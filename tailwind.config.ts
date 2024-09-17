@@ -10,14 +10,25 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      // backgroundImage: {
-      //   "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-      //   "gradient-conic":
-      //     "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
-      // },
+      colors: {
+        orange: {
+          25: '#FFF8F4',
+          50: '#FFEEE5',
+          100: '#FFDDCC',
+          200: '#FFBB99',
+          300: '#FF9866',
+          400: '#FF7633',
+          500: '#FF5400',
+          600: '#CC4300',
+          700: '#993200',
+          800: '#662200',
+          900: '#331100',
+        },
+      },
     },
   },
   // darkMode: "class",
   plugins: [nextui()],
 };
+
 export default config;
