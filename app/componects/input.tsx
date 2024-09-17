@@ -35,7 +35,7 @@ const InputZiva: React.FC<InputType> = ({ value, onChange, name, label, variant,
             classNames={{
                 label: `!self-end mr-0 !origin-top-right ${classNames?.label}`,
                 input: `text-right mr-1 ${classNames?.input}`,
-                inputWrapper: `bg-white hover:!bg-white focus:!bg-white w-64 ${classNames?.inputWrapper}`,
+                inputWrapper: `bg-white hover:!bg-white w-64 ${classNames?.inputWrapper}`,
                 innerWrapper: `${classNames?.innerWrapper}`
             }} 
         />

@@ -1,28 +1,53 @@
-import ButtonZiva from './Button';
-import InputZiva from './input';
+import ButtonZiva from "./Button";
+import InputZiva from "./input";
 
 const LoginForm: React.FC = () => {
-  const handleSubmit = async(formData: FormData) => {
-    'use server';
-    
-    const phone_number = formData.get('phone_number');
-    console.log('phone_number:', phone_number);
-  }
+  
+  const handleSubmit = async (formData: FormData) => {
+    "use server";
+    const phone_number = formData.get("phone_number");
+    console.log("phone_number:", phone_number);
+  };
 
   return (
-    <form action={handleSubmit} className='w-[440px] max-w-[90%] h-full grid items-center justify-center gap-8 bg-gray-50'>
-      <InputZiva 
-        name="phone_number" 
-        label="شماره موبایل" 
-        type="text"
-        classNames={{inputWrapper: "min-w-[116px]"}}
-      />
-      <div className="grid gap-4">
-        <ButtonZiva buttonText={"تایید و دریافت کد"} type={"submit"}/>
-        <span className='text-gray-500'>ورود شما به معنای پذیرش شرایط زیوا و قوانین حریم خصوصی است</span>
-      </div>
+    <form
+      action={handleSubmit}
+      className="w-[440px] max-w-[90%] h-full grid items-center justify-center gap-8 bg-white bg-opacity-20 backdrop-blur-sm rounded-3xl shadow-lg p-6"
+    >
+      <section className="grid gap-4">
+        <h1 className="text-2xl text-center font-bold text-gray-900">
+          ورود | ثبت نام
+        </h1>
+        <h2 className="text-lg text-center font-normal text-gray-500">
+          برای ادامه، شماره موبایل خود را وارد کنید{" "}
+        </h2>
+      </section>
+      <section className="grid gap-8">
+        <InputZiva
+          name="phone_number"
+          label="شماره موبایل"
+          type="text"
+          classNames={{ inputWrapper: "w-full min-w-[116px]" }}
+        />
+        <div className="grid gap-4">
+          <ButtonZiva
+            className="font-semibold"
+            buttonText={"تایید و دریافت کد"}
+            type={"submit"}
+          />
+          <p
+            lang="fa"
+            role="text"
+            className="text-center text-gray-500 font-normal"
+          >
+            ورود شما به معنای پذیرش{" "}
+            <span className="text-blue-500">شرایط زیوا</span> و{" "}
+            <span className="text-blue-500"> قوانین حریم خصوصی</span> است
+          </p>
+        </div>
+      </section>
     </form>
   );
-}
+};
 
 export default LoginForm;
