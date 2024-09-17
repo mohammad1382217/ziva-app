@@ -1,4 +1,4 @@
-import LoginForm from "./componects/LoginForm";
+import LoginForm from "./components/LoginForm";
 import bg_login from "./assests/RectangleLoginPage.png"
 import Image from "next/image";
 
