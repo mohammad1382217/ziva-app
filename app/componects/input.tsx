@@ -1,11 +1,6 @@
 'use client'
 
-import dynamic from 'next/dynamic';
-import Skeleton from 'react-loading-skeleton';
-
-const Input = dynamic(() => import("@nextui-org/input").then((mod) => mod.Input), {
-    loading: () => <Skeleton height={40} width={256} />,
-});
+import { Input } from "@nextui-org/input";
 
 interface ClassNamesType {
     label?: string;

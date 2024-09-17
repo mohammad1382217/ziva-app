@@ -1,5 +1,5 @@
 import ButtonZiva from './Button';
-import InputZiva from './Input';
+import InputZiva from './input';
 
 async function handleSubmit(formData: FormData) {
   'use server';
@@ -9,9 +9,9 @@ async function handleSubmit(formData: FormData) {
   console.log('phone_number:', phone_number);
 }
 
-const loginForm = () => {
+const LoginForm: React.FC = () => {
   return (
-    <form action={handleSubmit}>
+    <form action={handleSubmit} className='grid gap-8'>
       <InputZiva 
         name="phone_number" 
         label="شماره موبایل" 
@@ -22,4 +22,4 @@ const loginForm = () => {
   );
 }
 
-export default loginForm;
+export default LoginForm;
