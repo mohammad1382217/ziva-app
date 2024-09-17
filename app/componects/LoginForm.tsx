@@ -12,7 +12,7 @@ const LoginForm: React.FC = () => {
   return (
     <form
       action={handleSubmit}
-      className="w-[440px] max-w-[90%] h-full grid items-center justify-center gap-8 bg-white bg-opacity-20 backdrop-blur-sm rounded-3xl shadow-lg p-6"
+      className="z-10 fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[440px] max-w-[90%] h-auto grid items-center justify-center gap-8 bg-gradient-to-r from-white/90 to-white/80 bg-opacity-20 backdrop-blur-lg rounded-3xl shadow-lg p-6"
     >
       <section className="grid gap-4">
         <h1 className="text-2xl text-center font-bold text-gray-900">
