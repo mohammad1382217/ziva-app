@@ -36,3 +36,6 @@
   font-weight: 900;
   font-style: normal;
 }
+*{
+  direction: rtl;
+}

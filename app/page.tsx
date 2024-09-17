@@ -1,5 +1,5 @@
-import LoginForm from "./componects/LoginForm";
-import bg_login from "./assests/RectangleLoginPage.webp"
+import LoginForm from "./components/LoginForm";
+import bg_login from "./assests/RectangleLoginPage.png"
 import Image from "next/image";
 
 const Home: React.FC = () => {
