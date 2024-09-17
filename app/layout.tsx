@@ -6,27 +6,27 @@ import localFont from "next/font/local";
 const pelak = localFont({
   src: [
     {
-      path: '../public/fonts/PelakFA-Regular.otf',
+      path: '../public/fonts/PelakFA-Regular.woff2',
       weight: '400',
       style: 'normal',
     },
     {
-      path: '../public/fonts/PelakFA-Medium.otf',
+      path: '../public/fonts/PelakFA-Medium.woff2',
       weight: '500',
       style: 'normal',
     },
     {
-      path: '../public/fonts/PelakFA-SemiBold.otf',
+      path: '../public/fonts/PelakFA-SemiBold.woff2',
       weight: '600',
       style: 'normal',
     },
     {
-      path: '../public/fonts/PelakFA-Bold.otf',
+      path: '../public/fonts/PelakFA-Bold.woff2',
       weight: '700',
       style: 'normal',
     },
     {
-      path: '../public/fonts/PelakFA-Black.otf',
+      path: '../public/fonts/PelakFA-Black.woff2',
       weight: '900',
       style: 'normal',
     },
