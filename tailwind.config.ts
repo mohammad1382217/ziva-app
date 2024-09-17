@@ -25,6 +25,9 @@ const config: Config = {
           900: "#331100",
         },
       },
+      boxShadow: {
+        'Box': '0px 16px 40px -16px var(--MainColorGray100)',
+      }
     },
   },
   // darkMode: "class",
