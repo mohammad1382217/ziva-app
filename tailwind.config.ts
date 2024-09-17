@@ -24,9 +24,15 @@ const config: Config = {
           800: "#662200",
           900: "#331100",
         },
+        Folly:{
+          500:'#FF0054'
+        }
       },
       boxShadow: {
-        'Box': '0px 16px 40px -16px var(--MainColorGray100)',
+        'Box': '0px 16px 40px -16px var(gray-100)',
+      },
+      fontSize:{
+        '10':'10px'
       }
     },
   },
