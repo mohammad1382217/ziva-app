@@ -9,11 +9,11 @@ interface DividerCardsType {
 const DividerCards: React.FC<DividerCardsType> = ({ name, navigate }) => {
     return (
             <div className="flex flex-row-reverse  gap-8 justify-center items-center">
-                    <Link href={navigate} className="flex flex-row justify-center items-center gap-2" >
+                    <Link href={navigate} className="hidden sm-min:flex  flex-row justify-center items-center gap-2" >
                         <span className="text-gray-700 font-semibold text-lg">مشاهده بیشتر</span>
                         <Reply2 color="#FF5400" size={20} />
                     </Link>
-                <div className="flex-grow">
+                <div className="hidden sm-min:flex flex-grow">
                     <Divider className="w-full bg-orange-200" />
                 </div>
                 <div className="flex gap-2 flex-row justify-center items-center">

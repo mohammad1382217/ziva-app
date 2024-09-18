@@ -29,13 +29,13 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
   } = usePrevNextButtons(emblaApi)
 
   return (
-    <section className="embla">
+    <section className="embla sm-max:scale-[0.9]">
       <div className="embla__viewport" ref={emblaRef}>
         <div className="embla__container">
           {slides.map(({ rate, like, discount, name, location, navigate, price }, index) => (
             <div className="embla__slide" key={index}>
               {/* <div className="embla__slide__number"> */}
-                <Card discount={discount} like={like} location={location} name={name} navigate={navigate} price={price} rate={rate} />
+              <Card discount={discount} like={like} location={location} name={name} navigate={navigate} price={price} rate={rate} />
               {/* </div> */}
             </div>
           ))}
@@ -60,6 +60,7 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
           ))}
         </div> */}
       </div>
+      
     </section>
   )
 }

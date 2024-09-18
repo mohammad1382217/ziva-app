@@ -9,6 +9,24 @@ const config: Config = {
     "./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    screens: {
+      '4xl-max': { max: '1920px' },
+      '3xl-max': { max: '1440px' },
+      '2xl-max': { max: '1320px' },
+      'xl-max': { max: '1140px' },
+      'lg-max': { max: '960px' },
+      'md-max': { max: '720px' },
+      'sm-max': { max: '540px' },
+      'xs-max': { max: '420px' },
+      
+      '4xl-min': { min: '1921px' },
+      '3xl-min': { min: '1441px' },
+      '2xl-min': { min: '1321px' },
+      'xl-min': { min: '1141px' },
+      'lg-min': { min: '961px' },
+      'md-min': { min: '721px' },
+      'sm-min': { min: '541px' },
+    },
     extend: {
       colors: {
         orange: {
