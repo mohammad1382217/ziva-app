@@ -8,7 +8,7 @@ const Collection = () => {
             <h1 className="text-right text-orange-300">استخر به دلیل تعمیرات، از تاریخ 00 / 00 / 0 0 تا تاریخ 00 / 00 / 0 0 تعطیل می‌باشد</h1>
         </BoxDescription>
         <Card Verticalable={true} discount="10" like={true} location="قم بلوار فردوسی" name="نام استخر" navigate={'collection/poll'} price="10000" rate={0.5}/>
-        <BoxMuliCarousel />
+        {/* <BoxMuliCarousel /> */}
     </div>);
 }
 

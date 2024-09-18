@@ -20,7 +20,7 @@ export interface CardType {
 
 const Card: React.FC<CardType> = ({ rate, like, discount, name, location, navigate, price, Verticalable }) => {
     return (
-        <div className={`bg-white  flex m-10 p-1 gap-2  rounded-2xl shadow-Box ${Verticalable ? 'flex-row w-[556px]' : 'flex-col w-[246px]'}`}>
+        <div className={`bg-white  flex p-1 gap-2  rounded-2xl shadow-Box ${Verticalable ? 'flex-row w-[556px]' : 'flex-col w-[246px]'}`}>
             <div className={`gap-1 relative ${Verticalable ? ' w-[216px] h-[162px]' : ' w-[238px] h-[180px]'} w-[238px] h-[180px] rounded-xl p-1 bg-slate-600`}>
                 {Verticalable ? null : <div className="rounded-lg absolute left-1 gap-[3px] flex w-10 h-5 flex-row justify-center items-center bg-gradient-to-r from-white/90 to-white/80 bg-opacity-20 backdrop-blur-lg">
                     <span className="text-gray-900 font-bold text-10">{rate}</span>
@@ -65,7 +65,7 @@ const Card: React.FC<CardType> = ({ rate, like, discount, name, location, naviga
                             شروع قیمت از : {price}
                         </p>
                         <Link href={navigate} className="flex gap-1 flex-row justify-center items-center" >
-                            <span className="text-orange-500 font-semibold text-[10px]">{Verticalable ? 'مشاهده  و خرید بلیط' : "مشاهده"}</span>
+                            <span className="text-orange-500 font-semibold text-[10px]">{Verticalable    ? 'مشاهده  و خرید بلیط' : "مشاهده"}</span>
                             <Reply2 color="#FF5400" height={6.71} width={9.63} />
                         </Link>
 

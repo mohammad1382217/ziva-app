@@ -3,15 +3,7 @@
   --slide-spacing: 1rem;
   --slide-size: 100%;
 }
-.emblaMultiCarousel {
-  --slide-size: 18%;
-}
-@media (max-width: 768px) {
-  .emblaMultiCarousel {
-  --slide-size : 40%
-}
 
-}
 .embla__viewport {
   overflow: hidden;
 }

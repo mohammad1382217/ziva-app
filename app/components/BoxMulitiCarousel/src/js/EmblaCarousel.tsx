@@ -12,11 +12,13 @@ import Card, { CardType } from '@/app/components/Card'
 type PropType = {
   slides: CardType[]
   options?: EmblaOptionsType
+  Verticalable?: boolean,
+  isChangeVerticalable?: boolean,
 }
 
 const EmblaCarousel: React.FC<PropType> = (props) => {
-  const { slides, options } = props
-  const [emblaRef, emblaApi] = useEmblaCarousel(options)
+  const {isChangeVerticalable,Verticalable, slides, options } = props
+  const [emblaRef, emblaApi] = useEmblaCarousel({...options,loop:Verticalable ?true :false})
 
   // const { selectedIndex, scrollSnaps, onDotButtonClick } =
     // useDotButton(emblaApi)
@@ -29,36 +31,22 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
   } = usePrevNextButtons(emblaApi)
 
   return (
-    <section className="emblaMultiCarousel sm-max:scale-[0.9]" >
-      <div className="embla__viewport" ref={emblaRef}>
-        <div className="flex gap-6" style={{touchAction: "pan-y pinch-zoom"}}>
+    <section className={`embla sm-max:scale-[0.9]`} >
+      <div className={` ${Verticalable ? '!overflow-visible embla__viewport'  : "embla__viewport" } `} ref={emblaRef}>
+        <div className="mt-10 embla__container" style={{touchAction: "pan-y pinch-zoom"}}>
           {slides.map(({ rate, like, discount, name, location, navigate, price }, index) => (
-            <div className=" w-[246px] flex justify-center" key={index}>
-              {/* <div className="embla__slide__number"> */}
-              <Card discount={discount} like={like} location={location} name={name} navigate={navigate} price={price} rate={rate} />
-              {/* </div> */}
+            <div className={`${Verticalable &&isChangeVerticalable ? 'w-[556px]' : 'w-[246px]' } mx-2 flex justify-center`} key={index}>
+              <Card Verticalable={Verticalable &&isChangeVerticalable} discount={discount} like={like} location={location} name={name} navigate={navigate} price={price} rate={rate} />
             </div>
           ))}
         </div>
       </div>
 
-      <div className="flex justify-center items-center w-full">
+      <div className="flex mt-6 justify-center items-center w-full">
         <div className="embla__buttons">
           <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} />
           <NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled} />
         </div>
-
-        {/* <div className="embla__dots">
-          {scrollSnaps.map((_, index) => (
-            <DotButton
-              key={index}
-              onClick={() => onDotButtonClick(index)}
-              className={'embla__dot'.concat(
-                index === selectedIndex ? ' embla__dot--selected' : ''
-              )}
-            />
-          ))}
-        </div> */}
       </div>
       
     </section>
