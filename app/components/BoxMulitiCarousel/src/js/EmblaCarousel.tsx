@@ -1,7 +1,7 @@
 'use client'
 import React from 'react'
 import { EmblaOptionsType } from 'embla-carousel'
-import { DotButton, useDotButton } from './EmblaCarouselDotButton'
+// import { DotButton, useDotButton } from './EmblaCarouselDotButton'
 import {
   PrevButton,
   NextButton,
@@ -18,8 +18,8 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
   const { slides, options } = props
   const [emblaRef, emblaApi] = useEmblaCarousel(options)
 
-  const { selectedIndex, scrollSnaps, onDotButtonClick } =
-    useDotButton(emblaApi)
+  // const { selectedIndex, scrollSnaps, onDotButtonClick } =
+    // useDotButton(emblaApi)
 
   const {
     prevBtnDisabled,
@@ -29,11 +29,11 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
   } = usePrevNextButtons(emblaApi)
 
   return (
-    <section className="embla sm-max:scale-[0.9]">
+    <section className="emblaMultiCarousel sm-max:scale-[0.9]" >
       <div className="embla__viewport" ref={emblaRef}>
-        <div className="embla__container">
+        <div className="flex gap-6" style={{touchAction: "pan-y pinch-zoom"}}>
           {slides.map(({ rate, like, discount, name, location, navigate, price }, index) => (
-            <div className="embla__slide" key={index}>
+            <div className=" w-[246px] flex justify-center" key={index}>
               {/* <div className="embla__slide__number"> */}
               <Card discount={discount} like={like} location={location} name={name} navigate={navigate} price={price} rate={rate} />
               {/* </div> */}

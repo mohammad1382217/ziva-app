@@ -5,9 +5,11 @@ import { EmblaOptionsType } from 'embla-carousel'
 import DividerCards from '../DividerCards'
 import Link from 'next/link'
 import { Reply2 } from 'solar-icon-set'
+import '../../css/BoxMuliCarouseleEmbla.css'
 
 const BoxMuliCarousel = () => {
     const OPTIONS: EmblaOptionsType = { align: 'center', direction: 'rtl', dragFree: true }
+    
     const SLIDES = [
         { name: "استخر ۱", discount: "10", like: true, location: "قم بلوار فردوسی", navigate: 'collection/poll', price: "10000", rate: 0.5 },
         { name: "استخر ۲", discount: "15", like: false, location: "تهران خیابان انقلاب", navigate: 'collection/poll', price: "15000", rate: 4.0 },
@@ -24,7 +26,7 @@ const BoxMuliCarousel = () => {
     return (
         <div className='p-0 sm-min:p-5'>
             <div>
-                <DividerCards name="محصولات" navigate={'collection/poll'} />
+                <DividerCards name="محصولات"  />
             </div>
             <EmblaCarousel slides={SLIDES} options={OPTIONS} />
 
