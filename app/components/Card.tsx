@@ -3,7 +3,7 @@ import { Divider } from "antd";
 import Link from "next/link";
 import { Heart, Map, Reply2, Sale, Star } from "solar-icon-set";
 
-interface CardType {
+export interface CardType {
     rate: number,
     like: boolean,
     discount: string,
@@ -20,18 +20,18 @@ const Card: React.FC<CardType> = ({ rate, like, discount, name, location, naviga
             <div className="gap-1 relative w-[238px] h-[180px] rounded-xl p-1 bg-slate-600">
                 <div className="rounded-lg absolute left-1 gap-[3px] flex w-10 h-5 flex-row justify-center items-center bg-gradient-to-r from-white/90 to-white/80 bg-opacity-20 backdrop-blur-lg">
                     <span className="text-gray-900 font-bold text-10">{rate}</span>
-                    <Star size={12} color="#FFBD00" />
+                    <Star  width={12} height={12} size={12} color="#FFBD00" />
                 </div>
             </div>
             <div className="flex flex-row justify-between items-center">
 
                 <div className="flex rounded-full justify-center items-center  h-[18px] px-[2px] py-1  bg-Folly-500">
-                    <Sale color="#FFFFFF" size={14} />
+                    <Sale color="#FFFFFF" width={14} height={14} size={14} />
                     <p className="text-10 p-1 !m-0 font-bold text-white">
                         تا {discount} درصد تخفیف
                     </p>
                 </div>
-                <Heart color="#FF0054" />
+                <Heart size={12} color="#FF0054" />
 
             </div>
             <div className="gap-2">
@@ -39,7 +39,7 @@ const Card: React.FC<CardType> = ({ rate, like, discount, name, location, naviga
                     {name}
                 </h1>
                 <div className="flex flex-row gap-1">
-                    <Map color="#FF5400" size={12} />
+                    <Map color="#FF5400" size={12} width={12} height={12} />
                     <p className="text-gray-400 text-xs font-normal">
                         {location}
                     </p>
