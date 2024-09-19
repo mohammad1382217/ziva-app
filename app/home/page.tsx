@@ -61,8 +61,6 @@ const Home = () => {
                     </div>
                 </div>
             </div>
-
-
             <div>
                 <BoxMuliCarousel Verticalable={true} SLIDES={slideTopic} DivderName='مجموعه های برگزیده' />
                 <BoxMuliCarousel SLIDES={slideCard} DivderName='تخفیف‌های شگفت‌انگیز' DividerNavigate='/collection' />
