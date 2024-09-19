@@ -4,10 +4,11 @@ import ImageSampel from '../assests/RectangleLoginPage.webp'
 import Image from 'next/image';
 import DividerCards from '../components/DividerCards';
 import BoxMuliCarousel from '../components/BoxMulitiCarousel/BoxMuliCarousel';
+import Banner from '../components/Banner';
 
 const Home = () => {
 
-    const OPTIONS: EmblaOptionsType = { align: 'center', direction: 'rtl',loop:true }
+    const OPTIONS: EmblaOptionsType = { align: 'center', direction: 'rtl', loop: true }
     const SLIDES = [
         { src: ImageSampel, alt: 'استخر' },
         { src: ImageSampel, alt: 'استخر' },
@@ -35,14 +36,14 @@ const Home = () => {
     ];
 
     return (
-        <section className='gap-32 flex flex-col w-full h-full p-6 bg-[#F9FAFB] overflow-hidden'>
+        <section className='gap-32 md-max:gap-16 flex flex-col w-full h-full p-6 bg-[#F9FAFB] overflow-hidden'>
             <div className='flex lg-min:px-40 flex-col md-min:flex-row md-max:gap-0 gap-6 justify-between h-96 xs-max:h-80 md-max:h-[30rem]  lg-max:h-80 xl-max:h-96 3xl-max:h-[30rem] 3xl-min:h-[60vh]'>
                 <div className='w-full md-min:w-7/12 h-full  mb-4 md-min:mb-0'>
                     <EmblaCarouselHome slides={SLIDES} options={OPTIONS} />
                 </div>
-                <div className='w-full md-min:w-5/12 h-full overflow-hidden'>
+                <div className='w-full md-min:w-5/12 h-full  md-max:h-1/2 overflow-hidden'>
                     <div className='flex flex-col md-max:flex-row md-max:gap-2 w-full h-full gap-6'>
-                        <div className='h-1/2  w-full relative'>
+                        <div className='h-1/2 md-max:h-full  w-full relative'>
                             <Image
                                 src={ImageSampel}
                                 alt={'استخر'}
@@ -50,7 +51,7 @@ const Home = () => {
                                 className="rounded-2xl"
                             />
                         </div>
-                        <div className='h-1/2  w-full relative'>
+                        <div className='h-1/2 md-max:h-full  w-full relative'>
                             <Image
                                 src={ImageSampel}
                                 alt={'استخر'}
@@ -63,7 +64,23 @@ const Home = () => {
             </div>
             <div>
                 <BoxMuliCarousel Verticalable={true} SLIDES={slideTopic} DivderName='مجموعه های برگزیده' />
+
+                <div className='flex h-[104px] md-max:h-[128px] sm-max:flex-col justify-between w-full my-32 gap-6 lg-max:gap-4 lg-min:px-40'>
+                    <Banner className='w-1/2' />
+                    <Banner className='w-1/2' />
+                </div>
                 <BoxMuliCarousel SLIDES={slideCard} DivderName='تخفیف‌های شگفت‌انگیز' DividerNavigate='/collection' />
+                <BoxMuliCarousel SLIDES={slideCard} DivderName="محبوب‌ترین ها" DividerNavigate='/collection' />
+                <BoxMuliCarousel SLIDES={slideCard} DivderName="به‌صرفه‌ترین انتخاب" DividerNavigate='/collection' />
+                <div className='flex h-[104px] md-max:h-[128px] sm-max:flex-col justify-between w-full my-32 gap-6 lg-max:gap-4 lg-min:px-40'>
+                    <Banner className='w-1/3 ' />
+                    <Banner className='w-1/3 ' />
+                    <Banner className='w-1/3 md-min:flex md-max:hidden' />
+                </div>
+                <BoxMuliCarousel SLIDES={slideCard} DivderName="پرفروش های زیوا" DividerNavigate='/collection' />
+                <div className='flex h-[104px] justify-between w-full my-32 gap-6 lg-min:px-40'>
+                    <Banner className='w-full' />
+                </div>
             </div>
         </section>
     );

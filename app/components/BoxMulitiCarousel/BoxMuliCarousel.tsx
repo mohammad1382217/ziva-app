@@ -30,7 +30,7 @@ const BoxMuliCarousel: React.FC<BoxMuliCarouselType> = ({ SLIDES, DivderName, Di
       };
     }, [Verticalable]);
     return (
-        <div className='p-0 sm-min:lg-min:px-40'>
+        <div className='p-0 lg-min:px-40'>
             <div>
                 <DividerCards name={DivderName} navigate={DividerNavigate} />
             </div>
