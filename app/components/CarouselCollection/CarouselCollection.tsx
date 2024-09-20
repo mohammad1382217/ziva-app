@@ -4,8 +4,8 @@ import { EmblaOptionsType } from 'embla-carousel'
 import useEmblaCarousel from 'embla-carousel-react'
 import { Thumb } from './EmblaCarouselThumbsButton'
 import Image, { StaticImageData } from 'next/image';
-import '../../css/CarouselEmblaHome.css'
 import '../../css/Carouel.css'
+import { NextButton, PrevButton, usePrevNextButtons } from '../CarouselHome/EmblaCarouselArrowButtonsHome'
 interface ImageData {
     src: StaticImageData;
     alt: string;
@@ -21,7 +21,9 @@ const CarouselCollection: React.FC<PropType> = (props) => {
     const [emblaMainRef, emblaMainApi] = useEmblaCarousel(options)
     const [emblaThumbsRef, emblaThumbsApi] = useEmblaCarousel({
         containScroll: 'keepSnaps',
-        dragFree: true
+        dragFree: true,
+        loop: true,
+        direction: 'rtl'
     })
 
     const onThumbClick = useCallback(
@@ -38,6 +40,14 @@ const CarouselCollection: React.FC<PropType> = (props) => {
         emblaThumbsApi.scrollTo(emblaMainApi.selectedScrollSnap())
     }, [emblaMainApi, emblaThumbsApi, setSelectedIndex])
 
+    const {
+        prevBtnDisabled,
+        nextBtnDisabled,
+        onPrevButtonClick,
+        onNextButtonClick
+    } = usePrevNextButtons(emblaMainApi)
+
+
     useEffect(() => {
         if (!emblaMainApi) return
         onSelect()
@@ -46,14 +56,13 @@ const CarouselCollection: React.FC<PropType> = (props) => {
     }, [emblaMainApi, onSelect])
 
     return (
-        <div className="embla w-full h-full">
-            <div className="embla__viewport w-full h-full" ref={emblaMainRef}>
-                <div className="embla__container w-full h-full">
+        <div className="embla w-full h-full relative">
+            <div className="embla__viewport w-full h-80" ref={emblaMainRef}>
+                <div className="embla__container w-full h-80">
                     {slides.map(({ src, alt }, index) => (
-                        <div className="embla__slide w-full h-full" key={index}>
+                        <div className="embla__slide mx-1  w-full h-80" key={index}>
                             {/* <div className="embla__slide__number">{index + 1}</div> */}
-                            <div className='w-full h-full '>
-
+                            <div className='embla__slide  w-full h-80'>
                                 <Image
                                     src={src}
                                     alt={alt}
@@ -65,6 +74,14 @@ const CarouselCollection: React.FC<PropType> = (props) => {
                     ))}
                 </div>
             </div>
+
+            <div className="embla__controls absolute bottom-24 w-full flex flex-col justify-center items-center">
+                <div className="embla__buttons">
+                    <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} />
+                    <NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled} />
+                </div>
+            </div>
+
 
             <div className="embla-thumbs">
                 <div className="embla-thumbs__viewport" ref={emblaThumbsRef}>

@@ -50,8 +50,12 @@ const config: Config = {
         'Box': '0px 16px 40px -16px var(gray-100)',
       },
       fontSize:{
-        '10':'10px'
-      }
+        '10':'10px',
+        "40":"40px"
+      },
+      backgroundImage: {
+        "RectangleOrange": "url('./assests/RectangleLoginPage.webp')"
+      },
     },
   },
   // darkMode: "class",

@@ -17,20 +17,20 @@ export const Thumb: React.FC<PropType> = (props) => {
     return (
         <div
             className={'embla-thumbs__slide'.concat(
-                selected ? ' embla-thumbs__slide--selected' : ''
+                selected ? ' embla-thumbs__slide--selected ' : ''
             )}
         >
             <button
                 onClick={onClick}
                 type="button"
-                className="embla-thumbs__slide__number h-36"
+                className="embla-thumbs__slide__number relative"
             >
             <Image
                 src={src}
                 alt={alt}
                 onClick={onClick}
                 className="rounded-2xl"
-                // fill
+                fill
             />
                 {/* {index + 1} */}
             </button>
