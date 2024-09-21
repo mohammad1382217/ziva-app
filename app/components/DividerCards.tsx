@@ -1,4 +1,4 @@
-import { Divider } from "@nextui-org/react";
+import { Divider } from "@nextui-org/divider";
 import Link from "next/link";
 import { Reply2 } from "solar-icon-set";
 
