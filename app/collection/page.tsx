@@ -1,14 +1,21 @@
 import CarouselCollection from "../components/CarouselCollection/CarouselCollection";
 import ImageSampel from '../assests/RectangleLoginPage.webp'
 import { EmblaOptionsType } from "embla-carousel";
-import { ArrowDown, HandStars, Heart, MapPointWave, Sale, ClipboardList, DangerSquare, Ticket, ChatLine } from "solar-icon-set";
+import { ArrowDown, HandStars, Heart, MapPointWave, Sale, ClipboardList, DangerSquare, Ticket, ChatLine, ClockCircle, DangerCircle, ClipboardCheck, FacemaskSquare } from "solar-icon-set";
 import StarWhite from '@/app/assests/startWhite.svg';
 import Image from "next/image";
 import Map from '../assests/Button.png'
 import { getImageProps } from 'next/image'
 import SegmentedZiva from "../components/SegmentedZiva";
-import { useState } from "react";
 import BoxDescription from "../components/BoxDescription";
+import { Metadata } from "next";
+import ButtonZiva from "../components/Button";
+
+export const metadata: Metadata = {
+    title: 'مجموعه',
+    description: 'اسختر فلان در قم',
+}
+
 function getBackgroundImage(srcSet = '') {
     const imageSet = srcSet
         .split(', ')
@@ -32,12 +39,11 @@ const Collection = () => {
         { src: ImageSampel, alt: 'استخر' },
     ];
     const SegmentZiva = [
-        { Icon: <ClipboardList size={24} iconStyle="Outline" />, name: 'معرفی مجموعه' },
-        { Icon: <HandStars size={24} iconStyle="Outline" />, name: 'امکانات' },
-        { Icon: <Ticket size={24} iconStyle="Outline" />, name: 'خرید بلیط' },
-        { Icon: <ChatLine size={24} iconStyle="Outline" />, name: 'نظرات' },
+        { Icon: <ClipboardList size={24} iconStyle="Outline" />, name: 'معرفی مجموعه', hash: '#introduction' },
+        { Icon: <HandStars size={24} iconStyle="Outline" />, name: 'امکانات', hash: '#amenities' },
+        { Icon: <Ticket size={24} iconStyle="Outline" />, name: 'خرید بلیط', hash: '#ticket' },
+        { Icon: <ChatLine size={24} iconStyle="Outline" />, name: 'نظرات', hash: '#comments' },
     ];
-
     const OPTIONS: EmblaOptionsType = { align: 'center', direction: 'rtl', loop: true }
 
 
@@ -46,6 +52,8 @@ const Collection = () => {
     } = getImageProps({ alt: '', width: 128, height: 128, src: Map })
     const backgroundImage = getBackgroundImage(srcSet)
     const style = { backgroundImage }
+
+
 
     return (
         <div className="overflow-hidden flex justify-center w-full h-full gap-32 bg-gray-50">
@@ -119,37 +127,69 @@ const Collection = () => {
                         <CarouselCollection options={OPTIONS} slides={SLIDES} />
                     </div>
                 </section>
-                <section className="my-24">
+                <section >
                     <SegmentedZiva options={SegmentZiva} />
                 </section>
 
-                <section>
-                    <BoxDescription name="اطلاعیه ها" Icon={DangerSquare}>
-                        <h1 className="text-right text-orange-300">استخر به دلیل تعمیرات، از تاریخ 00 / 00 / 0 0 تا تاریخ 00 / 00 / 0 0 تعطیل می‌باشد</h1>
+
+
+
+                {/* بخش‌های مرتبط با هر تب */}
+                <section className="" id="introduction">
+                    <BoxDescription name="اطلاعیه ها" Icon={DangerCircle}>
+                        <ul className="list-disc list-inside text-right text-base font-normal text-orange-300">
+                            <li>استخر به دلیل تعمیرات، از تاریخ 00 / 00 / 0 0 تا تاریخ 00 / 00 / 0 0 تعطیل می‌باشد</li>
+                            <li>استخر به دلیل تعمیرات، از تاریخ 00 / 00 / 0 0 تا تاریخ 00 / 00 / 0 0 تعطیل می‌باشد</li>
+                        </ul>
                     </BoxDescription>
-                    <BoxDescription name="اطلاعیه ها" Icon={DangerSquare}>
-                        <h1 className="text-right text-orange-300">استخر به دلیل تعمیرات، از تاریخ 00 / 00 / 0 0 تا تاریخ 00 / 00 / 0 0 تعطیل می‌باشد</h1>
+                    <BoxDescription clsasName="mt-10" name="زمان‌بندی و سانس ها" Icon={ClockCircle}>
+                        <ul className="flex justify-between text-base gap-6  text-gray-700">
+                            <li className="gap-4">
+                                <span className="font-semibold">
+                                    آقایان
+                                </span>
+                                <div className="font-normal mt-4">
+                                    روز های یک‌شنبه، سه‌سنبه و پنج شنبه از ساعت 00 : 00 الی 00 : 00
+                                    و روز جمعه از ساعت 00 : 00 الی 00 : 00
+                                </div>
+                            </li>
+                            <li className="gap-4">
+                                <span className="font-semibold">
+                                    بانوان
+                                </span>
+                                <div className="font-normal mt-4">
+                                    روز های یک‌شنبه، سه‌سنبه و پنج شنبه از ساعت 00 : 00 الی 00 : 00
+                                    و روز جمعه از ساعت 00 : 00 الی 00 : 00
+                                </div>
+                            </li>
+                        </ul>
                     </BoxDescription>
-                    <BoxDescription name="اطلاعیه ها" Icon={DangerSquare}>
-                        <h1 className="text-right text-orange-300">استخر به دلیل تعمیرات، از تاریخ 00 / 00 / 0 0 تا تاریخ 00 / 00 / 0 0 تعطیل می‌باشد</h1>
+                    <BoxDescription clsasName="mt-10 " name="قوانین و شرایط استفاده" Icon={ClipboardCheck}>
+                        <p className="text-base font-normal text-gray-500">
+                            ۲۰ دقیقه پایانی سانس به دوش‌گرفتن و تعویض لباس اختصاص دارد.<br></br>
+                            کودکان از 5 سال به بالا پذیرش می شوند.
+                        </p>
                     </BoxDescription>
-                    <BoxDescription name="اطلاعیه ها" Icon={DangerSquare}>
-                        <h1 className="text-right text-orange-300">استخر به دلیل تعمیرات، از تاریخ 00 / 00 / 0 0 تا تاریخ 00 / 00 / 0 0 تعطیل می‌باشد</h1>
+                </section>
+
+
+                <section className="" id="amenities">
+                    <h1 className="text-black text-center font-bold text-4xl">
+                        امکانات و ویژگی ها
+                    </h1>
+                    <div>
+                        <ButtonZiva buttonText="استخر کودکان" type="submit" rightIcon={<FacemaskSquare />} />
+                    </div>
+                </section>
+                <section className="py-96" id="ticket">
+                    <BoxDescription name="خرید بلیط" Icon={Ticket}>
+                        <h1 className="text-right text-orange-300">در این بخش می‌توانید بلیط‌ها را خریداری کنید.</h1>
                     </BoxDescription>
-                    <BoxDescription name="اطلاعیه ها" Icon={DangerSquare}>
-                        <h1 className="text-right text-orange-300">استخر به دلیل تعمیرات، از تاریخ 00 / 00 / 0 0 تا تاریخ 00 / 00 / 0 0 تعطیل می‌باشد</h1>
-                    </BoxDescription>
-                    <BoxDescription name="اطلاعیه ها" Icon={DangerSquare}>
-                        <h1 className="text-right text-orange-300">استخر به دلیل تعمیرات، از تاریخ 00 / 00 / 0 0 تا تاریخ 00 / 00 / 0 0 تعطیل می‌باشد</h1>
-                    </BoxDescription>
-                    <BoxDescription name="اطلاعیه ها" Icon={DangerSquare}>
-                        <h1 className="text-right text-orange-300">استخر به دلیل تعمیرات، از تاریخ 00 / 00 / 0 0 تا تاریخ 00 / 00 / 0 0 تعطیل می‌باشد</h1>
-                    </BoxDescription>
-                    <BoxDescription name="اطلاعیه ها" Icon={DangerSquare}>
-                        <h1 className="text-right text-orange-300">استخر به دلیل تعمیرات، از تاریخ 00 / 00 / 0 0 تا تاریخ 00 / 00 / 0 0 تعطیل می‌باشد</h1>
-                    </BoxDescription>
-                    <BoxDescription name="اطلاعیه ها" Icon={DangerSquare}>
-                        <h1 className="text-right text-orange-300">استخر به دلیل تعمیرات، از تاریخ 00 / 00 / 0 0 تا تاریخ 00 / 00 / 0 0 تعطیل می‌باشد</h1>
+                </section>
+
+                <section className="py-96" id="comments">
+                    <BoxDescription name="نظرات" Icon={ChatLine}>
+                        <h1 className="text-right text-orange-300">این بخش مربوط به نظرات کاربران است.</h1>
                     </BoxDescription>
                 </section>
             </div>

@@ -1,7 +1,7 @@
 import { Button } from "@nextui-org/button";
 
 interface CustomButtonProps {
-  className: string;
+  className?: string;
   buttonText: string;
   type: "button" | "submit" | "reset" | undefined;
   leftIcon?: React.ReactNode; 
@@ -20,9 +20,9 @@ const ButtonZiva: React.FC<CustomButtonProps> = ({ className, buttonText, type, 
         textOnly ? "py-2" : "py-2 px-4"
       } ${className}`}
     >
-      {leftIcon && !textOnly && <span className="mr-2">{leftIcon}</span>}
-      {!textOnly && buttonText}
       {rightIcon && !textOnly && <span className="ml-2">{rightIcon}</span>}
+      {!textOnly && buttonText}
+      {leftIcon && !textOnly && <span className="mr-2">{leftIcon}</span>}
     </Button>
   );
 };

@@ -1,11 +1,11 @@
 import { Divider } from "@nextui-org/react";
 import React from "react";
 
-interface BoxDescriptionType { name: string, Icon: any, children: React.ReactNode }
+interface BoxDescriptionType { name: string, Icon: any, children: React.ReactNode,clsasName?:string }
 
-const BoxDescription: React.FC<BoxDescriptionType> = ({ name, Icon, children }) => {
+const BoxDescription: React.FC<BoxDescriptionType> = ({ name, Icon, children,clsasName }) => {
     return (
-        <div className="bg-white flex flex-col m-10 p-6 gap-8  rounded-2xl   shadow-Box">
+        <div className={`bg-white flex flex-col p-6 gap-8  rounded-2xl   shadow-Box ${clsasName}`}>
             <div className="flex flex-row-reverse  gap-6 justify-center items-center">
                 <div className="flex-grow">
                     <Divider className="w-full bg-orange-200" />
@@ -14,7 +14,7 @@ const BoxDescription: React.FC<BoxDescriptionType> = ({ name, Icon, children }) 
                     <h2 className="text-2xl font-bold text-nowrap">
                         {name}
                     </h2>
-                    <Icon color="#F04438" size={24} iconStyle="Bold" />
+                    <Icon color="#F04438" size={24} iconStyle="Outline" />
                 </div>
             </div>
             <div className="">
