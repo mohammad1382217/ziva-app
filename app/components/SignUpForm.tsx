@@ -10,13 +10,14 @@ const SignUpForm: React.FC = () => {
     const last_name = formData.get("last_name");
     const email = formData.get("email");
     const birth_date = formData.get("birth_date");
+    const gender = formData.get("gender")
 
-    const SignUp = { first_name, last_name, email, birth_date };
+    const SignUp = { first_name, last_name, email, birth_date, gender };
     console.log("SignUp:", SignUp);
 
-    // await fetch(`${baseURL}/api/store/`, {
+    // await fetch(`${baseURL}/api/SignUp`, {
     //   method: "POST",
-    //   body: JSON.stringify(newStores),
+    //   body: JSON.stringify(SignUp),
     //   headers: {
     //     "Content-Type": "application/json",
     //     Authorization: `Bearer ${getCookie("accessToken")}`,
@@ -57,6 +58,7 @@ const SignUpForm: React.FC = () => {
         <InputDate name="birth_date" placeholder="تاریخ تولد" />
         <RadioGroupZiva
           label="جنسیت"
+          name="gender"
           options={[
             { label: "آقا", value: "male" },
             { label: "خانم", value: "female" },

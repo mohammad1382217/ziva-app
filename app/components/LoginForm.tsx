@@ -9,9 +9,9 @@ const LoginForm: React.FC = () => {
     const phoneNumber = { phone_number };
     console.log("phoneNumber:", phoneNumber);
 
-    // await fetch(`${baseURL}/api/store/`, {
+    // await fetch(`${baseURL}/api/login/`, {
     //   method: "POST",
-    //   body: JSON.stringify(newStores),
+    //   body: JSON.stringify(phoneNumber),
     //   headers: {
     //     "Content-Type": "application/json",
     //     Authorization: `Bearer ${getCookie("accessToken")}`,
