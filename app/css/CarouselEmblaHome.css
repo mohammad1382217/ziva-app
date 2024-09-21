@@ -1,9 +1,7 @@
 .embla {
-  /* max-width: 48rem; */
-  margin: auto;
-  /* --slide-height: 19rem; */
-  --slide-spacing: -10rem;
-  --slide-size: 18%;
+  --slide-height: 19rem;
+  --slide-spacing: 1rem;
+  --slide-size: 100%;
 }
 
 .embla__viewport {
@@ -13,6 +11,7 @@
 .embla__container {
   display: flex;
   touch-action: pan-y pinch-zoom;
+<<<<<<< HEAD:app/css/embla.css
   gap: 24px;
 }
 
@@ -51,6 +50,29 @@
   border: 2px solid #ffffff;
   gap: 16px;
   padding: 8px;
+=======
+  margin-left: calc(var(--slide-spacing) * -1);
+}
+/*  */
+.embla__slide {
+  transform: translate3d(0, 0, 0);
+  flex: 0 0 var(--slide-size);
+  /* min-width: 0; */
+  padding-left: var(--slide-spacing);
+}
+
+.embla__buttons {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.6) 100%);
+  border-radius: 999px;
+  border: 2px solid #FFFFFF;
+  gap: 16px;
+  height: 32px;
+  padding: 8px;
+  width: 64px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+>>>>>>> 4de4116a911cbc166de10ca6b02745cfdfaa2e11:app/css/CarouselEmblaHome.css
 }
 
 .embla__button {
@@ -83,6 +105,7 @@
   flex-wrap: wrap;
   justify-content: flex-end;
   align-items: center;
+  gap: 8px;
   margin-right: calc((2.6rem - 1.4rem) / 2 * -1);
 }
 
@@ -90,32 +113,45 @@
   -webkit-tap-highlight-color: rgba(var(--text-high-contrast-rgb-value), 0.5);
   -webkit-appearance: none;
   appearance: none;
-  background-color: transparent;
   touch-action: manipulation;
   display: inline-flex;
   text-decoration: none;
   cursor: pointer;
   border: 0;
   padding: 0;
+  margin-top: 12px;
   margin: 0;
-  width: 2.6rem;
-  height: 2.6rem;
+  width: 8px;
+  height: 8px;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 50%;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.6) 100%);
+  border-radius: 999px;
+  border: 2px solid #FFFFFF;
 }
 
 .embla__dot:after {
   box-shadow: inset 0 0 0 0.2rem var(--detail-medium-contrast);
-  width: 1.4rem;
-  height: 1.4rem;
+  width: 32px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   content: "";
 }
 
+<<<<<<< HEAD:app/css/embla.css
 .embla__dot--selected:after {
   box-shadow: inset 0 0 0 0.2rem var(--text-body);
+=======
+.embla__dot--selected {
+  transition: 0.2s ease-in;
+  width: 32px !important;
+}
+
+.embla__dot--selected:after {
+  box-shadow: inset 0 0 0 0.2rem var(--text-body);
+  width: 32px;
+>>>>>>> 4de4116a911cbc166de10ca6b02745cfdfaa2e11:app/css/CarouselEmblaHome.css
 }

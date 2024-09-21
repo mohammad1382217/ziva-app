@@ -18,7 +18,7 @@ const inputDateZiva: React.FC<InputType> = ({ value, plugins, disabled, placehol
   return (
     <DatePicker
       format="HH:mm:ss YYYY/MM/DD"
-      value={value.format("HH:mm:ss YYYY/MM/DD")}
+      value={value}
       onChange={onChange}
       weekDays={weekDays}
       className="custom-calendar"

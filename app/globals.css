@@ -36,3 +36,17 @@
   font-weight: 900;
   font-style: normal;
 }
+
+.containerZiva{
+  padding: 158px;
+  display: flex;
+  flex-direction: column;
+  gap: 120px;
+  width: 100%;
+}
+
+@media only screen and (max-width: 600px) {
+  .containerZiva{
+    padding: 24px;
+  }
+}
