@@ -38,12 +38,12 @@ const BoxMuliCarousel: React.FC<BoxMuliCarouselType> = ({
 
     return () => window.removeEventListener("resize", handleResize);
   }, [Verticalable]);
-  
+
   return (
     <div className="">
       <div>
         <DividerCards
-          costomNavigate={costomNavigte}
+          costomNavigte={costomNavigte!}
           name={DivderName}
           navigate={DividerNavigate!}
         />
