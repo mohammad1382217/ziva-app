@@ -1,7 +1,8 @@
 'use client'
+
 import React from 'react'
 import { EmblaOptionsType } from 'embla-carousel'
-import { DotButton, useDotButton } from './EmblaCarouselDotButton'
+import { useDotButton } from './EmblaCarouselDotButton'
 import {
   PrevButton,
   NextButton,
@@ -9,6 +10,7 @@ import {
 } from './EmblaCarouselArrowButtons'
 import useEmblaCarousel from 'embla-carousel-react'
 import Card, { CardType } from '@/app/components/Card'
+
 type PropType = {
   slides: CardType[]
   options?: EmblaOptionsType
@@ -18,8 +20,7 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
   const { slides, options } = props
   const [emblaRef, emblaApi] = useEmblaCarousel(options)
 
-  const { selectedIndex, scrollSnaps, onDotButtonClick } =
-    useDotButton(emblaApi)
+  useDotButton(emblaApi)
 
   const {
     prevBtnDisabled,
@@ -34,9 +35,7 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
         <div className="embla__container">
           {slides.map(({ rate, like, discount, name, location, navigate, price }, index) => (
             <div className="embla__slide" key={index}>
-              {/* <div className="embla__slide__number"> */}
               <Card discount={discount} like={like} location={location} name={name} navigate={navigate} price={price} rate={rate} />
-              {/* </div> */}
             </div>
           ))}
         </div>
@@ -47,18 +46,6 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
           <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} />
           <NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled} />
         </div>
-
-        {/* <div className="embla__dots">
-          {scrollSnaps.map((_, index) => (
-            <DotButton
-              key={index}
-              onClick={() => onDotButtonClick(index)}
-              className={'embla__dot'.concat(
-                index === selectedIndex ? ' embla__dot--selected' : ''
-              )}
-            />
-          ))}
-        </div> */}
       </div>
       
     </section>

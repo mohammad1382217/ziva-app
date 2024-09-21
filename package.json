@@ -19,6 +19,7 @@
     "next-sitemap": "^4.2.3",
     "react": "^18",
     "react-dom": "^18",
+    "react-multi-date-picker": "^4.5.2",
     "solar-icon-set": "^1.0.0"
   },
   "devDependencies": {

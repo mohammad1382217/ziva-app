@@ -5,30 +5,31 @@
   --slide-spacing: -10rem;
   --slide-size: 18%;
 }
+
 .embla__viewport {
   overflow: hidden;
 }
+
 .embla__container {
   display: flex;
   touch-action: pan-y pinch-zoom;
-  /* margin-left: 24px; */
-  /* margin-right: 24px; */
-  gap:24px ;
+  gap: 24px;
 }
+
 .embla__slide {
   transform: translate3d(0, 0, 0);
-  /* flex: 0 0 var(--slide-size); */
-  /* min-width: 0; */
   padding-left: var(--slide-spacing);
   width: 246px;
   display: flex;
   justify-content: center;
 }
+
 @media (max-width: 768px) {
   .embla {
-  --slide-size : 40%
+    --slide-size: 40%;
+  }
 }
-}
+
 .embla__controls {
   display: grid;
   grid-template-columns: auto 1fr;
@@ -36,16 +37,22 @@
   gap: 1.2rem;
   margin-top: 1.8rem;
 }
+
 .embla__buttons {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.6) 100%);
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.5) 0%,
+    rgba(255, 255, 255, 0.6) 100%
+  );
   border-radius: 999px;
-  border: 2px solid  #FFFFFF;
+  border: 2px solid #ffffff;
   gap: 16px;
-  padding: 8px; 
+  padding: 8px;
 }
+
 .embla__button {
   -webkit-tap-highlight-color: rgba(var(--text-high-contrast-rgb-value), 0.5);
   -webkit-appearance: none;
@@ -59,8 +66,6 @@
   padding: 0;
   margin: 0;
   box-shadow: inset 0 0 0 0.2rem var(--detail-medium-contrast);
-  /* width: 3.6rem;
-  height: 3.6rem; */
   z-index: 1;
   border-radius: 50%;
   color: var(--text-body);
@@ -68,6 +73,7 @@
   align-items: center;
   justify-content: center;
 }
+
 .embla__button:disabled {
   color: var(--detail-high-contrast);
 }
@@ -79,6 +85,7 @@
   align-items: center;
   margin-right: calc((2.6rem - 1.4rem) / 2 * -1);
 }
+
 .embla__dot {
   -webkit-tap-highlight-color: rgba(var(--text-high-contrast-rgb-value), 0.5);
   -webkit-appearance: none;
@@ -98,6 +105,7 @@
   justify-content: center;
   border-radius: 50%;
 }
+
 .embla__dot:after {
   box-shadow: inset 0 0 0 0.2rem var(--detail-medium-contrast);
   width: 1.4rem;
@@ -105,8 +113,9 @@
   border-radius: 50%;
   display: flex;
   align-items: center;
-  content: '';
+  content: "";
 }
+
 .embla__dot--selected:after {
   box-shadow: inset 0 0 0 0.2rem var(--text-body);
 }
