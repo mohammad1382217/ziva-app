@@ -1,7 +1,7 @@
 import CarouselCollection from "../components/CarouselCollection/CarouselCollection";
 import ImageSampel from '../assests/RectangleLoginPage.webp'
 import { EmblaOptionsType } from "embla-carousel";
-import { ArrowDown, HandStars, Heart, MapPointWave, Sale, ClipboardList, DangerSquare, Ticket, ChatLine, ClockCircle, DangerCircle, ClipboardCheck, FacemaskSquare } from "solar-icon-set";
+import { ArrowDown, HandStars, Heart, MapPointWave, Sale, ClipboardList, Ticket, ChatLine, ClockCircle, DangerCircle, ClipboardCheck, FacemaskSquare, Document, Notebook, NotebookBookmark, NotebookSquare, NotebookMinimalistic, MenuDotsCircle } from "solar-icon-set";
 import StarWhite from '@/app/assests/startWhite.svg';
 import Image from "next/image";
 import Map from '../assests/Button.png'
@@ -10,6 +10,8 @@ import SegmentedZiva from "../components/SegmentedZiva";
 import BoxDescription from "../components/BoxDescription";
 import { Metadata } from "next";
 import ButtonZiva from "../components/Button";
+import BoxMuliCarousel from "../components/BoxMulitiCarousel/BoxMuliCarousel";
+import Banner from "../components/Banner";
 
 export const metadata: Metadata = {
     title: 'مجموعه',
@@ -46,7 +48,18 @@ const Collection = () => {
     ];
     const OPTIONS: EmblaOptionsType = { align: 'center', direction: 'rtl', loop: true }
 
-
+    const slideCard = [
+        { name: "استخر ۱", discount: "10", like: true, location: "قم بلوار فردوسی", navigate: 'collection/poll', price: "10000", rate: 0.5 },
+        { name: "استخر ۲", discount: "15", like: false, location: "تهران خیابان انقلاب", navigate: 'collection/poll', price: "15000", rate: 4.0 },
+        { name: "استخر ۳", discount: "20", like: true, location: "اصفهان میدان نقش جهان", navigate: 'collection/poll', price: "12000", rate: 3.5 },
+        { name: "استخر ۴", discount: "5", like: false, location: "مشهد امام رضا", navigate: 'collection/poll', price: "8000", rate: 2.0 },
+        { name: "استخر ۵", discount: "25", like: true, location: "شیراز حافظیه", navigate: 'collection/poll', price: "20000", rate: 4.5 },
+        { name: "استخر 6", discount: "10", like: true, location: "قم بلوار فردوسی", navigate: 'collection/poll', price: "10000", rate: 0.5 },
+        { name: "استخر 7", discount: "15", like: false, location: "تهران خیابان انقلاب", navigate: 'collection/poll', price: "15000", rate: 4.0 },
+        { name: "استخر 8", discount: "20", like: true, location: "اصفهان میدان نقش جهان", navigate: 'collection/poll', price: "12000", rate: 3.5 },
+        { name: "استخر 9", discount: "5", like: false, location: "مشهد امام رضا", navigate: 'collection/poll', price: "8000", rate: 2.0 },
+        { name: "استخر 10", discount: "25", like: true, location: "شیراز حافظیه", navigate: 'collection/poll', price: "20000", rate: 4.5 },
+    ];
     const {
         props: { srcSet },
     } = getImageProps({ alt: '', width: 128, height: 128, src: Map })
@@ -92,7 +105,7 @@ const Collection = () => {
                             </div>
                         </div>
                         <div className="flex h-[112px] flex-row gap-6">
-                            <div className="relative w-4/12 flex justify-between flex-col p-4 bg-gray-50 rounded-2xl">
+                            <div className="relative w-40 flex justify-between flex-col p-4 bg-gray-50 rounded-2xl">
                                 <div>
                                     <span className="font-semibold text-gray-400 text-base">قیمت گیشه</span>
                                 </div>
@@ -102,7 +115,7 @@ const Collection = () => {
                                     </div>
                                 </div>
                             </div>
-                            <div className="w-8/12 flex justify-between flex-col p-4 rounded-2xl bg-cover bg-RectangleOrange">
+                            <div className="w-full flex justify-between flex-col p-4 rounded-2xl bg-cover bg-RectangleOrange">
                                 <div className="flex flex-row justify-between">
                                     <span className="font-semibold text-white text-base">قیمت زیوا</span>
                                     <div className="flex rounded-full flex-row-reverse justify-center items-center gap-[2px]  h-[20px]  p-2  bg-white">
@@ -183,16 +196,38 @@ const Collection = () => {
                         <ButtonZiva className="h-10 w-auto rounded-full bg-transparent hover:bg-transparent border text-gray-900" buttonText="استخر کودکان" variant="bordered" type="submit" rightIcon={<FacemaskSquare size={17} color="#FF5400" />} />
                     </div>
                 </section>
-                <section className="py-96" id="ticket">
-                    <BoxDescription name="خرید بلیط" Icon={Ticket}>
-                        <h1 className="text-right text-orange-300">در این بخش می‌توانید بلیط‌ها را خریداری کنید.</h1>
+                <section className="gap-8 flex flex-col" id="ticket">
+                    <h1 className="text-black text-center font-bold text-4xl">
+                        خرید بلیط استخر
+                    </h1>
+                </section>
+                <section className="gap-8 flex flex-col">
+                    <BoxDescription clsasName="mt-10 " name="معرفی استخر" Icon={Document}>
+                        <p className="text-base font-normal text-gray-500">
+                            ۲۰ دقیقه پایانی سانس به دوش‌گرفتن و تعویض لباس اختصاص دارد.<br></br>
+                            کودکان از 5 سال به بالا پذیرش می شوند.
+                        </p>
+                    </BoxDescription>
+                    <BoxDescription clsasName="mt-10 " name="مشخصات استخر" Icon={MenuDotsCircle}>
+                        <p className="text-base font-normal text-gray-500">
+                            طول استخر: 25 متر<br />
+                            عرض استخر 50 متر<br />
+                            کمترین ارتفاع: 1 متر<br />
+                            بیشترین ارتفاع: 3 متر
+                        </p>
                     </BoxDescription>
                 </section>
 
+                <section className="w-full" >
+                    <BoxMuliCarousel costomNavigte="مشاهده همه استخر ها" SLIDES={slideCard} DivderName="مجموعه‌های پیشنهادی" DividerNavigate='/collection' />
+                </section>
+                <div className='flex h-[104px] justify-between w-full gap-6'>
+                    <Banner className='w-full' />
+                </div>
                 <section className="py-96" id="comments">
-                    <BoxDescription name="نظرات" Icon={ChatLine}>
+                    {/* <BoxDescription name="نظرات" Icon={ChatLine}>
                         <h1 className="text-right text-orange-300">این بخش مربوط به نظرات کاربران است.</h1>
-                    </BoxDescription>
+                    </BoxDescription> */}
                 </section>
             </div>
 

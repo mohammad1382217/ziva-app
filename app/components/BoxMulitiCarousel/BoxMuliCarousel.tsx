@@ -10,10 +10,11 @@ interface BoxMuliCarouselType {
     SLIDES: CardType[],
     DivderName: string,
     DividerNavigate?: string,
-    Verticalable?: boolean
+    Verticalable?: boolean,
+    costomNavigte?:string
 
 }
-const BoxMuliCarousel: React.FC<BoxMuliCarouselType> = ({ SLIDES, DivderName, DividerNavigate,Verticalable }) => {
+const BoxMuliCarousel: React.FC<BoxMuliCarouselType> = ({ SLIDES, DivderName, DividerNavigate,Verticalable,costomNavigte }) => {
 
     const OPTIONS: EmblaOptionsType = { align: 'center', direction: 'rtl', dragFree: true ,loop:false}
 
@@ -30,13 +31,13 @@ const BoxMuliCarousel: React.FC<BoxMuliCarouselType> = ({ SLIDES, DivderName, Di
       };
     }, [Verticalable]);
     return (
-        <div className='p-0 lg-min:px-40'>
+        <div className=''>
             <div>
-                <DividerCards name={DivderName} navigate={DividerNavigate} />
+                <DividerCards costomNavigte={costomNavigte} name={DivderName} navigate={DividerNavigate} />
             </div>
             <EmblaCarousel isChangeVerticalable={isVerticalable} Verticalable={Verticalable} slides={SLIDES} options={OPTIONS} />
             {DividerNavigate ? <Link href={DividerNavigate} className="flex sm-min:hidden my-3 flex-row justify-center items-center gap-2" >
-                <span className="text-gray-700 font-semibold text-lg">مشاهده بیشتر</span>
+                <span className="text-gray-700 font-semibold text-lg">{costomNavigte ? costomNavigte :"مشاهده بیشتر" }</span>
                 <Reply2 color="#FF5400" size={20} />
             </Link> : null}
 

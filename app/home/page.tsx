@@ -7,7 +7,6 @@ import BoxMuliCarousel from '../components/BoxMulitiCarousel/BoxMuliCarousel';
 import Banner from '../components/Banner';
 
 const Home = () => {
-
     const OPTIONS: EmblaOptionsType = { align: 'center', direction: 'rtl', loop: true }
     const SLIDES = [
         { src: ImageSampel, alt: 'استخر' },
@@ -63,21 +62,30 @@ const Home = () => {
                 </div>
             </div>
             <div>
-                <BoxMuliCarousel Verticalable={true} SLIDES={slideTopic} DivderName='مجموعه های برگزیده' />
+                <div className='p-0 lg-min:px-40'>
 
+                    <BoxMuliCarousel Verticalable={true} SLIDES={slideTopic} DivderName='مجموعه های برگزیده' />
+                </div>
                 <div className='flex h-[104px] md-max:h-[128px] sm-max:flex-col justify-between w-full my-32 gap-6 lg-max:gap-4 lg-min:px-40'>
                     <Banner className='w-1/2' />
                     <Banner className='w-1/2' />
                 </div>
-                <BoxMuliCarousel SLIDES={slideCard} DivderName='تخفیف‌های شگفت‌انگیز' DividerNavigate='/collection' />
-                <BoxMuliCarousel SLIDES={slideCard} DivderName="محبوب‌ترین ها" DividerNavigate='/collection' />
-                <BoxMuliCarousel SLIDES={slideCard} DivderName="به‌صرفه‌ترین انتخاب" DividerNavigate='/collection' />
+                <div className='p-0 lg-min:px-40'>
+
+                    <BoxMuliCarousel SLIDES={slideCard} DivderName='تخفیف‌های شگفت‌انگیز' DividerNavigate='/collection' />
+                    <BoxMuliCarousel SLIDES={slideCard} DivderName="محبوب‌ترین ها" DividerNavigate='/collection' />
+                    <BoxMuliCarousel SLIDES={slideCard} DivderName="به‌صرفه‌ترین انتخاب" DividerNavigate='/collection' />
+                </div>
+
                 <div className='flex h-[104px] md-max:h-[128px] sm-max:flex-col justify-between w-full my-32 gap-6 lg-max:gap-4 lg-min:px-40'>
                     <Banner className='w-1/3 ' />
                     <Banner className='w-1/3 ' />
                     <Banner className='w-1/3 md-min:flex md-max:hidden' />
                 </div>
-                <BoxMuliCarousel SLIDES={slideCard} DivderName="پرفروش های زیوا" DividerNavigate='/collection' />
+                <div className='p-0 lg-min:px-40'>
+
+                    <BoxMuliCarousel SLIDES={slideCard} DivderName="پرفروش های زیوا" DividerNavigate='/collection' />
+                </div>
                 <div className='flex h-[104px] justify-between w-full my-32 gap-6 lg-min:px-40'>
                     <Banner className='w-full' />
                 </div>
