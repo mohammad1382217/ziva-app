@@ -173,12 +173,14 @@ const Collection = () => {
                 </section>
 
 
-                <section className="" id="amenities">
+                <section className="gap-8 flex flex-col" id="amenities">
                     <h1 className="text-black text-center font-bold text-4xl">
                         امکانات و ویژگی ها
                     </h1>
-                    <div>
-                        <ButtonZiva buttonText="استخر کودکان" type="submit" rightIcon={<FacemaskSquare />} />
+                    <div className="flex justify-center items-center px-20 gap-4">
+                        <ButtonZiva className="h-10 w-auto rounded-full bg-transparent hover:bg-transparent border text-gray-900" buttonText="استخر کودکان" variant="bordered" type="submit" rightIcon={<FacemaskSquare size={17} color="#FF5400" />} />
+                        <ButtonZiva className="h-10 w-auto rounded-full bg-transparent hover:bg-transparent border text-gray-900" buttonText="استخر کودکان" variant="bordered" type="submit" rightIcon={<FacemaskSquare size={17} color="#FF5400" />} />
+                        <ButtonZiva className="h-10 w-auto rounded-full bg-transparent hover:bg-transparent border text-gray-900" buttonText="استخر کودکان" variant="bordered" type="submit" rightIcon={<FacemaskSquare size={17} color="#FF5400" />} />
                     </div>
                 </section>
                 <section className="py-96" id="ticket">
