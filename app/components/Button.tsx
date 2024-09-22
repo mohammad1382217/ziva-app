@@ -1,6 +1,8 @@
 import { Button } from "@nextui-org/button";
+import { CSSProperties } from "react";
 
 interface CustomButtonProps {
+  style?:CSSProperties,
   className?: string;
   buttonText: string;
   type: "button" | "submit" | "reset" | undefined;
@@ -11,10 +13,11 @@ interface CustomButtonProps {
   "solid" | "bordered" | "light" | "flat" | "faded" | "shadow" | "ghost" | undefined;
 }
 
-const ButtonZiva: React.FC<CustomButtonProps> = ({ className, buttonText, type, leftIcon, rightIcon, textOnly = false, variant }) => {
+const ButtonZiva: React.FC<CustomButtonProps> = ({ className, buttonText, type, leftIcon, rightIcon, textOnly = false, variant,style }) => {
   return (
     <Button
       type={type}
+      style={style}
       size="lg"
       variant={variant}
       color="warning"

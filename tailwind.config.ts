@@ -18,7 +18,7 @@ const config: Config = {
       'md-max': { max: '720px' },
       'sm-max': { max: '540px' },
       'xs-max': { max: '420px' },
-      
+
       '4xl-min': { min: '1921px' },
       '3xl-min': { min: '1441px' },
       '2xl-min': { min: '1321px' },
@@ -42,16 +42,23 @@ const config: Config = {
           800: "#662200",
           900: "#331100",
         },
-        Folly:{
-          500:'#FF0054'
-        }
+        Folly: {
+          500: '#FF0054'
+        },
+        Murrey: {
+          500: '#9E0059'
+        },
+        Duke: {
+          500: '#390099'
+        },
+
       },
       boxShadow: {
         'Box': '0px 16px 40px -16px var(gray-100)',
       },
-      fontSize:{
-        '10':'10px',
-        "40":"40px"
+      fontSize: {
+        '10': '10px',
+        "40": "40px"
       },
       backgroundImage: {
         "RectangleOrange": "url('./assests/RectangleLoginPage.webp')",

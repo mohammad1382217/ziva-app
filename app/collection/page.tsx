@@ -28,6 +28,7 @@ import ButtonZiva from "../components/Button";
 import BoxMuliCarousel from "../components/BoxMulitiCarousel/BoxMuliCarousel";
 import Banner from "../components/Banner";
 import BuyTicket from "../components/buyTicket";
+import Discount from "../components/Discount";
 
 export const metadata: Metadata = {
   title: "مجموعه",
@@ -181,8 +182,8 @@ const Collection: React.FC = () => {
   return (
     <div className="overflow-hidden flex justify-center w-full h-full gap-32 bg-gray-50">
       <div className="containerZiva">
-        <section className="flex p-6 gap-8 w-full rounded-3xl justify-between bg-white">
-          <div className="w-full flex flex-col justify-between">
+        <section className="flex p-6 gap-8 md-max:flex-col-reverse w-full h-auto rounded-3xl justify-between bg-white">
+          <div className="w-full h-full gap-10 lg-max:gap-[1.4rem] flex flex-col justify-between">
             <div className="flex flex-col gap-10">
               <div className="flex justify-between items-start">
                 <h1 className="text-40 font-black text-gray-700">نام استخر</h1>
@@ -214,13 +215,12 @@ const Collection: React.FC = () => {
                 </div>
                 <div className="w-full justify-end flex">
                   <button className="bg-no-repeat scale-110 w-28 h-8" style={style}>
-                    {/* Hello World */}
                   </button>
                 </div>
               </div>
             </div>
-            <div className="flex h-[112px] flex-row gap-6">
-              <div className="relative w-40 flex justify-between flex-col p-4 bg-gray-50 rounded-2xl">
+            <div className="flex h-[112px] lg-max:h-auto flex-row lg-max:flex-col gap-6 lg-max:gap-4">
+              <div className="relative w-44 xl-max:w-48 lg-max:w-full lg-max:flex-row flex justify-between flex-col p-4 bg-gray-50 rounded-2xl">
                 <div>
                   <span className="font-semibold text-gray-400 text-base">قیمت گیشه</span>
                 </div>
@@ -231,13 +231,8 @@ const Collection: React.FC = () => {
               </div>
               <div className="w-full flex justify-between flex-col p-4 rounded-2xl bg-cover bg-RectangleOrange">
                 <div className="flex flex-row justify-between">
-                  <span className="font-semibold text-white text-base">قیمت زیوا</span>
-                  <div className="flex rounded-full flex-row-reverse justify-center items-center gap-[2px]  h-[20px]  p-2  bg-white">
-                    <Sale color="#FF0054" width={14} height={14} size={14} />
-                    <p className="text-10 mt-[3px] font-bold text-Folly-500">
-                      تا 20 درصد تخفیف
-                    </p>
-                  </div>
+                  <span className="font-semibold text-white text-base">قیمت زیوا</span>   
+                  <Discount color="#FF0054" discount={20}  />
                 </div>
                 <div className="flex flex-row justify-between">
                   <span className="font-bold text-white text-xl">000,000 تومان</span>
@@ -331,8 +326,9 @@ const Collection: React.FC = () => {
         </section>
         <section className="gap-8 flex flex-col" id="ticket">
           <h1 className="text-black text-center font-bold text-4xl">خرید بلیط استخر</h1>
-          <div>
+          <div className="flex flex-col gap-6">
             <BuyTicket priceDiscount="12" background="#9E0059" childrenDiscount={12} childrenPrice="1222" discount={22} name="سانس بانوان" navigate="//" price="1222"  className="w-full" />
+            <BuyTicket priceDiscount="12" background="#390099" discount={22} name="سانس آقایان" navigate="//" price="1222"  className="w-full" />
           </div>
         </section>
         <section className="gap-8 flex flex-col">
@@ -367,9 +363,7 @@ const Collection: React.FC = () => {
           <Banner className="w-full" />
         </div>
         <section className="py-96" id="comments">
-          {/* <BoxDescription name="نظرات" Icon={ChatLine}>
-                  <h1 className="text-right text-orange-300">این بخش مربوط به نظرات کاربران است.</h1>
-              </BoxDescription> */}
+         
         </section>
       </div>
     </div>
