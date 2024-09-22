@@ -54,7 +54,8 @@ const config: Config = {
         "40":"40px"
       },
       backgroundImage: {
-        "RectangleOrange": "url('./assests/RectangleLoginPage.webp')"
+        "RectangleOrange": "url('./assests/RectangleLoginPage.webp')",
+        "pattern": "url('./assests/pattern.png')"
       },
     },
   },

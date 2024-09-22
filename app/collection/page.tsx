@@ -27,6 +27,7 @@ import { Metadata } from "next";
 import ButtonZiva from "../components/Button";
 import BoxMuliCarousel from "../components/BoxMulitiCarousel/BoxMuliCarousel";
 import Banner from "../components/Banner";
+import BuyTicket from "../components/buyTicket";
 
 export const metadata: Metadata = {
   title: "مجموعه",
@@ -330,6 +331,9 @@ const Collection: React.FC = () => {
         </section>
         <section className="gap-8 flex flex-col" id="ticket">
           <h1 className="text-black text-center font-bold text-4xl">خرید بلیط استخر</h1>
+          <div>
+            <BuyTicket priceDiscount="12" background="#9E0059" childrenDiscount={12} childrenPrice="1222" discount={22} name="سانس بانوان" navigate="//" price="1222"  className="w-full" />
+          </div>
         </section>
         <section className="gap-8 flex flex-col">
           <BoxDescription clsasName="mt-10 " name="معرفی استخر" Icon={Document}>
