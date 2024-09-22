@@ -4,9 +4,10 @@ import { Tabs, Tab } from "@nextui-org/tabs";
 import { Affix } from "antd";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
+
 interface objectType {
   hash: string;
-  Icon: JSX.Element; // حالا Icon به جای تابع، یک المان JSX است
+  Icon: JSX.Element;
   name: string;
 }
 
@@ -16,53 +17,26 @@ interface SegmentedZivaType {
 
 const SegmentedZiva: React.FC<SegmentedZivaType> = ({ options }) => {
   const [navClick, setNavClick] = useState(false);
-  // const [activeTab, setActiveTab] = useState(0);
-  // const observerRefs = useRef<(HTMLDivElement | null)[]>([]);
   const router = useRouter();
-
-  // useEffect(() => {
-  //     const handleObserver = (entries: IntersectionObserverEntry[]) => {
-  //         entries.forEach((entry) => {
-  //             if (entry.isIntersecting) {
-  //                 const index = observerRefs.current.findIndex((el) => el === entry.target);
-  //                 if (index !== -1 && !navClick) {
-  //                     console.log(activeTab)
-  //                     setActiveTab(index);
-  //                     router.push(options[index].hash);
-  //                 }
-  //             }
-  //         });
-  //     };
-
-  //     const observer = new IntersectionObserver(handleObserver, {
-  //         threshold: 0.5, // Change this value to control when a section is considered visible
-  //     });
-
-  //     observerRefs.current.forEach((section) => {
-  //         if (section) {
-  //             observer.observe(section);
-  //         }
-  //     });
-
-  //     return () => {
-  //         observer.disconnect();
-  //     };
-  // }, [navClick, options, router]);
 
   useEffect(() => {
     setTimeout(() => {
-      const element = document.querySelector(window.location.hash);
-      if (element) {
-        element.scrollIntoView({
-          behavior: "smooth",
-          block: "start",
-          inline: "start",
-        });
+      const hash = window.location.hash;
+      if (hash) {
+        const element = document.querySelector(hash);
+        if (element) {
+          element.scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+            inline: "start",
+          });
+        }
       }
     }, 0);
   }, [navClick]);
 
   const toggleNavClick = () => setNavClick((oldVal) => !oldVal);
+
   return (
     <Affix offsetTop={60}>
       <div className="flex  w-full flex-col">
