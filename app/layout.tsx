@@ -44,9 +44,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang='fa'>
-      <body className={pelak.className} >
-        <NextUIProvider locale='fa-AF' >
+    <html lang='fa' dir="rtl">
+      <body className={pelak.className}>
+        <NextUIProvider locale='fa-AF'>
           {children}
         </NextUIProvider>
       </body>

@@ -1,8 +1,7 @@
 'use client'
+
 import Image, { StaticImageData } from 'next/image'
 import '../../css/CarouselEmblaHome.css'
-
-import React from 'react'
 import { EmblaOptionsType } from 'embla-carousel'
 import { DotButton, useDotButton } from './EmblaCarouselDotButtonHome'
 import {

@@ -7,7 +7,7 @@ import React, {
   useState
 } from 'react'
 import { EmblaCarouselType } from 'embla-carousel'
-import { AltArrowLeft, AltArrowRight, ArrowRight } from 'solar-icon-set'
+import { AltArrowLeft, AltArrowRight } from 'solar-icon-set'
 
 type UsePrevNextButtonsType = {
   prevBtnDisabled: boolean

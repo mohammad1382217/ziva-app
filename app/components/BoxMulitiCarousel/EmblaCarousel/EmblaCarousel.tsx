@@ -1,7 +1,8 @@
 'use client'
+
 import React from 'react'
 import { EmblaOptionsType } from 'embla-carousel'
-// import { DotButton, useDotButton } from './EmblaCarouselDotButton'
+import { useDotButton } from './EmblaCarouselDotButton'
 import {
   PrevButton,
   NextButton,
@@ -9,6 +10,7 @@ import {
 } from './EmblaCarouselArrowButtons'
 import useEmblaCarousel from 'embla-carousel-react'
 import Card, { CardType } from '@/app/components/Card'
+
 type PropType = {
   slides: CardType[]
   options?: EmblaOptionsType
@@ -20,6 +22,7 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
   const {isChangeVerticalable,Verticalable, slides, options } = props
   const [emblaRef, emblaApi] = useEmblaCarousel({...options,loop:Verticalable ?true :false})
 
+  useDotButton(emblaApi)
   // const { selectedIndex, scrollSnaps, onDotButtonClick } =
     // useDotButton(emblaApi)
 

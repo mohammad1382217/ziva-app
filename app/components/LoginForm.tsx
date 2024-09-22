@@ -3,15 +3,25 @@ import InputZiva from "./input";
 
 const LoginForm: React.FC = () => {
   
-  const handleSubmit = async (formData: FormData) => {
+  const handleSubmitLogin = async (formData: FormData) => {
     "use server";
     const phone_number = formData.get("phone_number");
-    console.log("phone_number:", phone_number);
+    const phoneNumber = { phone_number };
+    console.log("phoneNumber:", phoneNumber);
+
+    // await fetch(`${baseURL}/api/login/`, {
+    //   method: "POST",
+    //   body: JSON.stringify(phoneNumber),
+    //   headers: {
+    //     "Content-Type": "application/json",
+    //     Authorization: `Bearer ${getCookie("accessToken")}`,
+    //   },
+    // });
   };
 
   return (
     <form
-      action={handleSubmit}
+      action={handleSubmitLogin}
       className="z-10 fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[440px] max-w-[90%] h-auto grid items-center justify-center gap-8 bg-gradient-to-r from-white/90 to-white/80 bg-opacity-20 backdrop-blur-lg rounded-3xl shadow-lg p-6"
     >
       <section className="grid gap-4">
