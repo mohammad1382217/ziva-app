@@ -43,7 +43,7 @@ const inputDateZiva: React.FC<InputType> = ({ value, plugins, disabled, placehol
           onChange={handleValueChange}
           label={placeholder}
           name={name}
-          classNames={{ inputWrapper: "w-full min-w-[116px]" }}
+          classNames={{ inputWrapper: "w-full min-w-[116px]", label: "text-medium sm-max:text-tiny" }}
           onFocus={openCalendar}
         />
       )}

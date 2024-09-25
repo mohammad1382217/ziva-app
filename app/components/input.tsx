@@ -15,6 +15,7 @@ interface InputType {
   label?: string;
   type?: string;
   value?: string;
+  maxLength?: number;
   onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
   onFocus?: (React.FocusEventHandler<HTMLInputElement> & ((e: React.FocusEvent<Element, Element>) => void)), 
   variant?: "flat" | "faded" | "bordered" | "underlined" | undefined;
@@ -29,6 +30,7 @@ const InputZiva = forwardRef<HTMLInputElement, InputType>(({
   label,
   variant,
   type,
+  maxLength,
   classNames,
 }, ref) => {
   return (
@@ -37,6 +39,7 @@ const InputZiva = forwardRef<HTMLInputElement, InputType>(({
       id={name}
       value={value}
       onChange={onChange}
+      maxLength={maxLength}
       onFocus={onFocus}
       name={name}
       variant={variant}

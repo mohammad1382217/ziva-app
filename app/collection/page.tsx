@@ -17,8 +17,8 @@ import {
   Document,
   MenuDotsCircle,
 } from "solar-icon-set";
-import StarWhite from "@/app/assests/startWhite.svg";
 import Image from "next/image";
+import StarWhite from "@/app/assests/startWhite.svg";
 import Map from "../assests/Button.png";
 import { getImageProps } from "next/image";
 import SegmentedZiva from "../components/SegmentedZiva";
@@ -171,6 +171,9 @@ const Collection: React.FC = () => {
       rate: 4.5,
     },
   ];
+
+  const buttonTexts = [ "استخر کودکان", "استخر بزرگسالان", "استخر عمومی"];
+
   const {
     props: { srcSet },
   } = getImageProps({ alt: "", width: 128, height: 128, src: Map });
@@ -305,27 +308,16 @@ const Collection: React.FC = () => {
             امکانات و ویژگی ها
           </h1>
           <div className="flex justify-center items-center px-20 gap-4">
-            <ButtonZiva
-              className="h-10 w-auto rounded-full bg-transparent hover:bg-transparent border text-gray-900"
-              buttonText="استخر کودکان"
-              variant="bordered"
-              type="submit"
-              rightIcon={<FacemaskSquare size={17} color="#FF5400" />}
-            />
-            <ButtonZiva
-              className="h-10 w-auto rounded-full bg-transparent hover:bg-transparent border text-gray-900"
-              buttonText="استخر کودکان"
-              variant="bordered"
-              type="submit"
-              rightIcon={<FacemaskSquare size={17} color="#FF5400" />}
-            />
-            <ButtonZiva
-              className="h-10 w-auto rounded-full bg-transparent hover:bg-transparent border text-gray-900"
-              buttonText="استخر کودکان"
-              variant="bordered"
-              type="submit"
-              rightIcon={<FacemaskSquare size={17} color="#FF5400" />}
-            />
+            {buttonTexts.map((text, index) => (
+              <ButtonZiva
+                key={index}
+                className="h-10 w-auto rounded-full bg-transparent hover:bg-transparent border text-gray-900"
+                buttonText={text}
+                variant="bordered"
+                type="submit"
+                rightIcon={<FacemaskSquare size={17} color="#FF5400" />}
+              />
+            ))}
           </div>
         </section>
         <section className="gap-8 flex flex-col" id="ticket">

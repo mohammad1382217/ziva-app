@@ -31,8 +31,8 @@ const SignUpForm: React.FC = () => {
       className="z-10 fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[440px] max-w-[90%] h-auto grid items-center justify-center gap-8 bg-gradient-to-r from-white/90 to-white/80 bg-opacity-20 backdrop-blur-lg rounded-3xl shadow-lg p-6"
     >
       <section className="grid gap-4">
-        <h1 className="text-2xl text-center font-bold text-gray-900">ثبت نام</h1>
-        <h2 className="text-lg text-center font-normal text-gray-500">
+        <h1 className="sm-min:text-2xl text-lg text-center font-bold text-gray-900">ثبت نام</h1>
+        <h2 className="sm-min:text-lg text-sm text-center font-normal text-gray-500">
           برای ساخت حساب، اطلاعات خود را وارد کنید
         </h2>
       </section>
@@ -41,19 +41,19 @@ const SignUpForm: React.FC = () => {
           name="first_name"
           label="نام"
           type="text"
-          classNames={{ inputWrapper: "w-full min-w-[116px]" }}
+          classNames={{ inputWrapper: "w-full min-w-[116px]", label: "text-medium sm-max:text-tiny" }}
         />
         <InputZiva
           name="last_name"
           label="نام خانوادگی"
           type="text"
-          classNames={{ inputWrapper: "w-full min-w-[116px]" }}
+          classNames={{ inputWrapper: "w-full min-w-[116px]", label: "text-medium sm-max:text-tiny" }}
         />
         <InputZiva
           name="email"
           label="ایمیل"
           type="text"
-          classNames={{ inputWrapper: "w-full min-w-[116px]" }}
+          classNames={{ inputWrapper: "w-full min-w-[116px]", label: "text-medium sm-max:text-tiny" }}
         />
         <InputDate name="birth_date" placeholder="تاریخ تولد" />
         <RadioGroupZiva
@@ -67,14 +67,10 @@ const SignUpForm: React.FC = () => {
 
         <div className="grid gap-4">
           <ButtonZiva
-            className="font-semibold"
-            buttonText={"تایید و دریافت کد"}
+            className="text-lg sm-min:text-xl font-semibold bg-orange-500 hover:bg-orange-600"
+            buttonText={"تایید و ثبت اطلاعات"}
             type={"submit"}
           />
-          <p lang="fa" role="text" className="text-center text-gray-500 font-normal">
-            ورود شما به معنای پذیرش <span className="text-blue-500">شرایط زیوا</span> و{" "}
-            <span className="text-blue-500"> قوانین حریم خصوصی</span> است
-          </p>
         </div>
       </section>
     </form>
