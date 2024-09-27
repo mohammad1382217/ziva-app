@@ -372,7 +372,7 @@ const Collection: React.FC = () => {
               <div className="flex gap-2 justify-center items-center">
                 <span className="text-gray-800 text-3xl sm-max:text-2xl font-bold">0.0</span>
                 <span className="font-semibold text-base sm-max:text-sm">از</span>
-                <span className="font-bold text-2xl sm-max:text-xl">5</span>
+                <span className="text-gray-600 font-bold text-2xl sm-max:text-xl">5</span>
               </div>
               <span className="text-lg sm-max:text-base font-medium">
                 از مجموع 00 نظر ثبت شده
@@ -382,23 +382,24 @@ const Collection: React.FC = () => {
               <Rate allowHalf disabled defaultValue={2.5} />
             </div>
           </div>
-          <div className="flex gap-6 items-start justify-between md-max:flex-col">
-          <div>
+          <div className="flex gap-6 items-start justify-between lg-max:flex-col">
             <RegisterComment />
-          </div>
-          <div className="w-full">
-            <BoxDescription clsasName="w-full" name="نظرات مشتریان" Icon={ChatLine}>
-              <div className="flex gap-2 items-center">
-              <InfoCircle color="#1570EF" size={16} iconStyle="Bold" />
-                <span className="text-base font-normal text-gray-500">
-                در زیوا، فقط نظرات کاربرانی ثبت می‌شود که بلیط این مجموعه را تهییه و استفاده کرده‌اند.
-                </span>
-              </div>
-              <div className="flex flex-col gap-14">
-                <Comment isAgree={false} isdisAgree={true} agree={1} disAgree={3} name="نام و نام خانوادگی" date="1400/00/00" Weaknesses={["نقطه ضعف 1","نقطه ضعف 2"]} strengths={["نقطه قوت 1","نقطه قوت 2"]} rate={0} text="لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است"/>
-              </div>
-            </BoxDescription>
-          </div>
+            <div className="w-full">
+              <BoxDescription clsasName="w-full" name="نظرات مشتریان" Icon={ChatLine}>
+                <div className="flex gap-2 items-center">
+                  <div className="w-4">
+
+                    <InfoCircle color="#1570EF" size={16} iconStyle="Bold" />
+                  </div>
+                  <span className="text-base font-normal text-gray-500">
+                    در زیوا، فقط نظرات کاربرانی ثبت می‌شود که بلیط این مجموعه را تهییه و استفاده کرده‌اند.
+                  </span>
+                </div>
+                <div className="flex flex-col gap-14">
+                  <Comment isAgree={false} isdisAgree={true} agree={1} disAgree={3} name="نام و نام خانوادگی" date="1400/00/00" Weaknesses={["نقطه ضعف 1", "نقطه ضعف 2"]} strengths={["نقطه قوت 1", "نقطه قوت 2"]} rate={0} text="لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است" />
+                </div>
+              </BoxDescription>
+            </div>
           </div>
         </section>
       </div>

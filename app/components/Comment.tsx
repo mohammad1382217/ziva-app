@@ -1,5 +1,6 @@
-import { Dislike, FaceScanSquare, Like } from "solar-icon-set";
+import { AddCircle, CloseCircle, Dislike, FaceScanSquare, Like } from "solar-icon-set";
 import ButtonZiva from "./Button";
+import Rate from "./Rate";
 
 interface CommentType {
     name: string;
@@ -51,8 +52,29 @@ const Comment: React.FC<CommentType> = ({
                     </div>
                 </div>
             </div>
-            <div>
-
+            <div className="flex flex-row gap-5 px-5">
+                <div className="w-[1px] bg-[#DCDCDC]">
+                </div>
+                <div className="flex flex-col gap-4">
+                    <div className="flex flex-row flex-wrap w-full gap-[6px] items-center">
+                        <Rate className="w-10 flex flex-row-reverse !gap-1 h-7 rounded-md" rate={2} />
+                        {strengths.map((strength, index) => (
+                            <div key={index} className="flex flex-row items-center gap-1 text-gray-800 font-semibold">
+                                <AddCircle color="#12B76A" size={20} iconStyle="Bold" />
+                                {strength}
+                            </div>
+                        ))}
+                        {Weaknesses.map((Weakness, index) => (
+                            <div key={index} className="flex flex-row items-center gap-1 text-gray-800 font-semibold">
+                                <CloseCircle color="#F04438" size={20} iconStyle="Bold" />
+                                {Weakness}
+                            </div>
+                        ))}
+                    </div>
+                    <div className="text-[#2E303B] text-sm font-normal">
+                        {text}
+                    </div>
+                </div>
             </div>
         </div>
     );

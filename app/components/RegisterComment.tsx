@@ -36,8 +36,7 @@ const RegisterComment: React.FC<RegisterCommentType> = ({
         setWeakneses(newtWeaknesses);
     };
     return (
-        <div>
-            <BoxDescription name="ثبت نظر" Icon={ChatLine}>
+            <BoxDescription clsasName="lg-max:w-full" name="ثبت نظر" Icon={ChatLine}>
                 <p className="text-gray-500 text-base font-normal">
                     تجربه خودت رو در استفاده از مجموعه برامون بنویس.
                 </p>
@@ -48,9 +47,9 @@ const RegisterComment: React.FC<RegisterCommentType> = ({
                 }}>
                     <div className="flex flex-row justify-between items-center">
                         <div className="flex gap-2 justify-center items-center">
-                            <span className="text-gray-800 text-3xl sm-max:text-2xl font-bold">0.0</span>
-                            <span className="font-semibold text-base sm-max:text-sm">از</span>
-                            <span className="font-bold text-2xl sm-max:text-xl">5</span>
+                            <span className="text-gray-800 text-2xl sm-max:text-xl font-bold">0.0</span>
+                            <span className="font-semibold text-sm sm-max:text-xs">از</span>
+                            <span className="text-gray-600 font-bold text-xl sm-max:text-lg">5</span>
                         </div>
                         <div>
                             <Rate defaultValue={0} />
@@ -139,7 +138,6 @@ const RegisterComment: React.FC<RegisterCommentType> = ({
                     <ButtonZiva className="h-10" type="button" buttonText="ثبت نظر" />
                 </form>
             </BoxDescription>
-        </div>
     );
 }
 
