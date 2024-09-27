@@ -29,6 +29,8 @@ import BoxMuliCarousel from "../components/BoxMulitiCarousel/BoxMuliCarousel";
 import Banner from "../components/Banner";
 import BuyTicket from "../components/buyTicket";
 import Discount from "../components/Discount";
+import { Rate } from "antd";
+import RegisterComment from "../components/RegisterComment";
 
 export const metadata: Metadata = {
   title: "مجموعه",
@@ -231,8 +233,8 @@ const Collection: React.FC = () => {
               </div>
               <div className="w-full flex justify-between flex-col p-4 rounded-2xl bg-cover bg-RectangleOrange">
                 <div className="flex flex-row justify-between">
-                  <span className="font-semibold text-white text-base">قیمت زیوا</span>   
-                  <Discount color="#FF0054" discount={20}  />
+                  <span className="font-semibold text-white text-base">قیمت زیوا</span>
+                  <Discount color="#FF0054" discount={20} />
                 </div>
                 <div className="flex flex-row justify-between">
                   <span className="font-bold text-white text-xl">000,000 تومان</span>
@@ -327,8 +329,8 @@ const Collection: React.FC = () => {
         <section className="gap-8 flex flex-col" id="ticket">
           <h1 className="text-black text-center font-bold text-4xl">خرید بلیط استخر</h1>
           <div className="flex flex-col gap-6">
-            <BuyTicket priceDiscount="12" background="#9E0059" childrenDiscount={12} childrenPrice="1222" discount={22} name="سانس بانوان" navigate="//" price="1222"  className="w-full" />
-            <BuyTicket priceDiscount="12" background="#390099" discount={22} name="سانس آقایان" navigate="//" price="1222"  className="w-full" />
+            <BuyTicket priceDiscount="12" background="#9E0059" childrenDiscount={12} childrenPrice="1222" discount={22} name="سانس بانوان" navigate="//" price="1222" className="w-full" />
+            <BuyTicket priceDiscount="12" background="#390099" discount={22} name="سانس آقایان" navigate="//" price="1222" className="w-full" />
           </div>
         </section>
         <section className="gap-8 flex flex-col">
@@ -362,8 +364,33 @@ const Collection: React.FC = () => {
         <div className="flex h-[104px] justify-between w-full gap-6">
           <Banner className="w-full" />
         </div>
-        <section className="py-96" id="comments">
-         
+        <section className="flex flex-col gap-6" id="comments">
+          <div className="bg-white w-full flex flex-row md-max:flex-col md-max:items-start justify-between items-center px-6 py-4 gap-8  rounded-2xl shadow-Box">
+            <div className="flex gap-4 text-gray-600 items-center">
+              <div className="flex gap-2 justify-center items-center">
+                <span className="text-gray-800 text-3xl sm-max:text-2xl font-bold">0.0</span>
+                <span className="font-semibold text-base sm-max:text-sm">از</span>
+                <span className="font-bold text-2xl sm-max:text-xl">5</span>
+              </div>
+              <span className="text-lg sm-max:text-base font-medium">
+                از مجموع 00 نظر ثبت شده
+              </span>
+            </div>
+            <div>
+              <Rate allowHalf disabled defaultValue={2.5} />
+            </div>
+          </div>
+          <div className="flex gap-6 items-center justify-between md-max:flex-col">
+
+          <div>
+            <RegisterComment />
+          </div>
+          <div className="w-full">
+            <BoxDescription clsasName="w-full" name="نظرات مشتریان" Icon={ChatLine}>
+              dsf
+            </BoxDescription>
+          </div>
+          </div>
         </section>
       </div>
     </div>
