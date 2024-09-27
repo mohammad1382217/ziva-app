@@ -54,7 +54,7 @@ const EmblaCarouselHome: React.FC<PropType> = (props) => {
         </div>
       </div>
 
-      <div className="embla__controls absolute bottom-3 w-full flex flex-col justify-center items-center">
+      <div className=" absolute bottom-3 w-full flex flex-col justify-center items-center">
         <div className="embla__buttons mb-3">
           <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} />
           <NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled} />

@@ -4,7 +4,7 @@ import { EmblaOptionsType } from "embla-carousel";
 import ImageSampel from "./assests/RectangleLoginPage.webp";
 import EmblaCarouselHome from "./components/CarouselHome/EmblaCarouselHome";
 import BoxMuliCarousel from "./components/BoxMulitiCarousel/BoxMuliCarousel";
-
+import '../app/css/CarouselEmblaHome.css';
 const Home: React.FC = () => {
   const OPTIONS: EmblaOptionsType = { align: "center", direction: "rtl", loop: true };
   const SLIDES = [

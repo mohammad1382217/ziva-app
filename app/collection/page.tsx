@@ -184,7 +184,7 @@ const Collection: React.FC = () => {
   const style = { backgroundImage };
 
   return (
-    <div className="overflow-hidden flex justify-center w-full h-full gap-32 bg-gray-50">
+    <div className="overflow-hidden flex flex-col justify-center w-full h-full gap-32 bg-gray-50">
       <div className="containerZiva">
         <section className="flex p-6 gap-8 md-max:flex-col-reverse w-full h-auto rounded-3xl justify-between bg-white">
           <div className="w-full h-full gap-10 lg-max:gap-[1.4rem] flex flex-col justify-between">
@@ -256,7 +256,6 @@ const Collection: React.FC = () => {
           <SegmentedZiva options={SegmentZiva} />
         </section>
 
-        {/* بخش‌های مرتبط با هر تب */}
         <section className="" id="introduction">
           <BoxDescription name="اطلاعیه ها" Icon={DangerCircle}>
             <ul className="list-disc list-inside text-right text-base font-normal text-orange-300">
@@ -354,15 +353,18 @@ const Collection: React.FC = () => {
             </p>
           </BoxDescription>
         </section>
+      </div>
 
-        <section className="w-full">
-          <BoxMuliCarousel
-            costomNavigte="مشاهده همه استخر ها"
-            SLIDES={slideCard}
-            DivderName="مجموعه‌های پیشنهادی"
-            DividerNavigate="/collection"
-          />
-        </section>
+      <section className="w-full">
+        <BoxMuliCarousel
+          costomNavigte="مشاهده همه استخر ها"
+          SLIDES={slideCard}
+          DivderName="مجموعه‌های پیشنهادی"
+          DividerNavigate="/collection"
+        />
+      </section>
+      <div className="containerZiva">
+
         <div className="flex h-[104px] justify-between w-full gap-6">
           <Banner className="w-full" />
         </div>
