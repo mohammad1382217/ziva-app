@@ -29,7 +29,7 @@ const BoxDescription: React.FC<BoxDescriptionType> = ({
           <Icon color="#F04438" size={24} iconStyle="Outline" />
         </div>
       </div>
-      <div className={childrenclassName}>{children}</div>
+      <div className={`flex flex-col gap-6 ${childrenclassName}`}>{children}</div>
     </div>
   );
 };

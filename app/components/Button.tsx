@@ -2,9 +2,10 @@ import { Button } from "@nextui-org/button";
 import { CSSProperties } from "react";
 
 interface CustomButtonProps {
-  style?:CSSProperties,
+  style?: CSSProperties,
+  buttonTextClassName?:string;
   className?: string;
-  buttonText: string;
+  buttonText?: string;
   type: "button" | "submit" | "reset" | undefined;
   leftIcon?: React.ReactNode;
   rightIcon?: React.ReactNode;
@@ -13,7 +14,7 @@ interface CustomButtonProps {
   "solid" | "bordered" | "light" | "flat" | "faded" | "shadow" | "ghost" | undefined;
 }
 
-const ButtonZiva: React.FC<CustomButtonProps> = ({ className, buttonText, type, leftIcon, rightIcon, textOnly = false, variant,style }) => {
+const ButtonZiva: React.FC<CustomButtonProps> = ({ className,buttonTextClassName, buttonText, type, leftIcon, rightIcon, textOnly = false, variant, style }) => {
   return (
     <Button
       type={type}
@@ -26,7 +27,9 @@ const ButtonZiva: React.FC<CustomButtonProps> = ({ className, buttonText, type, 
         } ${className}`}
     >
       {rightIcon && !textOnly && <span className="ml-2 flex justify-center items-center">{rightIcon}</span>}
-      {!textOnly && buttonText}
+      <span className={`${buttonTextClassName}`}>
+        {!textOnly && buttonText}
+      </span>
       {leftIcon && !textOnly && <span className="mr-2 flex justify-center items-center">{leftIcon}</span>}
     </Button>
   );

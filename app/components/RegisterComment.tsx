@@ -37,7 +37,7 @@ const RegisterComment: React.FC<RegisterCommentType> = ({
     };
     return (
         <div>
-            <BoxDescription childrenclassName="flex flex-col gap-6" name="ثبت نظر" Icon={ChatLine}>
+            <BoxDescription name="ثبت نظر" Icon={ChatLine}>
                 <p className="text-gray-500 text-base font-normal">
                     تجربه خودت رو در استفاده از مجموعه برامون بنویس.
                 </p>
