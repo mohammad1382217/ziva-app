@@ -381,7 +381,6 @@ const Collection: React.FC = () => {
             </div>
           </div>
           <div className="flex gap-6 items-center justify-between md-max:flex-col">
-
           <div>
             <RegisterComment />
           </div>

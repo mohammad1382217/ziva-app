@@ -6,6 +6,7 @@ interface BoxDescriptionType {
   Icon: any;
   children: React.ReactNode;
   clsasName?: string;
+  childrenclassName?:string
 }
 
 const BoxDescription: React.FC<BoxDescriptionType> = ({
@@ -13,6 +14,7 @@ const BoxDescription: React.FC<BoxDescriptionType> = ({
   Icon,
   children,
   clsasName,
+  childrenclassName
 }) => {
   return (
     <div
@@ -27,7 +29,7 @@ const BoxDescription: React.FC<BoxDescriptionType> = ({
           <Icon color="#F04438" size={24} iconStyle="Outline" />
         </div>
       </div>
-      <div className="">{children}</div>
+      <div className={childrenclassName}>{children}</div>
     </div>
   );
 };
