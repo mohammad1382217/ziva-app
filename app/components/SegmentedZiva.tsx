@@ -46,11 +46,11 @@ const SegmentedZiva: React.FC<SegmentedZivaType> = ({ options }) => {
           variant="bordered"
           classNames={{
             tabList:
-              "rounded-full flex justify-between px-32 py-4 w-full bg-gradient-to-r from-white/10 to-white/10 bg-opacity-0 backdrop-blur-lg",
+              "rounded-full flex justify-between px-4 py-2 xl-min:px-10 w-full bg-gradient-to-r from-white/10 to-white/10 bg-opacity-0 backdrop-blur-lg",
             cursor: "w-full rounded-full bg-white text-orange-200",
             tab: "max-w-fit px-0  h-10 rounded-full",
             tabContent:
-              "!w-44 group-data-[selected=true]:text-orange-500 text-orange-200",
+              "w-44 md-max:w-10 group-data-[selected=true]:text-orange-500 text-orange-200",
           }}
           onSelectionChange={(index) => {
             toggleNavClick();
@@ -64,7 +64,7 @@ const SegmentedZiva: React.FC<SegmentedZivaType> = ({ options }) => {
               title={
                 <div className="flex gap-2 items-center justify-center">
                   {Icon}
-                  <span>{name}</span>
+                  <span className="md-max:hidden">{name}</span>
                 </div>
               }
             />

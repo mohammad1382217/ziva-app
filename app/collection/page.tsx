@@ -14,10 +14,13 @@ import {
   DangerCircle,
   ClipboardCheck,
   FacemaskSquare,
-  Document,
+  // Document,
   MenuDotsCircle,
   InfoCircle,
+  Document,
+  Clipboard
 } from "solar-icon-set";
+// Outline / Notes / Document Text
 import StarWhite from "@/app/assests/startWhite.svg";
 import Image from "next/image";
 import Map from "../assests/Button.png";
@@ -184,9 +187,9 @@ const Collection: React.FC = () => {
   const style = { backgroundImage };
 
   return (
-    <div className="overflow-hidden flex flex-col justify-center w-full h-full gap-32 bg-gray-50">
+    <div className="overflow-hidden flex justify-center w-full h-full gap-32 bg-gray-50">
       <div className="containerZiva">
-        <section className="flex p-6 gap-8 md-max:flex-col-reverse w-full h-auto rounded-3xl justify-between bg-white">
+        <section className="flex p-6 gap-8 lg-max:flex-col-reverse w-full h-auto rounded-3xl justify-between bg-white">
           <div className="w-full h-full gap-10 lg-max:gap-[1.4rem] flex flex-col justify-between">
             <div className="flex flex-col gap-10">
               <div className="flex justify-between items-start">
@@ -212,7 +215,7 @@ const Collection: React.FC = () => {
                   <div className="w-6">
                     <MapPointWave color="#FF5400" size={24} />
                   </div>
-                  <p className="text-gray-600 text-lg font-normal">
+                  <p className="text-gray-600 text-lg lg-max:text-base font-normal">
                     آدرس کامل استخر لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت
                     چاپ و با استفاده از طراحان گرافیک است
                   </p>
@@ -224,7 +227,7 @@ const Collection: React.FC = () => {
               </div>
             </div>
             <div className="flex h-[112px] lg-max:h-auto flex-row lg-max:flex-col gap-6 lg-max:gap-4">
-              <div className="relative w-44 xl-max:w-48 lg-max:w-full lg-max:flex-row flex justify-between flex-col p-4 bg-gray-50 rounded-2xl">
+              <div className="relative w-44 xl-max:w-52 lg-max:w-full lg-max:flex-row flex justify-between flex-col p-4 bg-gray-50 rounded-2xl">
                 <div>
                   <span className="font-semibold text-gray-400 text-base">قیمت گیشه</span>
                 </div>
@@ -248,7 +251,7 @@ const Collection: React.FC = () => {
               </div>
             </div>
           </div>
-          <div className="w-96">
+          <div className="w-96 lg-max:w-full">
             <CarouselCollection options={OPTIONS} slides={SLIDES} />
           </div>
         </section>
@@ -256,7 +259,8 @@ const Collection: React.FC = () => {
           <SegmentedZiva options={SegmentZiva} />
         </section>
 
-        <section className="" id="introduction">
+        {/* بخش‌های مرتبط با هر تب */}
+        <section className="gap-10 flex flex-col lg-max:gap-6" id="introduction">lg-max
           <BoxDescription name="اطلاعیه ها" Icon={DangerCircle}>
             <ul className="list-disc list-inside text-right text-base font-normal text-orange-300">
               <li>
@@ -269,8 +273,8 @@ const Collection: React.FC = () => {
               </li>
             </ul>
           </BoxDescription>
-          <BoxDescription clsasName="mt-10" name="زمان‌بندی و سانس ها" Icon={ClockCircle}>
-            <ul className="flex justify-between text-base gap-6  text-gray-700">
+          <BoxDescription name="زمان‌بندی و سانس ها" Icon={ClockCircle}>
+            <ul className="flex justify-between text-base md-max:flex-col gap-6  text-gray-700">
               <li className="gap-4">
                 <span className="font-semibold">آقایان</span>
                 <div className="font-normal mt-4">
@@ -288,7 +292,7 @@ const Collection: React.FC = () => {
             </ul>
           </BoxDescription>
           <BoxDescription
-            clsasName="mt-10 "
+            clsasName=""
             name="قوانین و شرایط استفاده"
             Icon={ClipboardCheck}
           >
@@ -303,7 +307,35 @@ const Collection: React.FC = () => {
           <h1 className="text-black text-center font-bold text-4xl">
             امکانات و ویژگی ها
           </h1>
-          <div className="flex justify-center items-center px-20 gap-4">
+          <div className="flex justify-center items-center flex-wrap px-24 lg-max:px-10 md-max:px-0 gap-4">
+            <ButtonZiva
+              className="h-10 w-auto rounded-full bg-transparent hover:bg-transparent border text-gray-900"
+              buttonText="استخر کودکان"
+              variant="bordered"
+              type="submit"
+              rightIcon={<FacemaskSquare size={17} color="#FF5400" />}
+            />
+            <ButtonZiva
+              className="h-10 w-auto rounded-full bg-transparent hover:bg-transparent border text-gray-900"
+              buttonText="استخر کودکان"
+              variant="bordered"
+              type="submit"
+              rightIcon={<FacemaskSquare size={17} color="#FF5400" />}
+            />
+            <ButtonZiva
+              className="h-10 w-auto rounded-full bg-transparent hover:bg-transparent border text-gray-900"
+              buttonText="استخر کودکان"
+              variant="bordered"
+              type="submit"
+              rightIcon={<FacemaskSquare size={17} color="#FF5400" />}
+            />
+            <ButtonZiva
+              className="h-10 w-auto rounded-full bg-transparent hover:bg-transparent border text-gray-900"
+              buttonText="استخر کودکان"
+              variant="bordered"
+              type="submit"
+              rightIcon={<FacemaskSquare size={17} color="#FF5400" />}
+            />
             <ButtonZiva
               className="h-10 w-auto rounded-full bg-transparent hover:bg-transparent border text-gray-900"
               buttonText="استخر کودکان"
@@ -327,15 +359,17 @@ const Collection: React.FC = () => {
             />
           </div>
         </section>
-        <section className="gap-8 flex flex-col" id="ticket">
+
+        <section className="gap-8 px-24 lg-max:px-10 md-max:px-0 flex flex-col" id="ticket">
           <h1 className="text-black text-center font-bold text-4xl">خرید بلیط استخر</h1>
           <div className="flex flex-col gap-6">
             <BuyTicket priceDiscount="12" background="#9E0059" childrenDiscount={12} childrenPrice="1222" discount={22} name="سانس بانوان" navigate="//" price="1222" className="w-full" />
             <BuyTicket priceDiscount="12" background="#390099" discount={22} name="سانس آقایان" navigate="//" price="1222" className="w-full" />
           </div>
         </section>
+
         <section className="gap-8 flex flex-col">
-          <BoxDescription clsasName="mt-10 " name="معرفی استخر" Icon={Document}>
+          <BoxDescription clsasName="mt-10 " name="معرفی استخر" Icon={Clipboard}>
             <p className="text-base font-normal text-gray-500">
               ۲۰ دقیقه پایانی سانس به دوش‌گرفتن و تعویض لباس اختصاص دارد.<br></br>
               کودکان از 5 سال به بالا پذیرش می شوند.
@@ -353,18 +387,15 @@ const Collection: React.FC = () => {
             </p>
           </BoxDescription>
         </section>
-      </div>
 
-      <section className="w-full">
-        <BoxMuliCarousel
-          costomNavigte="مشاهده همه استخر ها"
-          SLIDES={slideCard}
-          DivderName="مجموعه‌های پیشنهادی"
-          DividerNavigate="/collection"
-        />
-      </section>
-      <div className="containerZiva">
-
+        <section className="w-full">
+          <BoxMuliCarousel
+            costomNavigte="مشاهده همه استخر ها"
+            SLIDES={slideCard}
+            DivderName="مجموعه‌های پیشنهادی"
+            DividerNavigate="/collection"
+          />
+        </section>
         <div className="flex h-[104px] justify-between w-full gap-6">
           <Banner className="w-full" />
         </div>

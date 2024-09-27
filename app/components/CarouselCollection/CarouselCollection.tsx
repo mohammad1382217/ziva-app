@@ -56,7 +56,7 @@ const CarouselCollection: React.FC<PropType> = (props) => {
   }, [emblaMainApi, onSelect]);
 
   return (
-    <div className="embla w-full h-full relative">
+    <div className="embla flex flex-col justify-between w-full h-full relative">
       <div className="embla__viewport w-full h-80" ref={emblaMainRef}>
         <div className="embla__container w-full h-80">
           {slides.map(({ src, alt }, index) => (
@@ -70,7 +70,7 @@ const CarouselCollection: React.FC<PropType> = (props) => {
         </div>
       </div>
 
-      <div className="embla__controls absolute bottom-24 w-full flex flex-col justify-center items-center">
+      <div className="embla__controls absolute top-[17rem] w-full flex flex-col justify-center items-center">
         <div className="embla__buttons">
           <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} />
           <NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled} />
