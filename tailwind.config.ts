@@ -58,7 +58,8 @@ const config: Config = {
       },
       fontSize: {
         '10': '10px',
-        "40": "40px"
+        "40": "40px",
+        '32': '32px'
       },
       backgroundImage: {
         "RectangleOrange": "url('./assests/RectangleLoginPage.webp')",
