@@ -2,6 +2,7 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { NextUIProvider } from "@nextui-org/react";
 import localFont from "next/font/local";
+import Footer from "./components/Footer";
 
 const pelak = localFont({
   src: [
@@ -50,6 +51,9 @@ export default function RootLayout({
           {children}
         </NextUIProvider>
       </body>
+      <footer>
+        <Footer />
+      </footer>
     </html>
   );
 }

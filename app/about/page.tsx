@@ -90,7 +90,7 @@ const AboutPage = () => {
       <ZivaProperty property="ویژگی برتر زیوا" icon="" description="لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ  و با استفاده از طراحان گرافیک است" />
     </section>
     <section className="flex flex-row-reverse">
-      <Image  src={ImageIntroductio2} alt={"معرفی زیوا"} className="md-max:hidden" />
+      <Image src={ImageIntroductio2} alt={"معرفی زیوا"} className="md-max:hidden" />
       <div className="flex flex-col gap-8 justify-center items-start">
         <h1 className="text-32 font-bold text-orange-500 mr-8 sm-max:mr-0">معرفی زیوا</h1>
         <div className="flex flex-col gap-6">
@@ -128,7 +128,6 @@ const AboutPage = () => {
         سوالات متداول
       </div>
       <CollapseZiva items={getItems(panelStyle)} />
-
     </section>
   </div>
 };
