@@ -24,7 +24,7 @@ import { getImageProps } from "next/image";
 import SegmentedZiva from "../components/SegmentedZiva";
 import BoxDescription from "../components/BoxDescription";
 import { Metadata } from "next";
-import ButtonZiva from "../components/Button";
+import ButtonZiva from "../components/ButtonZiva";
 import BoxMuliCarousel from "../components/BoxMulitiCarousel/BoxMuliCarousel";
 import Banner from "../components/Banner";
 
@@ -172,7 +172,7 @@ const Collection: React.FC = () => {
     },
   ];
 
-  const buttonTexts = [ "استخر کودکان", "استخر بزرگسالان", "استخر عمومی"];
+  const buttonTexts = ["استخر کودکان", "استخر بزرگسالان", "استخر عمومی"];
 
   const {
     props: { srcSet },

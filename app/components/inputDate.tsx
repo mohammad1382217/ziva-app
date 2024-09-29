@@ -1,12 +1,12 @@
-"use client"
+"use client";
 
-import DatePicker, { CustomComponentProps, DateObject, Plugin } from "react-multi-date-picker";
+import DatePicker, { DateObject, Plugin } from "react-multi-date-picker";
 import persian_fa from "react-date-object/locales/persian_fa";
 import persian from "react-date-object/calendars/persian";
-import InputZiva from "./input";
+import InputZiva from "./InputZiva";
 
 interface InputType {
-  plugins?: (Plugin | Plugin[]);
+  plugins?: Plugin | Plugin[];
   placeholder?: string;
   value?: string;
   name?: string;
@@ -17,8 +17,15 @@ interface InputType {
 
 const weekDays = ["ش", "ی", "د", "س", "چ", "پ", "ج"];
 
-const inputDateZiva: React.FC<InputType> = ({ value, plugins, disabled, placeholder, onChange, className, name }) => {
-
+const inputDateZiva: React.FC<InputType> = ({
+  value,
+  plugins,
+  disabled,
+  placeholder,
+  onChange,
+  className,
+  name,
+}) => {
   return (
     <DatePicker
       format="YYYY/MM/DD"
@@ -43,7 +50,10 @@ const inputDateZiva: React.FC<InputType> = ({ value, plugins, disabled, placehol
           onChange={handleValueChange}
           label={placeholder}
           name={name}
-          classNames={{ inputWrapper: "w-full min-w-[116px]", label: "text-medium sm-max:text-tiny" }}
+          classNames={{
+            inputWrapper: "w-full min-w-[116px]",
+            label: "text-medium sm-max:text-tiny",
+          }}
           onFocus={openCalendar}
         />
       )}

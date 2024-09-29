@@ -16,8 +16,10 @@ interface InputType {
   type?: string;
   value?: string;
   maxLength?: number;
+  dir? : "rtl" | "ltr";
   onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
   onFocus?: (React.FocusEventHandler<HTMLInputElement> & ((e: React.FocusEvent<Element, Element>) => void)), 
+  onKeyDown?: (e: React.KeyboardEvent<HTMLInputElement>) => void;
   variant?: "flat" | "faded" | "bordered" | "underlined" | undefined;
   classNames?: ClassNamesType;
 }
@@ -29,6 +31,7 @@ const InputZiva = forwardRef<HTMLInputElement, InputType>(({
   name,
   label,
   variant,
+  dir = "rtl",
   type,
   maxLength,
   classNames,
@@ -43,7 +46,7 @@ const InputZiva = forwardRef<HTMLInputElement, InputType>(({
       onFocus={onFocus}
       name={name}
       variant={variant}
-      dir="rtl"
+      dir={dir}
       lang="fa"
       type={type}
       aria-label={label}
@@ -51,7 +54,7 @@ const InputZiva = forwardRef<HTMLInputElement, InputType>(({
       classNames={{
         label: `mr-0 !origin-top-right ${classNames?.label}`,
         input: `text-right mr-1 ${classNames?.input}`,
-        inputWrapper: `bg-white hover:!bg-white w-64 ${classNames?.inputWrapper}`,
+        inputWrapper: `h-12 bg-white hover:!bg-white w-64 ${classNames?.inputWrapper}`,
         innerWrapper: `${classNames?.innerWrapper}`,
       }}
     />
