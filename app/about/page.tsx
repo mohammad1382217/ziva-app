@@ -73,11 +73,10 @@ const AboutPage = () => {
   };
 
 
-  return <div className="bg-[#FCFCFD] flex flex-col sm-max:gap-[60px] ">
-    <section className="flex flex-row lg-max:flex-col sm-max:px-0 pr-[77px] pl-40">
-
-      <Image className=" relative sm-max:hidden" src={ImageIntroduction} alt={"معرفی زیوا"} />
-      <div className="flex flex-col w-1/2 sm-max:w-full sm-max:px-6 gap-8 justify-center items-start">
+  return <div className="bg-[#FCFCFD] flex flex-col gap-20 sm-max:gap-[60px] containerZiva">
+    <section className="flex flex-row md-max:flex-col">
+      <Image className=" relative md-max:hidden" src={ImageIntroduction} alt={"معرفی زیوا"} />
+      <div className="flex flex-col w-1/2 xl-max:w-4/5 md-max:w-full gap-8 justify-center items-start">
         <h1 className="text-32 font-bold text-orange-500">معرفی زیوا</h1>
         <p className="text-lg font-normal text-black">
           در دنیای شلوغ و پرهیاهوی امروز، تفریح و سرگرمی بخش  مهمی از زندگی روزمره ماست. ما در زیوا به این نیاز پاسخ می‌دهیم و  به شما کمک می‌کنیم تا لحظات به یادماندنی را با بهترین قیمت تجربه کنید.
@@ -85,20 +84,18 @@ const AboutPage = () => {
         </p>
       </div>
     </section>
-    <section className="containerZiva !gap-5 flex !flex-row md-max:!flex-col sm-max:px-6 justify-between sm-max:gap-9 ">
+    <section className="!gap-5 flex !flex-row md-max:!flex-col justify-between sm-max:gap-9 ">
       <ZivaProperty property="ویژگی برتر زیوا" icon="" description="لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ  و با استفاده از طراحان گرافیک است" />
       <ZivaProperty property="ویژگی برتر زیوا" icon="" description="لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ  و با استفاده از طراحان گرافیک است" />
       <ZivaProperty property="ویژگی برتر زیوا" icon="" description="لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ  و با استفاده از طراحان گرافیک است" />
     </section>
-    <section className="flex flex-row-reverse pl-[77px] pr-40">
-      <Image width={602} height={610} src={ImageIntroductio2} alt={"معرفی زیوا"} className="" />
+    <section className="flex flex-row-reverse">
+      <Image  src={ImageIntroductio2} alt={"معرفی زیوا"} className="md-max:hidden" />
       <div className="flex flex-col gap-8 justify-center items-start">
-        <h1 className="text-32 font-bold text-orange-500">معرفی زیوا</h1>
+        <h1 className="text-32 font-bold text-orange-500 mr-8 sm-max:mr-0">معرفی زیوا</h1>
         <div className="flex flex-col gap-6">
-
           <div className="flex gap-2 items-center">
             <div className="w-6">
-
               <VerifiedCheck color="#ff5400" size={24} />
             </div>
             <p className="font-normal text-lg text-black">
@@ -126,7 +123,7 @@ const AboutPage = () => {
         </div>
       </div>
     </section>
-    <section className="containerZiva flex flex-col gap-6">
+    <section className=" flex flex-col gap-6">
       <div className="flex justify-center text-center text-32 font-bold text-[#151618]">
         سوالات متداول
       </div>

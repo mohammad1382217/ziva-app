@@ -188,7 +188,7 @@ const Collection: React.FC = () => {
 
   return (
     <div className="overflow-hidden flex justify-center w-full h-full gap-32 bg-gray-50">
-      <div className="containerZiva">
+      <div className="containerZiva flex flex-col gap-28">
         <section className="flex p-6 gap-8 lg-max:flex-col-reverse w-full h-auto rounded-3xl justify-between bg-white">
           <div className="w-full h-full gap-10 lg-max:gap-[1.4rem] flex flex-col justify-between">
             <div className="flex flex-col gap-10">

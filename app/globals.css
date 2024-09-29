@@ -38,10 +38,10 @@
 }
 
 .containerZiva{
-  padding: 158px;
-  display: flex;
+  padding: 78px 158px;
+  /* display: flex;
   flex-direction: column;
-  gap: 120px;
+  gap: 120px; */
   width: 100%;
 }
 
