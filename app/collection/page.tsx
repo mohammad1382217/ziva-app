@@ -19,7 +19,7 @@ import {
 } from "solar-icon-set";
 import Image from "next/image";
 import StarWhite from "@/app/assests/startWhite.svg";
-import Map from "../assests/Button.png";
+import Map from "../assests/Button.webp";
 import { getImageProps } from "next/image";
 import SegmentedZiva from "../components/SegmentedZiva";
 import BoxDescription from "../components/BoxDescription";

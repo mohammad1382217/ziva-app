@@ -21,7 +21,7 @@ export function SidebarLinks(props: SidebarLinksProps) {
     'secondaryGray.600',
   );
   let activeIcon = useColorModeValue('brand.500', 'white');
-  let textColor = useColorModeValue('secondaryGray.500', 'white');
+  let textColor = useColorModeValue('#98A2B3', 'white');
   let brandColor = useColorModeValue('brand.500', 'brand.400');
 
   // verifies if routeName is the one active (in browser input)
@@ -73,7 +73,7 @@ export function SidebarLinks(props: SidebarLinksProps) {
                       fontWeight={
                         activeRoute(route.path.toLowerCase())
                           ? 'bold'
-                          : 'normal'
+                          : 'bold'
                       }
                     >
                       {route.name}

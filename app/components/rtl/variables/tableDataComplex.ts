@@ -1,34 +1,29 @@
 type RowObj = {
 	name: string;
 	status: string;
-	date: string;
 	progress: number;
 };
 
 const tableDataComplex: RowObj[] = [
 	{
-		name: 'Horizon UI PRO',
+		name: 'استخر قصر آبی',
 		progress: 75.5,
 		status: 'Approved',
-		date: '12 Jan 2021'
 	},
 	{
-		name: 'Horizon UI Free',
+		name: 'استخر تختی',
 		progress: 25.5,
 		status: 'Disable',
-		date: '21 Feb 2021'
 	},
 	{
-		name: 'Weekly Update',
+		name: 'استخر قصر آبی',
 		progress: 90,
 		status: 'Error',
-		date: '13 Mar 2021'
 	},
 	{
-		name: 'Marketplace',
+		name: 'استخر تختی',
 		progress: 50.5,
 		status: 'Approved',
-		date: '24 Oct 2022'
 	}
 ];
 export default tableDataComplex;

@@ -7,8 +7,6 @@ import {
   Tbody,
   Td,
   Text,
-  Th,
-  Thead,
   Tr,
   useColorModeValue,
 } from "@chakra-ui/react";
@@ -22,10 +20,10 @@ import {
 } from "@tanstack/react-table";
 // Custom components
 import Card from "../../../components/card/Card";
-import Menu from "../../../components/menu/MainMenu";
 import * as React from "react";
 // Assets
 import { MinusCircle, CheckCircle, Eraser } from "solar-icon-set";
+import { HSeparator } from "../../separator/Separator";
 
 type RowObj = {
   name: string;
@@ -169,45 +167,14 @@ export default function ComplexTable(props: { tableData: any }) {
       px="0px"
       overflowX={{ sm: "scroll", lg: "hidden" }}
     >
-      <Flex px="25px" mb="8px" justifyContent="space-between" align="center">
-        <Text color={textColor} fontSize="22px" fontWeight="700" lineHeight="100%">
-          Complex Table
+      <Flex px="25px" mb="8px" flexDirection="column" justifyContent="space-between" align="start" gap="10px">
+        <Text color={textColor} fontSize="18px" fontWeight="700" lineHeight="100%">
+          استخر های مورد علاقه 
         </Text>
-        <Menu />
+        <HSeparator/>
       </Flex>
       <Box>
         <Table variant="simple" color="gray.500" mb="24px" mt="12px">
-          <Thead>
-            {table.getHeaderGroups().map((headerGroup) => (
-              <Tr key={headerGroup.id}>
-                {headerGroup.headers.map((header) => {
-                  return (
-                    <Th
-                      key={header.id}
-                      colSpan={header.colSpan}
-                      pe="10px"
-                      borderColor={borderColor}
-                      cursor="pointer"
-                      onClick={header.column.getToggleSortingHandler()}
-                    >
-                      <Flex
-                        justifyContent="space-between"
-                        align="center"
-                        fontSize={{ sm: "10px", lg: "12px" }}
-                        color="gray.400"
-                      >
-                        {flexRender(header.column.columnDef.header, header.getContext())}
-                        {{
-                          asc: "",
-                          desc: "",
-                        }[header.column.getIsSorted() as string] ?? null}
-                      </Flex>
-                    </Th>
-                  );
-                })}
-              </Tr>
-            ))}
-          </Thead>
           <Tbody>
             {table
               .getRowModel()

@@ -111,14 +111,14 @@ export default function AdminNavbar(props: {
         <Box mb={{ sm: "8px", md: "0px" }}>
           <Breadcrumb>
             <BreadcrumbItem color={secondaryText} fontSize="sm" mb="5px">
-              <BreadcrumbLink href="#" color={secondaryText} className="flex items-center justify-center gap-2">
+              <BreadcrumbLink href="/" color={secondaryText} className="flex items-center justify-center gap-2">
                 <Home iconStyle="Bold" width="14px" height="14px" color="orange" />
                 <span>خانه</span>
               </BreadcrumbLink>
             </BreadcrumbItem>
 
             <BreadcrumbItem color={secondaryText} fontSize="sm">
-              <BreadcrumbLink href="#" color={secondaryText}>
+              <BreadcrumbLink href={`/${brandText}`} color={secondaryText}>
                 {brandText}
               </BreadcrumbLink>
             </BreadcrumbItem>

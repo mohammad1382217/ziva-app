@@ -1,15 +1,12 @@
 import {
   Button,
   Flex,
-  Image,
   Link,
   Text,
-  useColorModeValue,
 } from '@chakra-ui/react';
-import { QuestionCircle } from 'solar-icon-set';
+import { PhoneCallingRounded, QuestionCircle } from 'solar-icon-set';
 
-export default function SidebarDocs() {
-  const borderColor = useColorModeValue('white', 'navy.800');
+const SidebarDocs = () => {
 
   return (
     <Flex
@@ -33,13 +30,13 @@ export default function SidebarDocs() {
           borderColor={"#ff5400"}
           bg={"#ff5400"}
           borderRadius="12px"
-          w="26px"
-          h="26px"
-          align="start"
+          w="34px"
+          h="34px"
+          align="center"
           justify="center"
           mb={4}
         >
-          <QuestionCircle iconStyle="Bold" color="white" width="60px" height="60px" />
+          <QuestionCircle iconStyle="Bold" color="white" width="60px" height="60px" className='z-50'/>
         </Flex>
         <Text
           fontSize={{ base: 'lg', xl: '18px' }}
@@ -47,14 +44,14 @@ export default function SidebarDocs() {
           fontWeight="bold"
           lineHeight="150%"
           textAlign="center"
-          mb="14px"
+          mb="8px"
         >
           کمک می‌خواهید؟
         </Text>
         <Text
           fontSize={{ base: 'xs'}}
           color="gray.800"
-          mb="14px"
+          mb="16px"
           textAlign="start"
         >
           در صورت نیاز، با پشتیبانی زیوا، تماس بگیرید
@@ -66,15 +63,23 @@ export default function SidebarDocs() {
           _hover={{ bg: 'gray.100' }}
           _active={{ bg: 'gray.200' }}
           mb={{ sm: '16px', xl: '24px' }}
-          color="gray.800"
-          fontWeight="regular"
-          fontSize="sm"
+          color="transparent"
+          fontWeight="semibold"
+          fontSize="base"
           minW="185px"
+          height={"32px"}
           mx="auto"
+          gap={"6px"}
+          w="16px"
+          h="16px"
+          p={4}
         >
-          0912 345 6789
+          <PhoneCallingRounded iconStyle='Outline' width="16px" height="16px" color="#FF9866" />
+          <span className='text-orange-500'>6789 345 0912</span>
         </Button>
       </Link>
     </Flex>
   );
 }
+
+export default SidebarDocs;

@@ -126,6 +126,5 @@ export function SidebarResponsive(props: SidebarResponsiveProps) {
     </Flex>
   );
 }
-// PROPS
 
 export default Sidebar;

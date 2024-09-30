@@ -1,60 +1,86 @@
-'use client';
-/*!
-  _   _  ___  ____  ___ ________  _   _   _   _ ___   
- | | | |/ _ \|  _ \|_ _|__  / _ \| \ | | | | | |_ _| 
- | |_| | | | | |_) || |  / / | | |  \| | | | | || | 
- |  _  | |_| |  _ < | | / /| |_| | |\  | | |_| || |
- |_| |_|\___/|_| \_\___/____\___/|_| \_|  \___/|___|
-                                                                                                                                                                                                                                                                                                                                       
-=========================================================
-* Horizon UI - v1.1.0
-=========================================================
+"use client";
 
-* Product Page: https://www.horizon-ui.com/
-* Copyright 2022 Horizon UI (https://www.horizon-ui.com/)
+import Image from "next/image";
+import { Box, Flex, SimpleGrid } from "@chakra-ui/react";
+import bg_login from "../assests/RectangleLoginPage.webp";
+import CheckTable from "../components/rtl/components/CheckTable";
+import ComplexTable from "../components/rtl/components/ComplexTable";
+import Tasks from "../components/rtl/components/Tasks";
+import tableDataCheck from "../components/rtl/variables/tableDataCheck";
+import tableDataComplex from "../components/rtl/variables/tableDataComplex";
+import { SmileSquare } from "solar-icon-set";
 
-* Designed and Coded by Simmmple
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-*/
-
-// Chakra imports
-import {
-  Box,
-  Flex,
-  Icon,
-  Select,
-  SimpleGrid,
-  useColorModeValue,
-} from '@chakra-ui/react';
-// Assets
-// import Usa from '/public/img/dashboards/usa.png';
-import CheckTable from '../components/rtl/components/CheckTable';
-import ComplexTable from '../components/rtl/components/ComplexTable';
-import Tasks from '../components/rtl/components/Tasks';
-
-import tableDataCheck from '../components/rtl/variables/tableDataCheck';
-import tableDataComplex from '../components/rtl/variables/tableDataComplex';
-
-export default function UserReports() {
-  // Chakra Color Mode
-  const brandColor = useColorModeValue('brand.500', 'white');
-  const boxBg = useColorModeValue('secondaryGray.300', 'whiteAlpha.100');
+export const UserReports = () => {
   return (
-    <Box pt={{ base: '130px', md: '120px', xl: '120px' }}>
-      <SimpleGrid columns={{ base: 1, md: 1, xl: 2 }} gap="20px" mb="20px">
-        <CheckTable tableData={tableDataCheck} />
-        <ComplexTable tableData={tableDataComplex} />
+    <Box pt={{ base: "130px", md: "120px", xl: "120px" }}>
+      <SimpleGrid w="100%" columns={{ base: 1, md: 1 }} gap="20px" mb="20px">
+        <Box
+          p="0px"
+          style={{ position: "relative" }}
+          display="flex"
+          alignItems="center"
+          justifyContent="center"
+        >
+          <Box
+            className="flex flex-col gap-[2px] bg-gradient-to-b from-white/70 to-white/80 bg-opacity-20 backdrop-blur-lg"
+            _hover={{ cursor: "pointer" }}
+            color="white"
+            w="90%"
+            h="86px"
+            padding="16px"
+            overflow={"hidden"}
+            style={{ position: "relative" }}
+            top="150px"
+            zIndex="50"
+            borderRadius="20px"
+            mb="150px"
+          >
+            <Flex>
+              <Flex
+                className="bg-blue-200"
+                borderRadius="12px"
+                w="56px"
+                h="56px"
+                align="center"
+                justify="center"
+                mb={4}
+              >
+                <SmileSquare
+                  iconStyle="Outline"
+                  color="white"
+                  className="z-50 !w-6 !h-6"
+                />
+              </Flex>
+              <Flex flexDirection="column">
+                <span className="mr-4 text-gray-900 text-lg font-bold">
+                  نام و نام خانوادگی
+                </span>
+                <span className="mr-4 text-gray-500 text-sm font-normal">
+                  6789 345 0912
+                </span>
+              </Flex>
+            </Flex>
+          </Box>
+          <Box bottom={0} left={0} position={"absolute"} w={"100%"} h={"100%"}>
+            <Image
+              className="relative top-0 w-full h-[190px] flex flex-col self-start rounded-3xl"
+              src={bg_login}
+              alt={"bg_login"}
+              width={1392}
+              height={190}
+            />
+          </Box>
+        </Box>
+        {/* <CheckTable tableData={tableDataCheck} /> */}
       </SimpleGrid>
       <SimpleGrid columns={{ base: 1, md: 1, xl: 2 }} gap="20px" mb="20px">
-        <SimpleGrid columns={{ base: 1, md: 2, xl: 2 }} gap="20px">
-          <Tasks />
-          {/* <MiniCalendar h="100%" minW="100%" selectRange={false} /> */}
+        <SimpleGrid columns={{ base: 1, md: 2, xl: 1 }} gap="20px">
+          <ComplexTable tableData={tableDataComplex} />
+          {/* <Tasks /> */}
         </SimpleGrid>
       </SimpleGrid>
     </Box>
   );
-}
+};
+
+export default UserReports;
