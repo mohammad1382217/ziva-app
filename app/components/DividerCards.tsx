@@ -4,7 +4,7 @@ import { Reply2 } from "solar-icon-set";
 
 interface DividerCardsType {
   name: string;
-  navigate: string;
+  navigate?: string;
   costomNavigte?: string;
 }
 
@@ -14,7 +14,7 @@ const DividerCards: React.FC<DividerCardsType> = ({
   costomNavigte,
 }) => {
   return (
-    <div className="flex flex-row-reverse  gap-8 justify-center items-center">
+    <div className="flex w-full flex-row-reverse  gap-8 justify-center items-center">
       {navigate && (
         <Link
           href={navigate}
