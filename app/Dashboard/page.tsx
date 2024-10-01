@@ -73,8 +73,9 @@ export const UserReports = () => {
         </Box>
         {/* <CheckTable tableData={tableDataCheck} /> */}
       </SimpleGrid>
-      <SimpleGrid columns={{ base: 1, md: 1, xl: 2 }} gap="20px" mb="20px">
-        <SimpleGrid columns={{ base: 1, md: 2, xl: 1 }} gap="20px">
+      <SimpleGrid columns={{ base: 1, md: 1, xl: 1 }} gap="20px" mb="20px">
+        <SimpleGrid columns={{ base: 1, md: 2, xl: 3 }} gap="20px">
+          <ComplexTable tableData={tableDataComplex} />
           <ComplexTable tableData={tableDataComplex} />
           {/* <Tasks /> */}
         </SimpleGrid>

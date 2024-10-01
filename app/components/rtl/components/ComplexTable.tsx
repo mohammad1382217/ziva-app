@@ -1,8 +1,6 @@
 import {
   Box,
   Flex,
-  Icon,
-  Progress,
   Table,
   Tbody,
   Td,
@@ -22,8 +20,10 @@ import {
 import Card from "../../../components/card/Card";
 import * as React from "react";
 // Assets
-import { MinusCircle, CheckCircle, Eraser } from "solar-icon-set";
+import { Reply2 } from "solar-icon-set";
 import { HSeparator } from "../../separator/Separator";
+import Image from "next/image";
+import Poll from "../../../assests/Rectangle 2491.png";
 
 type RowObj = {
   name: string;
@@ -55,7 +55,14 @@ export default function ComplexTable(props: { tableData: any }) {
         </Text>
       ),
       cell: (info: any) => (
-        <Flex align="center">
+        <Flex align="center" gap="8px">
+          <Image
+            className="relative top-0 w-[60px] h-[45px] flex flex-col self-start rounded-3xl"
+            src={Poll}
+            alt={"Poll"}
+            width={60}
+            height={45}
+          />
           <Text color={textColor} fontSize="sm" fontWeight="700">
             {info.getValue()}
           </Text>
@@ -74,76 +81,12 @@ export default function ComplexTable(props: { tableData: any }) {
           STATUS
         </Text>
       ),
-      cell: (info) => (
-        <Flex align="center">
-          <Icon
-            w="24px"
-            h="24px"
-            me="5px"
-            color={
-              info.getValue() === "Approved"
-                ? "green.500"
-                : info.getValue() === "Disable"
-                  ? "red.500"
-                  : info.getValue() === "Error"
-                    ? "orange.500"
-                    : undefined
-            }
-            as={
-              info.getValue() === "Approved"
-                ? CheckCircle
-                : info.getValue() === "Disable"
-                  ? MinusCircle
-                  : info.getValue() === "Error"
-                    ? Eraser
-                    : undefined
-            }
-          />
-          <Text color={textColor} fontSize="sm" fontWeight="700">
-            {info.getValue()}
+      cell: () => (
+        <Flex align="center" gap="4px" justifyContent="flex-end" px="14px">
+          <Text color={"#ff5400"} fontSize="sm" fontWeight="700">
+            مشاهده
           </Text>
-        </Flex>
-      ),
-    }),
-    columnHelper.accessor("date", {
-      id: "date",
-      header: () => (
-        <Text
-          justifyContent="space-between"
-          align="center"
-          fontSize={{ sm: "10px", lg: "12px" }}
-          color="gray.400"
-        >
-          DATE
-        </Text>
-      ),
-      cell: (info) => (
-        <Text color={textColor} fontSize="sm" fontWeight="700">
-          {info.getValue()}
-        </Text>
-      ),
-    }),
-    columnHelper.accessor("progress", {
-      id: "progress",
-      header: () => (
-        <Text
-          justifyContent="space-between"
-          align="center"
-          fontSize={{ sm: "10px", lg: "12px" }}
-          color="gray.400"
-        >
-          PROGRESS
-        </Text>
-      ),
-      cell: (info) => (
-        <Flex align="center">
-          <Progress
-            variant="table"
-            colorScheme="brandScheme"
-            h="8px"
-            w="108px"
-            value={info.getValue()}
-          />
+          <Reply2 size={24} iconStyle="Outline" color="#ff5400" />
         </Flex>
       ),
     }),
@@ -167,11 +110,18 @@ export default function ComplexTable(props: { tableData: any }) {
       px="0px"
       overflowX={{ sm: "scroll", lg: "hidden" }}
     >
-      <Flex px="25px" mb="8px" flexDirection="column" justifyContent="space-between" align="start" gap="10px">
+      <Flex
+        px="25px"
+        mb="8px"
+        flexDirection="column"
+        justifyContent="space-between"
+        align="start"
+        gap="10px"
+      >
         <Text color={textColor} fontSize="18px" fontWeight="700" lineHeight="100%">
-          استخر های مورد علاقه 
+          استخر های مورد علاقه
         </Text>
-        <HSeparator/>
+        <HSeparator />
       </Flex>
       <Box>
         <Table variant="simple" color="gray.500" mb="24px" mt="12px">
@@ -185,6 +135,7 @@ export default function ComplexTable(props: { tableData: any }) {
                     {row.getVisibleCells().map((cell) => {
                       return (
                         <Td
+                          py="10px"
                           key={cell.id}
                           fontSize={{ sm: "14px" }}
                           minW={{ sm: "150px", md: "200px", lg: "auto" }}
