@@ -11,6 +11,16 @@ import tableDataComplex from "../components/rtl/variables/tableDataComplex";
 import { SmileSquare } from "solar-icon-set";
 
 export const UserReports = () => {
+  const tableDataComplex = [
+    { name: "استخر الف", status: "فعال", date: "2023-01-01", progress: 50 },
+    { name: "استخر ب", status: "غیرفعال", date: "2023-02-01", progress: 75 },
+  ];
+
+  const columnsConfig = [
+    { accessor: "name", header: "نام" },
+    { accessor: "status", header: "وضعیت" },
+  ];
+
   return (
     <Box pt={{ base: "130px", md: "120px", xl: "120px" }}>
       <SimpleGrid w="100%" columns={{ base: 1, md: 1 }} gap="20px" mb="20px">
@@ -75,9 +85,15 @@ export const UserReports = () => {
       </SimpleGrid>
       <SimpleGrid columns={{ base: 1, md: 1, xl: 1 }} gap="20px" mb="20px">
         <SimpleGrid columns={{ base: 1, md: 2, xl: 3 }} gap="20px">
-          <ComplexTable tableData={tableDataComplex} />
-          <ComplexTable tableData={tableDataComplex} />
-          {/* <Tasks /> */}
+          <ComplexTable
+            tableData={tableDataComplex}
+            HeaderText={"استخر های مورد علاقه"}
+          />
+          <ComplexTable
+            tableData={tableDataComplex}
+            HeaderText={"استخر های مورد علاقه"}
+          />
+          <ComplexTable tableData={tableDataComplex} HeaderText={"اطلاعات حساب"} />
         </SimpleGrid>
       </SimpleGrid>
     </Box>
