@@ -1,73 +1,58 @@
 // Chakra imports
-import { Box, Flex, Text, Icon, useColorModeValue, Checkbox } from '@chakra-ui/react';
+import { Box, Flex, Text, useColorModeValue } from '@chakra-ui/react';
 // Custom components
 import Card from '../../../components/card/Card';
-import Menu from '../../../components/menu/MainMenu';
-import IconBox from '../../../components/icons/IconBox';
-
 // Assets
-import { CheckCircle, IncomingCallRounded } from 'solar-icon-set';
+import { Pen2 } from 'solar-icon-set';
 
-export default function Conversion(props: { [x: string]: any }) {
+const Conversion = (props: { [x: string]: any }) => {
 	const { ...rest } = props;
 
 	// Chakra Color Mode
 	const textColor = useColorModeValue('secondaryGray.900', 'white');
-	const boxBg = useColorModeValue('secondaryGray.300', 'navy.700');
-	const brandColor = useColorModeValue('brand.500', 'brand.400');
-	return (
-		<Card p='20px' alignItems='center' flexDirection='column' w='100%' {...rest}>
-			<Flex alignItems='center' w='100%' mb='30px'>
-				<IconBox
-					me='12px'
-					w='38px'
-					h='38px'
-					bg={boxBg}
-					icon={<Icon as={CheckCircle} color={brandColor} w='24px' h='24px' />}
-				/>
+	const userData = {
+		fullName: "علی محمدی",
+		phoneNumber: "09123456789",
+		email: "ali.mohammadi@example.com",
+		gender: "مرد",
+		birthDate: "1370/01/01",
+	};
 
+	const infoFields = [
+    { label: "نام و نام خانوادگی", value: userData.fullName },
+    { label: "شماره تلفن", value: userData.phoneNumber },
+    { label: "ایمیل", value: userData.email },
+    { label: "جنسیت", value: userData.gender },
+    { label: "تاریخ تولد", value: userData.birthDate },
+  ];
+
+	return (
+		<Card p='20px' alignItems='start' flexDirection='column' w='100%' {...rest}>
+			<Flex alignItems='center' justifyContent="space-between" w='100%' mb='30px'>
 				<Text color={textColor} fontSize='lg' fontWeight='700'>
-					Tasks
+					اطلاعات حساب
 				</Text>
-				<Menu ms='auto' />
+				<Flex gap="2px" alignItems="center" justifyContent="center">
+					<Pen2 iconStyle="Outline" width="24px" height="24px" color="#ff5400" />
+					<Text fontWeight='bold' color="#111827" fontSize='xs' textAlign='start' cursor="pointer">
+						ویرایش اطلاعات
+					</Text>
+				</Flex>
 			</Flex>
-			<Box px='11px'>
-				<Flex mb='20px'>
-					<Checkbox me='16px' colorScheme='brandScheme' />
-					<Text fontWeight='bold' color={textColor} fontSize='md' textAlign='start'>
-						Landing Page Design
-					</Text>
-					<Icon ms='auto' as={IncomingCallRounded} color='secondaryGray.600' w='24px' h='24px' />
-				</Flex>
-				<Flex mb='20px'>
-					<Checkbox me='16px' defaultChecked colorScheme='brandScheme' />
-					<Text fontWeight='bold' color={textColor} fontSize='md' textAlign='start'>
-						Dashboard Builder
-					</Text>
-					<Icon ms='auto' as={IncomingCallRounded} color='secondaryGray.600' w='24px' h='24px' />
-				</Flex>
-				<Flex mb='20px'>
-					<Checkbox defaultChecked me='16px' colorScheme='brandScheme' />
-					<Text fontWeight='bold' color={textColor} fontSize='md' textAlign='start'>
-						Mobile App Design
-					</Text>
-					<Icon ms='auto' as={IncomingCallRounded} color='secondaryGray.600' w='24px' h='24px' />
-				</Flex>
-				<Flex mb='20px'>
-					<Checkbox me='16px' colorScheme='brandScheme' />
-					<Text fontWeight='bold' color={textColor} fontSize='md' textAlign='start'>
-						Illustrations
-					</Text>
-					<Icon ms='auto' as={IncomingCallRounded} color='secondaryGray.600' w='24px' h='24px' />
-				</Flex>
-				<Flex mb='20px'>
-					<Checkbox defaultChecked me='16px' colorScheme='brandScheme' />
-					<Text fontWeight='bold' color={textColor} fontSize='md' textAlign='start'>
-						Promotional LP
-					</Text>
-					<Icon ms='auto' as={IncomingCallRounded} color='secondaryGray.600' w='24px' h='24px' />
-				</Flex>
-			</Box>
+			<Box>
+      {infoFields.map((field, index) => (
+        <Flex key={index} mb="20px" gap="8px">
+          <Text fontWeight="semibold" color="#667085" fontSize="sm" textAlign="start">
+            {field.label}:
+          </Text>
+          <Text fontWeight="medium" fontSize="sm" textAlign="start" color="#98A2B3">
+            {field.value}
+          </Text>
+        </Flex>
+      ))}
+    </Box>
 		</Card>
 	);
 }
+
+export default Conversion;

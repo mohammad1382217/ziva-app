@@ -12,15 +12,15 @@ import { SmileSquare } from "solar-icon-set";
 
 export const UserReports = () => {
   const tableDataComplex = [
-    { name: "استخر الف", status: "فعال", date: "2023-01-01", progress: 50 },
-    { name: "استخر ب", status: "غیرفعال", date: "2023-02-01", progress: 75 },
+    { name: "استخر الف" },
+    { name: "استخر ب" },
   ];
 
   const columnsConfig = [
-    { accessor: "name", header: "نام" },
-    { accessor: "status", header: "وضعیت" },
+    { accessor: "name", header: "نام", isImage: true }, // ستونی با عکس
+    { accessor: "status", header: "وضعیت", isStatus: true }, // ستونی با آیکون مشاهده
   ];
-
+  
   return (
     <Box pt={{ base: "130px", md: "120px", xl: "120px" }}>
       <SimpleGrid w="100%" columns={{ base: 1, md: 1 }} gap="20px" mb="20px">
@@ -41,7 +41,7 @@ export const UserReports = () => {
             overflow={"hidden"}
             style={{ position: "relative" }}
             top="150px"
-            zIndex="50"
+            zIndex="10"
             borderRadius="20px"
             mb="150px"
           >
@@ -85,15 +85,14 @@ export const UserReports = () => {
       </SimpleGrid>
       <SimpleGrid columns={{ base: 1, md: 1, xl: 1 }} gap="20px" mb="20px">
         <SimpleGrid columns={{ base: 1, md: 2, xl: 3 }} gap="20px">
+          <CheckTable tableData={tableDataComplex} />
           <ComplexTable
             tableData={tableDataComplex}
-            HeaderText={"استخر های مورد علاقه"}
+            HeaderText="استخر های مورد علاقه"
+            columnsConfig={columnsConfig}
+            showImage={true}
           />
-          <ComplexTable
-            tableData={tableDataComplex}
-            HeaderText={"استخر های مورد علاقه"}
-          />
-          <ComplexTable tableData={tableDataComplex} HeaderText={"اطلاعات حساب"} />
+          <Tasks/>
         </SimpleGrid>
       </SimpleGrid>
     </Box>

@@ -91,6 +91,7 @@ export default function AdminNavbar(props: {
       }}
       pt="8px"
       top={{ base: "12px", md: "16px", xl: "18px" }}
+      zIndex="10"
       w={{
         base: "calc(100vw - 6%)",
         md: "calc(100vw - 8%)",
