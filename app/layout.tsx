@@ -2,8 +2,6 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { NextUIProvider } from "@nextui-org/react";
 import localFont from "next/font/local";
-import Footer from "./components/Footer";
-import Header from "./components/Header";
 import AppWrappers from "./components/AppWrappers";
 
 const pelak = localFont({
@@ -48,18 +46,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='fa' dir="rtl">
-      <header>
-        <Header />
-      </header>
-
       <body className={pelak.className}>
         <NextUIProvider locale='fa-AF'>
           <AppWrappers>{children}</AppWrappers>
         </NextUIProvider>
       </body>
-      <footer>
-        <Footer />
-      </footer>
     </html>
   );
 }
