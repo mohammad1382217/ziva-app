@@ -1,5 +1,8 @@
+import { Widget } from "solar-icon-set";
 import Card from "../components/Card";
 import DividerCards from "../components/DividerCards";
+import FilterBox from "../components/FilterBox";
+import { Checkbox } from "@nextui-org/react";
 
 const SearchPage = () => {
     const SearchCards = [
@@ -95,7 +98,7 @@ const SearchPage = () => {
         },
     ];
     return (
-        <div className="containerZiva">
+        <div className="containerZiva gap-6 flex md-max:flex-col-reverse justify-between flex-row-reverse">
             <div className="flex flex-col gap-6">
                 <div className="flex gap-6 justify-between items-center w-full">
                     <DividerCards name="نتایج جستجو برای “کلمه مورد نظر”" />
@@ -112,7 +115,11 @@ const SearchPage = () => {
                 </div>
             </div>
             <div className="flex flex-col gap-6">
-
+                <FilterBox name="امکانات" Icon={<Widget />} >
+                    <div>
+                        <Checkbox defaultSelected>استخر کودکان</Checkbox>
+                    </div>
+                </FilterBox>
             </div>
         </div>
     );

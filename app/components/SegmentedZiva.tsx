@@ -38,7 +38,7 @@ const SegmentedZiva: React.FC<SegmentedZivaType> = ({ options }) => {
   const toggleNavClick = () => setNavClick((oldVal) => !oldVal);
 
   return (
-    <Affix offsetTop={60}>
+    <Affix offsetTop={90}>
       <div className="flex  w-full flex-col">
         <Tabs
           aria-label="Options"

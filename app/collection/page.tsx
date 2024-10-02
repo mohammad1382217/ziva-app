@@ -260,7 +260,7 @@ const Collection: React.FC = () => {
         </section>
 
         {/* بخش‌های مرتبط با هر تب */}
-        <section className="gap-10 flex flex-col lg-max:gap-6" id="introduction">lg-max
+        <section className="gap-10 flex flex-col lg-max:gap-6" id="introduction">
           <BoxDescription name="اطلاعیه ها" Icon={DangerCircle}>
             <ul className="list-disc list-inside text-right text-base font-normal text-orange-300">
               <li>
