@@ -1,6 +1,6 @@
 "use client";
 
-import { Divider } from "antd";
+import Divider from "antd/es/divider";
 import Link from "next/link";
 import { Heart, MapPointWave, Reply2, Sale } from "solar-icon-set";
 import Star from "@/app/assests/start.svg";

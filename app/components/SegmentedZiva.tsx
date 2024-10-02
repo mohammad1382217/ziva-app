@@ -1,7 +1,7 @@
 "use client";
 
 import { Tabs, Tab } from "@nextui-org/tabs";
-import { Affix } from "antd";
+import Affix from "antd/es/affix";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 

@@ -14,21 +14,18 @@ import {
   DangerCircle,
   ClipboardCheck,
   FacemaskSquare,
-  // Document,
   MenuDotsCircle,
   InfoCircle,
-  Document,
   Clipboard
 } from "solar-icon-set";
-// Outline / Notes / Document Text
 import StarWhite from "@/app/assests/startWhite.svg";
 import Image from "next/image";
-import Map from "../assests/Button.png";
+import Map from "../assests/Button.webp";
 import { getImageProps } from "next/image";
 import SegmentedZiva from "../components/SegmentedZiva";
 import BoxDescription from "../components/BoxDescription";
 import { Metadata } from "next";
-import ButtonZiva from "../components/Button";
+import ButtonZiva from "../components/ButtonZiva";
 import BoxMuliCarousel from "../components/BoxMulitiCarousel/BoxMuliCarousel";
 import Banner from "../components/Banner";
 import BuyTicket from "../components/buyTicket";
@@ -180,6 +177,9 @@ const Collection: React.FC = () => {
       rate: 4.5,
     },
   ];
+
+  const buttonTexts = ["استخر کودکان", "استخر بزرگسالان", "استخر عمومی"];
+
   const {
     props: { srcSet },
   } = getImageProps({ alt: "", width: 128, height: 128, src: Map });
@@ -307,56 +307,17 @@ const Collection: React.FC = () => {
           <h1 className="text-black text-center font-bold text-4xl">
             امکانات و ویژگی ها
           </h1>
-          <div className="flex justify-center items-center flex-wrap px-24 lg-max:px-10 md-max:px-0 gap-4">
-            <ButtonZiva
-              className="h-10 w-auto rounded-full bg-transparent hover:bg-transparent border text-gray-900"
-              buttonText="استخر کودکان"
-              variant="bordered"
-              type="submit"
-              rightIcon={<FacemaskSquare size={17} color="#FF5400" />}
-            />
-            <ButtonZiva
-              className="h-10 w-auto rounded-full bg-transparent hover:bg-transparent border text-gray-900"
-              buttonText="استخر کودکان"
-              variant="bordered"
-              type="submit"
-              rightIcon={<FacemaskSquare size={17} color="#FF5400" />}
-            />
-            <ButtonZiva
-              className="h-10 w-auto rounded-full bg-transparent hover:bg-transparent border text-gray-900"
-              buttonText="استخر کودکان"
-              variant="bordered"
-              type="submit"
-              rightIcon={<FacemaskSquare size={17} color="#FF5400" />}
-            />
-            <ButtonZiva
-              className="h-10 w-auto rounded-full bg-transparent hover:bg-transparent border text-gray-900"
-              buttonText="استخر کودکان"
-              variant="bordered"
-              type="submit"
-              rightIcon={<FacemaskSquare size={17} color="#FF5400" />}
-            />
-            <ButtonZiva
-              className="h-10 w-auto rounded-full bg-transparent hover:bg-transparent border text-gray-900"
-              buttonText="استخر کودکان"
-              variant="bordered"
-              type="submit"
-              rightIcon={<FacemaskSquare size={17} color="#FF5400" />}
-            />
-            <ButtonZiva
-              className="h-10 w-auto rounded-full bg-transparent hover:bg-transparent border text-gray-900"
-              buttonText="استخر کودکان"
-              variant="bordered"
-              type="submit"
-              rightIcon={<FacemaskSquare size={17} color="#FF5400" />}
-            />
-            <ButtonZiva
-              className="h-10 w-auto rounded-full bg-transparent hover:bg-transparent border text-gray-900"
-              buttonText="استخر کودکان"
-              variant="bordered"
-              type="submit"
-              rightIcon={<FacemaskSquare size={17} color="#FF5400" />}
-            />
+          <div className="flex justify-center items-center px-20 gap-4">
+            {buttonTexts.map((text, index) => (
+              <ButtonZiva
+                key={index}
+                className="h-10 w-auto rounded-full bg-transparent hover:bg-transparent border text-gray-900"
+                buttonText={text}
+                variant="bordered"
+                type="submit"
+                rightIcon={<FacemaskSquare size={17} color="#FF5400" />}
+              />
+            ))}
           </div>
         </section>
 
