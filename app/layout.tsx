@@ -4,7 +4,7 @@ import { NextUIProvider } from "@nextui-org/react";
 import localFont from "next/font/local";
 import AppWrappers from "./components/AppWrappers";
 import Header from "./components/Header";
-import Footer from "react-multi-date-picker/plugins/range_picker_footer";
+import Footer from "./components/Footer";
 
 const pelak = localFont({
   src: [
