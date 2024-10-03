@@ -1,11 +1,11 @@
 import Image from "next/image";
 import ImageIntroduction from '@/app/assests/Group 146.png'
 import ImageIntroductio2 from '@/app/assests/Group 152.png'
-import ZivaProperty from "../components/ZivaProperty";
 import { CSSProperties } from "react";
-import { Collapse, CollapseProps } from "antd";
-import { MinusSquare, VerifiedCheck } from "solar-icon-set";
-import CollapseZiva from "../components/CollabpseZiva";
+import { CollapseProps } from "antd";
+import {  VerifiedCheck } from "solar-icon-set";
+import ZivaProperty from "@/app/components/ZivaProperty";
+import CollapseZiva from "@/app/components/CollabpseZiva";
 const AboutPage = () => {
   const text = `
 لورم  ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از  طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و  سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای  متنوع با هدف بهبود ابزارهای کاربردی می 
@@ -73,7 +73,7 @@ const AboutPage = () => {
   };
 
 
-  return <div className="bg-[#FCFCFD] flex flex-col gap-20 sm-max:gap-[60px] containerZiva">
+  return <div className="bg-[#FCFCFD] mt-20 flex flex-col gap-20 sm-max:gap-[60px] containerZiva">
     <section className="flex flex-row md-max:flex-col">
       <Image className=" relative md-max:hidden" src={ImageIntroduction} alt={"معرفی زیوا"} />
       <div className="flex flex-col w-1/2 xl-max:w-4/5 md-max:w-full gap-8 justify-center items-start">
