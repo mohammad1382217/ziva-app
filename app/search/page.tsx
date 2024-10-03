@@ -98,7 +98,7 @@ const SearchPage = () => {
         },
     ];
     return (
-        <div className="containerZiva py-12 mt-20 bg-gray-50 gap-6 flex md-max:flex-col-reverse justify-between flex-row-reverse">
+        <div className="containerZiva py-12 mt-20 bg-gray-50 gap-6 flex lg-max:flex-col-reverse justify-between flex-row-reverse">
             <div className="flex flex-col gap-6">
                 <div className="flex gap-6 justify-between items-center w-full">
                     <DividerCards name="نتایج جستجو برای “کلمه مورد نظر”" />
