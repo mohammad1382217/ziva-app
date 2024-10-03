@@ -1,5 +1,5 @@
 import CarouselCollection from "../../components/CarouselCollection/CarouselCollection";
-import ImageSampel from "../assests/RectangleLoginPage.webp";
+import ImageSampel from "../../assests/RectangleLoginPage.webp";
 import { EmblaOptionsType } from "embla-carousel";
 import {
   ArrowDown,
@@ -19,7 +19,7 @@ import {
 } from "solar-icon-set";
 import StarWhite from "@/app/assests/startWhite.svg";
 import Image from "next/image";
-import Map from "../assests/Button.webp";
+import Map from "../../assests/Button.webp";
 import { getImageProps } from "next/image";
 import SegmentedZiva from "../../components/SegmentedZiva";
 import BoxDescription from "../../components/BoxDescription";
@@ -32,7 +32,6 @@ import Discount from "../../components/Discount";
 import Rate from "antd/es/rate";
 import RegisterComment from "../../components/RegisterComment";
 import Comment from "../../components/Comment";
-
 export const metadata: Metadata = {
   title: "مجموعه",
   description: "اسختر فلان در قم",
