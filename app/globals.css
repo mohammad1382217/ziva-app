@@ -37,7 +37,10 @@
   backdrop-filter: none !important;
 }
 body {
-  font-family: "PelakFA !important";
+  /* font-family: "PelakFA !important"; */
   margin: 0;
   padding: 0;
+}
+*{
+
 }

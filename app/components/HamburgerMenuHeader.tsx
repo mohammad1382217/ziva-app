@@ -12,7 +12,7 @@ export default function HamburgerMenuHeader({ menuItems }: { menuItems: string[]
       <NavbarContent className="px-0 bg-transparent">
         <NavbarMenuToggle
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-          className="768-min:hidden bg-transparent px-0"
+          className="bg-transparent px-0"
         />
       </NavbarContent>
 

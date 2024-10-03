@@ -185,7 +185,7 @@ const Collection: React.FC = () => {
   const style = { backgroundImage };
 
   return (
-    <div className="overflow-hidden flex justify-center w-full h-full gap-32 bg-gray-50">
+    <div className="overflow-hidden flex justify-center mt-10 w-full h-full gap-32 bg-gray-50">
       <div className="containerZiva flex flex-col gap-28">
         <section className="flex p-6 gap-8 lg-max:flex-col-reverse w-full h-auto rounded-3xl justify-between bg-white">
           <div className="w-full h-full gap-10 lg-max:gap-[1.4rem] flex flex-col justify-between">
