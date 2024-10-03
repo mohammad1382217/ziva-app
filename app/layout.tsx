@@ -47,19 +47,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang='fa' dir="rtl">
-      <header>
-        <Header />
-      </header>
-
+    <html lang='fa' dir="rtl" >
       <body className={pelak.className}>
-        <NextUIProvider locale='fa-AF'>
+        <NextUIProvider locale='fa-AF' className="bg-gray-50">
+          <Header />
           <AppWrappers>{children}</AppWrappers>
+          <Footer />
         </NextUIProvider>
       </body>
-      <footer>
-        <Footer />
-      </footer>
     </html>
   );
 }

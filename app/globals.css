@@ -30,6 +30,6 @@
     padding: 24px;
   }
 }
-*{
-  font-family: 'PelakFA';
+.hamberger{
+  backdrop-filter: none !important;
 }
