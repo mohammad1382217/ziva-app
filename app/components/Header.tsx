@@ -6,7 +6,7 @@ import HamburgerMenuHeader from "./HamburgerMenuHeader";
 
 const Header = () => {
     const menuItems = [
-        ["مشاهده استخر ها", "/"],
+        ["مشاهده استخر ها", "/collection"],
         ["درباره ما", "/about"],
         ["ارتباط با ما", "/about"],
         ["قوانین و مقررات", "/about"],

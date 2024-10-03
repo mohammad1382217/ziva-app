@@ -50,7 +50,12 @@ export default function RootLayout({
     <html lang='fa' dir="rtl">
       <body className={pelak.className}>
         <NextUIProvider locale='fa-AF' className="bg-gray-50">
+          <Header />
+          <div className="mt-20">
+
           <AppWrappers>{children}</AppWrappers>
+          </div>
+          <Footer />
         </NextUIProvider>
       </body>
     </html>
