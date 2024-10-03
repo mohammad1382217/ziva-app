@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-.containerZiva{
+.containerZiva {
   padding: 78px 158px;
   /* display: flex;
   flex-direction: column;
@@ -11,25 +11,33 @@
 }
 
 @media only screen and (max-width: 600px) {
-  .containerZiva{
+  .containerZiva {
     padding: 2rem;
   }
 }
+
 @media only screen and (max-width: 1400px) {
-  .containerZiva{
+  .containerZiva {
     padding: 4rem;
   }
 }
+
 @media only screen and (max-width: 1250px) {
-  .containerZiva{
+  .containerZiva {
     padding: 5rem;
   }
 }
+
 @media only screen and (max-width: 1024px) {
-  .containerZiva{
+  .containerZiva {
     padding: 24px;
   }
 }
 .hamberger{
   backdrop-filter: none !important;
+}
+body {
+  font-family: "PelakFA !important";
+  margin: 0;
+  padding: 0;
 }

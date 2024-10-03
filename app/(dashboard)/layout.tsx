@@ -7,13 +7,12 @@ import Navbar from '../components/navbar/NavbarRTL';
 import Sidebar from '../components/sidebar/Sidebar';
 import { RtlProvider } from '../components/rtlProvider/RtlProvider';
 import { SidebarContext } from '../contexts/SidebarContext';
-import { PropsWithChildren, useEffect, useState } from 'react';
-import routes from './routes';
+import { PropsWithChildren, useState } from 'react';
+import routes from './Dashboard/routes';
 import {
   getActiveNavbar,
   getActiveNavbarText,
   getActiveRoute,
-  isWindowAvailable,
 } from '../utils/navigation';
 
 interface RTLLayoutProps extends PropsWithChildren {}

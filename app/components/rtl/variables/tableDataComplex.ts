@@ -21,4 +21,5 @@ const tableDataComplex: RowObj[] = [
 		status: 'Approved',
 	}
 ];
+
 export default tableDataComplex;

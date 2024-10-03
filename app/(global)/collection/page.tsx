@@ -1,4 +1,4 @@
-import CarouselCollection from "../components/CarouselCollection/CarouselCollection";
+import CarouselCollection from "../../components/CarouselCollection/CarouselCollection";
 import ImageSampel from "../assests/RectangleLoginPage.webp";
 import { EmblaOptionsType } from "embla-carousel";
 import {
@@ -6,7 +6,6 @@ import {
   HandStars,
   Heart,
   MapPointWave,
-  Sale,
   ClipboardList,
   Ticket,
   ChatLine,
@@ -22,17 +21,17 @@ import StarWhite from "@/app/assests/startWhite.svg";
 import Image from "next/image";
 import Map from "../assests/Button.webp";
 import { getImageProps } from "next/image";
-import SegmentedZiva from "../components/SegmentedZiva";
-import BoxDescription from "../components/BoxDescription";
+import SegmentedZiva from "../../components/SegmentedZiva";
+import BoxDescription from "../../components/BoxDescription";
 import { Metadata } from "next";
-import ButtonZiva from "../components/ButtonZiva";
-import BoxMuliCarousel from "../components/BoxMulitiCarousel/BoxMuliCarousel";
-import Banner from "../components/Banner";
-import BuyTicket from "../components/buyTicket";
-import Discount from "../components/Discount";
-import { Rate } from "antd";
-import RegisterComment from "../components/RegisterComment";
-import Comment from "../components/Comment";
+import ButtonZiva from "../../components/ButtonZiva";
+import BoxMuliCarousel from "../../components/BoxMulitiCarousel/BoxMuliCarousel";
+import Banner from "../../components/Banner";
+import BuyTicket from "../../components/buyTicket";
+import Discount from "../../components/Discount";
+import Rate from "antd/es/rate";
+import RegisterComment from "../../components/RegisterComment";
+import Comment from "../../components/Comment";
 
 export const metadata: Metadata = {
   title: "مجموعه",

@@ -2,9 +2,9 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { NextUIProvider } from "@nextui-org/react";
 import localFont from "next/font/local";
-import Footer from "./components/Footer";
-import Header from "./components/Header";
 import AppWrappers from "./components/AppWrappers";
+import Header from "./components/Header";
+import Footer from "react-multi-date-picker/plugins/range_picker_footer";
 
 const pelak = localFont({
   src: [
@@ -47,7 +47,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang='fa' dir="rtl" >
+    <html lang='fa' dir="rtl">
       <body className={pelak.className}>
         <NextUIProvider locale='fa-AF' className="bg-gray-50">
           <Header />
