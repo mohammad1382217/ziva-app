@@ -7,7 +7,6 @@ import {
   MenuItem,
   MenuList,
   Text,
-  useColorMode,
   useColorModeValue,
 } from "@chakra-ui/react";
 // Custom Components
@@ -15,7 +14,6 @@ import { ItemContent } from "../../components/menu/ItemContent";
 import { SidebarResponsive } from "../../components/sidebar/Sidebar";
 import { Bell, SmileSquare } from "solar-icon-set";
 import routes from "../../(dashboard)/Dashboard/routes";
-import Image from "next/image";
 
 export default function HeaderLinks(props: {
   secondary: boolean;

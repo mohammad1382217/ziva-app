@@ -5,7 +5,7 @@ import { Box, Flex, SimpleGrid } from "@chakra-ui/react";
 import bg_login from "../../assests/RectangleLoginPage.webp";
 import ImageCard from "../../components/rtl/components/ImageCard";
 import ComplexTable from "../../components/rtl/components/ComplexTable";
-import Tasks from "../../components/rtl/components/Tasks";
+import Tasks from "../../components/rtl/components/Information";
 import tableDataCheck from "../../components/rtl/variables/tableDataCheck";
 import tableDataComplex from "../../components/rtl/variables/tableDataComplex";
 import { SmileSquare } from "solar-icon-set";
