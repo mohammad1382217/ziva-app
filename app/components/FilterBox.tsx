@@ -32,7 +32,7 @@ const FilterBox: React.FC<FilterBoxType> = ({
   return (
     <div>
       <div
-        className={`bg-white md-max:hidden w-[264px] flex flex-col p-6 gap-8  rounded-2xl   shadow-Box ${clsasName}`}
+        className={`bg-white lg-max:hidden w-[264px] flex flex-col p-6 gap-8  rounded-2xl   shadow-Box ${clsasName}`}
       >
         <div className="flex flex-row-reverse  gap-6 justify-center items-center">
           <div className="flex-grow">

@@ -5,7 +5,8 @@ import { EmblaOptionsType } from "embla-carousel";
 import useEmblaCarousel from "embla-carousel-react";
 import { Thumb } from "./EmblaCarouselThumbsButton";
 import Image, { StaticImageData } from "next/image";
-import "../../css/Carouel.css";
+import "../../styles/Carouel.css";
+
 import {
   NextButton,
   PrevButton,

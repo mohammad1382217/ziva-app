@@ -18,6 +18,9 @@ const config: Config = {
       'md-max': { max: '720px' },
       'sm-max': { max: '540px' },
       'xs-max': { max: '420px' },
+      '1200-max': { max: '1200px' },
+      '768-max': { max: '768px' },
+      '768-min': { min: '768px' },
 
       '4xl-min': { min: '1921px' },
       '3xl-min': { min: '1441px' },
