@@ -1,7 +1,7 @@
 import { Widget } from "solar-icon-set";
-import Card from "../components/Card";
-import DividerCards from "../components/DividerCards";
-import FilterBox from "../components/FilterBox";
+import Card from "../../components/Card";
+import DividerCards from "../../components/DividerCards";
+import FilterBox from "../../components/FilterBox";
 import { Checkbox } from "@nextui-org/react";
 
 const SearchPage = () => {

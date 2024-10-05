@@ -24,7 +24,6 @@ const Account = (props: { [x: string]: any }) => {
                 <InputZiva
                   name="first_name"
                   size="sm"
-                  variant="bordered"
                   label="نام"
                   type="text"
                   classNames={{
@@ -35,7 +34,6 @@ const Account = (props: { [x: string]: any }) => {
                 <InputZiva
                   name="last_name"
                   size="sm"
-                  variant="bordered"
                   label="نام و نام خانوادگی"
                   type="text"
                   classNames={{
@@ -48,7 +46,6 @@ const Account = (props: { [x: string]: any }) => {
                 <InputZiva
                   name="phone_number"
                   size="sm"
-                  variant="bordered"
                   label="شماره موبایل"
                   type="text"
                   classNames={{
@@ -59,7 +56,6 @@ const Account = (props: { [x: string]: any }) => {
                 <InputDate
                   name="birth_date"
                   size="sm"
-                  variant="bordered"
                   placeholder="تاریخ تولد"
                   className=""
                 />
@@ -73,11 +69,10 @@ const Account = (props: { [x: string]: any }) => {
                 <InputZiva
                   name="email"
                   size="sm"
-                  variant="bordered"
                   label="ایمیل"
                   type="text"
                   classNames={{
-                    inputWrapper: "w-full min-w-[116px] ",
+                    inputWrapper: "w-full min-w-[116px]",
                     label: "text-medium sm-max:text-tiny",
                   }}
                 />

@@ -22,7 +22,10 @@ interface InputType {
   onKeyDown?: (e: React.KeyboardEvent<HTMLInputElement>) => void;
   variant?: "flat" | "faded" | "bordered" | "underlined" | undefined;
   classNames?: ClassNamesType;
-  size?: "sm" | "md" | "lg"
+  size?: "sm" | "md" | "lg";
+  radius?: "sm" | "md" | "lg" | "none" | "full";
+  labelPlacement?: "outside" | "inside" | "outside-left";
+  isRequired?: boolean;
 }
 
 const InputZiva = forwardRef<HTMLInputElement, InputType>(({
@@ -31,21 +34,27 @@ const InputZiva = forwardRef<HTMLInputElement, InputType>(({
   onFocus,
   name,
   label,
-  variant,
+  variant = "bordered",
   dir = "rtl",
   type,
   maxLength,
   classNames,
-  size = "lg"
+  size = "lg",
+  radius = "md",
+  labelPlacement = "inside",
+  isRequired
 }, ref) => {
   return (
     <Input
       ref={ref} // اکنون می‌توانیم ref را پاس دهیم
       id={name}
       size={size}
+      radius={radius}
       value={value}
       onChange={onChange}
       maxLength={maxLength}
+      labelPlacement={labelPlacement}
+      isRequired={isRequired}
       onFocus={onFocus}
       name={name}
       variant={variant}
@@ -57,7 +66,7 @@ const InputZiva = forwardRef<HTMLInputElement, InputType>(({
       classNames={{
         label: `mr-0 !origin-top-right ${classNames?.label}`,
         input: `text-right mr-1 ${classNames?.input}`,
-        inputWrapper: `h-12 bg-white hover:!bg-white w-64 ${classNames?.inputWrapper}`,
+        inputWrapper: `h-11 bg-white hover:!bg-white w-64 ${classNames?.inputWrapper}`,
         innerWrapper: `${classNames?.innerWrapper}`,
       }}
     />
