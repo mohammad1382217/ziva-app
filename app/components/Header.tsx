@@ -68,12 +68,14 @@ const Header = () => {
             </button>
           }
         />
-        <ButtonZiva
-          className="h-10 w-40 min-w-max text-lg font-semibold text-white"
-          type="button"
-          buttonText="پنل کاربری"
-          leftIcon={<UserCircle size={20} />}
-        />
+        <Link href="/Dashboard">
+          <ButtonZiva
+            className="h-10 w-40 min-w-max text-lg font-semibold text-white"
+            type="button"
+            buttonText="پنل کاربری"
+            leftIcon={<UserCircle size={20} />}
+          />
+        </Link>
       </div>
       <div className="768-min:hidden ">
         <HamburgerMenuHeader menuItems={menuItems} />

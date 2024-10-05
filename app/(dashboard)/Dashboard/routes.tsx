@@ -6,7 +6,8 @@ const routes: IRoute[] = [
     name: "داشبورد",
     layout: "/",
     path: "Dashboard",
-    icon: <Widget5 iconStyle="Bold" width="20px" height="20px" color="#ff5400" />,
+    icon: <Widget5 iconStyle="Outline" width="20px" height="20px" color="#ff5400" />,
+    secondary: true,
   },
   {
     name: "اطلاعات حساب",
@@ -20,12 +21,14 @@ const routes: IRoute[] = [
     layout: "/",
     path: "MyTickets",
     icon: <CartCheck iconStyle="Outline" width="20px" height="20px" color="#ff5400" />,
+    secondary: true,
   },
   {
     name: "علاقه مندی ها",
     layout: "/",
     path: "MyFavorite",
     icon: <Heart iconStyle="Outline" width="20px" height="20px" color="#ff5400" />,
+    secondary: true,
   },
 ];
 

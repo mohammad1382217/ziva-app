@@ -8,6 +8,7 @@ import {
   Link,
   useColorModeValue,
 } from "@chakra-ui/react";
+import PropTypes from 'prop-types';
 import { useState, useEffect } from "react";
 import AdminNavbarLinks from "./NavbarLinksAdmin";
 import { isWindowAvailable } from "../../utils/navigation";
@@ -33,7 +34,7 @@ export default function AdminNavbar(props: {
     }
   });
 
-  const { secondary, message, brandText, fixed } = props;
+  const { secondary, brandText, fixed } = props;
 
   // Here are all the props that may change depending on navbar's type or state.(secondary, variant, scrolled)
   let mainText = useColorModeValue("navy.700", "white");
@@ -47,6 +48,7 @@ export default function AdminNavbar(props: {
   let secondaryMargin = "0px";
   let paddingX = "15px";
   let gap = "0px";
+
   const changeNavbar = () => {
     if (isWindowAvailable() && window.scrollY > 1) {
       setScrolled(true);
@@ -110,16 +112,16 @@ export default function AdminNavbar(props: {
         mb={gap}
       >
         <Box mb={{ sm: "8px", md: "0px" }}>
-          <Breadcrumb>
+          <Breadcrumb separator=">">
             <BreadcrumbItem color={secondaryText} fontSize="sm" mb="5px">
               <BreadcrumbLink href="/" color={secondaryText} className="flex items-center justify-center gap-2">
-                <Home iconStyle="Bold" width="14px" height="14px" color="orange" />
+                <Home iconStyle="Bold" width="14px" height="14px" color="gray" />
                 <span>خانه</span>
               </BreadcrumbLink>
             </BreadcrumbItem>
 
             <BreadcrumbItem color={secondaryText} fontSize="sm" mb="5px">
-              <BreadcrumbLink href="/" color={secondaryText} className="flex items-center justify-center gap-2">
+              <BreadcrumbLink href="/Dashboard" color={secondaryText} className="flex items-center justify-center gap-2">
                 <span>پنل کاربری</span>
               </BreadcrumbLink>
             </BreadcrumbItem>
@@ -137,7 +139,7 @@ export default function AdminNavbar(props: {
             bg="inherit"
             borderRadius="inherit"
             fontWeight="bold"
-            fontSize="34px"
+            fontSize="16px"
             _hover={{ color: { mainText } }}
             _active={{
               bg: "inherit",
@@ -159,3 +161,6 @@ export default function AdminNavbar(props: {
   );
 }
 
+AdminNavbar.propTypes = {
+  brandText: PropTypes.string.isRequired
+};
