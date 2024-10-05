@@ -5,7 +5,6 @@ import { Pen2 } from "solar-icon-set";
 const Information: React.FC = (props: { [x: string]: any }) => {
   const { ...rest } = props;
 
-  // Chakra Color Mode
   const textColor = useColorModeValue("secondaryGray.900", "white");
   const userData = {
     fullName: "علی محمدی",

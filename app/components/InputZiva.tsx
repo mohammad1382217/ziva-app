@@ -22,6 +22,7 @@ interface InputType {
   onKeyDown?: (e: React.KeyboardEvent<HTMLInputElement>) => void;
   variant?: "flat" | "faded" | "bordered" | "underlined" | undefined;
   classNames?: ClassNamesType;
+  size?: "sm" | "md" | "lg"
 }
 
 const InputZiva = forwardRef<HTMLInputElement, InputType>(({
@@ -35,11 +36,13 @@ const InputZiva = forwardRef<HTMLInputElement, InputType>(({
   type,
   maxLength,
   classNames,
+  size = "lg"
 }, ref) => {
   return (
     <Input
       ref={ref} // اکنون می‌توانیم ref را پاس دهیم
       id={name}
+      size={size}
       value={value}
       onChange={onChange}
       maxLength={maxLength}

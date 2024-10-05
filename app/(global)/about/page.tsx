@@ -1,11 +1,12 @@
 import Image from "next/image";
 import ImageIntroduction from '@/app/assests/Group 146.png'
 import ImageIntroductio2 from '@/app/assests/Group 152.png'
-import ZivaProperty from "../components/ZivaProperty";
+import ZivaProperty from "../../components/ZivaProperty";
 import { CSSProperties } from "react";
-import { Collapse, CollapseProps } from "antd";
-import { MinusSquare, VerifiedCheck } from "solar-icon-set";
-import CollapseZiva from "../components/CollabpseZiva";
+import { CollapseProps } from "antd/es/collapse";
+import { VerifiedCheck } from "solar-icon-set";
+import CollapseZiva from "../../components/CollabpseZiva";
+
 const AboutPage = () => {
   const text = `
 لورم  ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از  طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و  سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای  متنوع با هدف بهبود ابزارهای کاربردی می 

@@ -118,8 +118,14 @@ export default function AdminNavbar(props: {
               </BreadcrumbLink>
             </BreadcrumbItem>
 
+            <BreadcrumbItem color={secondaryText} fontSize="sm" mb="5px">
+              <BreadcrumbLink href="/" color={secondaryText} className="flex items-center justify-center gap-2">
+                <span>پنل کاربری</span>
+              </BreadcrumbLink>
+            </BreadcrumbItem>
+
             <BreadcrumbItem color={secondaryText} fontSize="sm">
-              <BreadcrumbLink href={`/${brandText}`} color={secondaryText}>
+              <BreadcrumbLink href={`#`} color={secondaryText}>
                 {brandText}
               </BreadcrumbLink>
             </BreadcrumbItem>

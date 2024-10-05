@@ -15,7 +15,7 @@ import {
   FacemaskSquare,
   MenuDotsCircle,
   InfoCircle,
-  Clipboard
+  Clipboard,
 } from "solar-icon-set";
 import StarWhite from "@/app/assests/startWhite.svg";
 import Image from "next/image";
@@ -29,7 +29,7 @@ import BoxMuliCarousel from "../../components/BoxMulitiCarousel/BoxMuliCarousel"
 import Banner from "../../components/Banner";
 import BuyTicket from "../../components/buyTicket";
 import Discount from "../../components/Discount";
-import Rate from "antd/es/rate";
+import Rate from "/rate";
 import RegisterComment from "../../components/RegisterComment";
 import Comment from "../../components/Comment";
 
@@ -220,8 +220,10 @@ const Collection: React.FC = () => {
                   </p>
                 </div>
                 <div className="w-full justify-end flex">
-                  <button className="bg-no-repeat scale-110 w-28 h-8" style={style}>
-                  </button>
+                  <button
+                    className="bg-no-repeat scale-110 w-28 h-8"
+                    style={style}
+                  ></button>
                 </div>
               </div>
             </div>
@@ -320,11 +322,32 @@ const Collection: React.FC = () => {
           </div>
         </section>
 
-        <section className="gap-8 px-24 lg-max:px-10 md-max:px-0 flex flex-col" id="ticket">
+        <section
+          className="gap-8 px-24 lg-max:px-10 md-max:px-0 flex flex-col"
+          id="ticket"
+        >
           <h1 className="text-black text-center font-bold text-4xl">خرید بلیط استخر</h1>
           <div className="flex flex-col gap-6">
-            <BuyTicket priceDiscount="12" background="#9E0059" childrenDiscount={12} childrenPrice="1222" discount={22} name="سانس بانوان" navigate="//" price="1222" className="w-full" />
-            <BuyTicket priceDiscount="12" background="#390099" discount={22} name="سانس آقایان" navigate="//" price="1222" className="w-full" />
+            <BuyTicket
+              priceDiscount="12"
+              background="#9E0059"
+              childrenDiscount={12}
+              childrenPrice="1222"
+              discount={22}
+              name="سانس بانوان"
+              navigate="//"
+              price="1222"
+              className="w-full"
+            />
+            <BuyTicket
+              priceDiscount="12"
+              background="#390099"
+              discount={22}
+              name="سانس آقایان"
+              navigate="//"
+              price="1222"
+              className="w-full"
+            />
           </div>
         </section>
 
@@ -363,7 +386,9 @@ const Collection: React.FC = () => {
           <div className="bg-white w-full flex flex-row md-max:flex-col md-max:items-start justify-between items-center px-6 py-4 gap-8  rounded-2xl shadow-Box">
             <div className="flex gap-4 text-gray-600 items-center">
               <div className="flex gap-2 justify-center items-center">
-                <span className="text-gray-800 text-3xl sm-max:text-2xl font-bold">0.0</span>
+                <span className="text-gray-800 text-3xl sm-max:text-2xl font-bold">
+                  0.0
+                </span>
                 <span className="font-semibold text-base sm-max:text-sm">از</span>
                 <span className="text-gray-600 font-bold text-2xl sm-max:text-xl">5</span>
               </div>
@@ -381,15 +406,26 @@ const Collection: React.FC = () => {
               <BoxDescription clsasName="w-full" name="نظرات مشتریان" Icon={ChatLine}>
                 <div className="flex gap-2 items-center">
                   <div className="w-4">
-
                     <InfoCircle color="#1570EF" size={16} iconStyle="Bold" />
                   </div>
                   <span className="text-base font-normal text-gray-500">
-                    در زیوا، فقط نظرات کاربرانی ثبت می‌شود که بلیط این مجموعه را تهییه و استفاده کرده‌اند.
+                    در زیوا، فقط نظرات کاربرانی ثبت می‌شود که بلیط این مجموعه را تهییه و
+                    استفاده کرده‌اند.
                   </span>
                 </div>
                 <div className="flex flex-col gap-14">
-                  <Comment isAgree={false} isdisAgree={true} agree={1} disAgree={3} name="نام و نام خانوادگی" date="1400/00/00" Weaknesses={["نقطه ضعف 1", "نقطه ضعف 2"]} strengths={["نقطه قوت 1", "نقطه قوت 2"]} rate={0} text="لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است" />
+                  <Comment
+                    isAgree={false}
+                    isdisAgree={true}
+                    agree={1}
+                    disAgree={3}
+                    name="نام و نام خانوادگی"
+                    date="1400/00/00"
+                    Weaknesses={["نقطه ضعف 1", "نقطه ضعف 2"]}
+                    strengths={["نقطه قوت 1", "نقطه قوت 2"]}
+                    rate={0}
+                    text="لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است"
+                  />
                 </div>
               </BoxDescription>
             </div>

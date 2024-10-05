@@ -13,6 +13,8 @@ interface InputType {
   onChange?: (date: DateObject | DateObject[] | null) => void;
   disabled?: boolean;
   className?: string;
+  size?: "sm" | "md" | "lg"
+  variant?: "flat" | "faded" | "bordered" | "underlined" | undefined;
 }
 
 const weekDays = ["ش", "ی", "د", "س", "چ", "پ", "ج"];
@@ -24,7 +26,9 @@ const inputDateZiva: React.FC<InputType> = ({
   placeholder,
   onChange,
   className,
+  size,
   name,
+  variant
 }) => {
   return (
     <DatePicker
@@ -36,7 +40,7 @@ const inputDateZiva: React.FC<InputType> = ({
       calendar={persian}
       locale={persian_fa}
       className="custom-calendar"
-      inputClass={`outline-0 w-full bg-white h-11 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 p-3 disabled:text-gray-600 disabled:bg-white disabled:border-gray-300 disabled:cursor-not-allowed select-none ${className}`}
+      inputClass={`outline-0 w-full bg-white h-11 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 p-3 disabled:text-gray-600 disabled:bg-white disabled:border-gray-300 disabled:cursor-not-allowed select-none`}
       placeholder={placeholder}
       plugins={plugins ? [plugins] : []}
       disabled={disabled}
@@ -47,11 +51,13 @@ const inputDateZiva: React.FC<InputType> = ({
       ) => (
         <InputZiva
           value={value}
+          size={size}
+          variant={variant}
           onChange={handleValueChange}
           label={placeholder}
           name={name}
           classNames={{
-            inputWrapper: "w-full min-w-[116px]",
+            inputWrapper: `w-full min-w-[116px] ${className}`,
             label: "text-medium sm-max:text-tiny",
           }}
           onFocus={openCalendar}

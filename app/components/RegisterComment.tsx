@@ -1,5 +1,5 @@
 'use client'
-import { Rate } from "antd";
+import Rate from "antd/es/rate";
 import BoxDescription from "./BoxDescription";
 import { AddCircle, ChatLine, CloseCircle, PlusMinus, Pulse, TrashBinMinimalistic } from "solar-icon-set";
 import { Input, Textarea } from "@nextui-org/react";

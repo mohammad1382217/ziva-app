@@ -17,7 +17,7 @@ import {
   useReactTable,
 } from "@tanstack/react-table";
 import Card from "../../../components/card/Card";
-import * as React from "react";
+import React from "react";
 import Image from "next/image";
 import { Reply2 } from "solar-icon-set";
 import Poll from "../../../assests/Rectangle 2491.png";

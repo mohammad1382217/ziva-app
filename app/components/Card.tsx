@@ -6,6 +6,7 @@ import { Heart, MapPointWave, Reply2, Sale } from "solar-icon-set";
 import Star from "@/app/assests/start.svg";
 import StarWhite from "@/app/assests/startWhite.svg";
 import Image from "next/image";
+
 export interface CardType {
   rate: number;
   like: boolean;
