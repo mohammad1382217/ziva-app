@@ -1,11 +1,10 @@
 'use client';
 // Chakra imports
 import { Portal, Box, useDisclosure } from '@chakra-ui/react';
-import Footer from '../components/footer/FooterAdmin';
 // Layout components
 import Navbar from '../components/navbar/NavbarRTL';
 import Sidebar from '../components/sidebar/Sidebar';
-import { RtlProvider } from '../components/rtlProvider/RtlProvider';
+import RtlProvider from '../components/rtlProvider/RtlProvider';
 import { SidebarContext } from '../contexts/SidebarContext';
 import { PropsWithChildren, useState } from 'react';
 import routes from './Dashboard/routes';
@@ -18,7 +17,7 @@ import {
 interface RTLLayoutProps extends PropsWithChildren {}
 
 // Custom Chakra theme
-export default function RTLLayout(props: RTLLayoutProps) {
+const RTLLayout = (props: RTLLayoutProps) => {
   const { children, ...rest } = props;
   const [fixed] = useState(false);
   const [toggleSidebar, setToggleSidebar] = useState(false);
@@ -72,12 +71,11 @@ export default function RTLLayout(props: RTLLayoutProps) {
             >
               {children}
             </Box>
-            <Box>
-              <Footer />
-            </Box>
           </Box>
         </SidebarContext.Provider>
       </Box>
     </RtlProvider>
   );
 }
+
+export default RTLLayout;

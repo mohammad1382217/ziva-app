@@ -1,6 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: false,
+  output: "standalone",
+  swcMinify: true,
+  optimizeFonts: true,
   experimental: {
     optimizePackageImports: [
       "@chakra-ui/icons",

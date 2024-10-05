@@ -38,7 +38,7 @@ type ColumnConfig = {
 
 const columnHelper = createColumnHelper<RowObj>();
 
-export default function ComplexTable({
+const ComplexTable = ({
   tableData,
   HeaderText,
   columnsConfig,
@@ -48,7 +48,7 @@ export default function ComplexTable({
   HeaderText: string;
   columnsConfig: ColumnConfig[];
   showImage?: boolean;
-}) {
+}) => {
   const [sorting, setSorting] = React.useState<SortingState>([]);
   const textColor = useColorModeValue("secondaryGray.900", "white");
 
@@ -170,3 +170,5 @@ export default function ComplexTable({
     </Card>
   );
 }
+
+export default ComplexTable;

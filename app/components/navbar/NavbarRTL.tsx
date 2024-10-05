@@ -14,14 +14,14 @@ import AdminNavbarLinks from "./NavbarLinksAdmin";
 import { isWindowAvailable } from "../../utils/navigation";
 import { Home } from "solar-icon-set";
 
-export default function AdminNavbar(props: {
+const AdminNavbar = (props: {
   secondary: boolean;
   message: string | boolean;
   brandText: string;
   logoText: string;
   fixed: boolean;
   onOpen: (...args: any[]) => any;
-}) {
+}) => {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -164,3 +164,5 @@ export default function AdminNavbar(props: {
 AdminNavbar.propTypes = {
   brandText: PropTypes.string.isRequired
 };
+
+export default AdminNavbar;

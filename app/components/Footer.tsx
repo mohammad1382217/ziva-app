@@ -7,7 +7,7 @@ import { Letter } from "solar-icon-set";
 
 const Footer = () => {
   return (
-    <div>
+    <footer className="!select-none">
       <div className="flex justify-between gap-32 xl-max:gap-16 lg-max:8 sm-max:flex-col-reverse bg-gray-50 flex-row containerZiva py-16">
         <div className="flex flex-col gap-12">
           <div className="flex flex-col justify-end items-start gap-6">
@@ -53,14 +53,14 @@ const Footer = () => {
             buttonText="پست الکترونیکی:  info@zivaticket.ir"
             variant="bordered"
             type="submit"
-            rightIcon={<Letter size={17} color="#FFFFFF" />}
+            rightIcon={<Letter size={17} color="white" />}
           />
           <ButtonZiva
             className="h-10 w-auto rounded-full bg-transparent hover:bg-transparent text-[14px] font-semibold border border-whitetext-white "
             buttonText="شماره تماس پشتیبانی:  0912 345 6789"
             variant="bordered"
             type="submit"
-            rightIcon={<Letter size={17} color="#FFFFFF" />}
+            rightIcon={<Letter size={17} color="white" />}
           />
         </div>
         <div className="flex gap-4">
@@ -69,32 +69,32 @@ const Footer = () => {
             iconOnly={true}
             variant="bordered"
             type="submit"
-            rightIcon={<Letter size={17} color="#FFFFFF" />}
+            rightIcon={<Letter size={17} color="white" />}
           />
           <ButtonZiva
             className="h-10 min-w-5 w-10 rounded-full bg-transparent hover:bg-transparent text-[14px] font-semibold border border-whitetext-white "
             iconOnly={true}
             variant="bordered"
             type="submit"
-            rightIcon={<Letter size={17} color="#FFFFFF" />}
+            rightIcon={<Letter size={17} color="white" />}
           />
           <ButtonZiva
             className="h-10 min-w-5 w-10 rounded-full bg-transparent hover:bg-transparent text-[14px] font-semibold border border-whitetext-white "
             iconOnly={true}
             variant="bordered"
             type="submit"
-            rightIcon={<Letter size={17} color="#FFFFFF" />}
+            rightIcon={<Letter size={17} color="white" />}
           />
           <ButtonZiva
             className="h-10 min-w-5 w-10 rounded-full bg-transparent hover:bg-transparent text-[14px] font-semibold border border-whitetext-white "
             iconOnly={true}
             variant="bordered"
             type="submit"
-            rightIcon={<Letter size={17} color="#FFFFFF" />}
+            rightIcon={<Letter size={17} color="white" />}
           />
         </div>
       </div>
-    </div>
+    </footer>
   );
 };
 

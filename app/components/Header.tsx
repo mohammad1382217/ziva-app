@@ -14,7 +14,7 @@ const Header = () => {
   ];
 
   return (
-    <div className="h-20 flex items-center justify-between fixed top-0 z-40 px-[156px] 1200-max:px-20 768-max:px-5 w-full bg-gradient-to-r from-white/80 to-white/90 backdrop-blur-sm">
+    <header className="h-20 flex items-center justify-between fixed top-0 z-40 px-[156px] 1200-max:px-20 768-max:px-5 w-full bg-gradient-to-r from-white/80 to-white/90 backdrop-blur-sm !select-none">
       <div className="flex gap-14 1200-max:gap-12">
         <div className="flex justify-center items-center gap-4">
           <div className="w-8 h-8 rounded-full bg-slate-600"></div>
@@ -80,7 +80,7 @@ const Header = () => {
       <div className="768-min:hidden ">
         <HamburgerMenuHeader menuItems={menuItems} />
       </div>
-    </div>
+    </header>
   );
 };
 

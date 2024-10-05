@@ -2,7 +2,7 @@
 import { Box, Flex, Select, Text, useColorModeValue } from '@chakra-ui/react'
 import Card from '../../../components/card/Card'
 
-export default function UserActivity (props: { [x: string]: any }) {
+const UserActivity = (props: { [x: string]: any }) => {
   const { ...rest } = props
 
   // Chakra Color Mode
@@ -35,3 +35,5 @@ export default function UserActivity (props: { [x: string]: any }) {
     </Card>
   )
 }
+
+export default UserActivity;

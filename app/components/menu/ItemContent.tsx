@@ -2,7 +2,7 @@
 import { Icon, Flex, Text, useColorModeValue } from "@chakra-ui/react";
 import { Upload } from "solar-icon-set"; 
 
-export function ItemContent(props:{info:string}) {
+const ItemContent = (props:{info:string}) => {
   const textColor = useColorModeValue("navy.700", "white");
   return (
     <>
@@ -38,3 +38,5 @@ export function ItemContent(props:{info:string}) {
     </>
   );
 }
+
+export default ItemContent;

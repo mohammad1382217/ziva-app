@@ -17,20 +17,24 @@ type UsePrevNextButtonsType = {
 };
 
 export const usePrevNextButtons = (
-  emblaApi: EmblaCarouselType | undefined
+  emblaApi: EmblaCarouselType | undefined,
+  scrollAmount: number = 2 // Number of slides to move
 ): UsePrevNextButtonsType => {
   const [prevBtnDisabled, setPrevBtnDisabled] = useState(true);
   const [nextBtnDisabled, setNextBtnDisabled] = useState(true);
 
   const onPrevButtonClick = useCallback(() => {
     if (!emblaApi) return;
-    emblaApi.scrollPrev();
-  }, [emblaApi]);
+    const targetIndex = Math.max(emblaApi.selectedScrollSnap() - scrollAmount, 0);
+    emblaApi.scrollTo(targetIndex);
+  }, [emblaApi, scrollAmount]);
 
   const onNextButtonClick = useCallback(() => {
     if (!emblaApi) return;
-    emblaApi.scrollNext();
-  }, [emblaApi]);
+    const maxIndex = emblaApi.scrollSnapList().length - 1;
+    const targetIndex = Math.min(emblaApi.selectedScrollSnap() + scrollAmount, maxIndex);
+    emblaApi.scrollTo(targetIndex);
+  }, [emblaApi, scrollAmount]);
 
   const onSelect = useCallback((emblaApi: EmblaCarouselType) => {
     setPrevBtnDisabled(!emblaApi.canScrollPrev());

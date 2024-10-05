@@ -8,7 +8,7 @@ interface SidebarLinksProps {
   routes: IRoute[];
 }
 
-export function SidebarLinks({ routes }: SidebarLinksProps) {
+const SidebarLinks = ({ routes }: SidebarLinksProps) => {
   const pathname = usePathname();
 
   // Determine if the route is active

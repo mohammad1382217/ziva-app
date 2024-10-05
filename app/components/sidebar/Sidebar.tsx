@@ -33,7 +33,7 @@ interface SidebarProps extends SidebarResponsiveProps {
   [x: string]: any;
 }
 
-function Sidebar(props: SidebarProps) {
+const Sidebar = (props: SidebarProps) => {
   const { routes } = props;
 
   let variantChange = '0.2s linear';
@@ -73,7 +73,7 @@ function Sidebar(props: SidebarProps) {
 
 // FUNCTIONS
 
-export function SidebarResponsive(props: SidebarResponsiveProps) {
+export const SidebarResponsive = (props: SidebarResponsiveProps) => {
   let sidebarBackgroundColor = useColorModeValue('white', 'navy.800');
   let menuColor = useColorModeValue('gray.400', 'white');
   // // SIDEBAR

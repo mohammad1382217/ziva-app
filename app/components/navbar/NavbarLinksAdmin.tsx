@@ -10,16 +10,16 @@ import {
   useColorModeValue,
 } from "@chakra-ui/react";
 // Custom Components
-import { ItemContent } from "../../components/menu/ItemContent";
+import ItemContent from "../../components/menu/ItemContent";
 import { SidebarResponsive } from "../../components/sidebar/Sidebar";
 import { Bell, SmileSquare } from "solar-icon-set";
 import routes from "../../(dashboard)/Dashboard/routes";
 
-export default function HeaderLinks(props: {
+const HeaderLinks = (props: {
   secondary: boolean;
   onOpen: boolean | any;
   fixed: boolean | any;
-}) {
+}) => {
   const { secondary } = props;
   // Chakra Color Mode
   let menuBg = useColorModeValue("white", "navy.800");
@@ -111,3 +111,5 @@ export default function HeaderLinks(props: {
     </Flex>
   );
 }
+
+export default HeaderLinks;

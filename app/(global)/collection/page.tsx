@@ -261,7 +261,7 @@ const Collection: React.FC = () => {
         </section>
 
         {/* بخش‌های مرتبط با هر تب */}
-        <section className="gap-10 flex flex-col lg-max:gap-6" id="introduction">
+        <section className="gap-10 flex flex-col lg-max:gap-6 scroll-mt-[184px]" id="introduction">
           <BoxDescription name="اطلاعیه ها" Icon={DangerCircle}>
             <ul className="list-disc list-inside text-right text-base font-normal text-orange-300">
               <li>
@@ -304,8 +304,8 @@ const Collection: React.FC = () => {
           </BoxDescription>
         </section>
 
-        <section className="gap-8 flex flex-col" id="amenities">
-          <h1 className="text-black text-center font-bold text-4xl">
+        <section className="gap-8 flex flex-col">
+          <h1 className="text-black text-center font-bold text-4xl scroll-mt-[184px]" id="amenities">
             امکانات و ویژگی ها
           </h1>
           <div className="flex justify-center items-center px-20 gap-4">
@@ -324,9 +324,8 @@ const Collection: React.FC = () => {
 
         <section
           className="gap-8 px-24 lg-max:px-10 md-max:px-0 flex flex-col"
-          id="ticket"
         >
-          <h1 className="text-black text-center font-bold text-4xl">خرید بلیط استخر</h1>
+          <h1 className="text-black text-center font-bold text-4xl scroll-mt-[184px]" id="ticket">خرید بلیط استخر</h1>
           <div className="flex flex-col gap-6">
             <BuyTicket
               priceDiscount="12"
@@ -382,7 +381,7 @@ const Collection: React.FC = () => {
         <div className="flex h-[104px] justify-between w-full gap-6">
           <Banner className="w-full" />
         </div>
-        <section className="flex flex-col gap-6" id="comments">
+        <section className="flex flex-col gap-6 scroll-mt-[184px]" id="comments">
           <div className="bg-white w-full flex flex-row md-max:flex-col md-max:items-start justify-between items-center px-6 py-4 gap-8  rounded-2xl shadow-Box">
             <div className="flex gap-4 text-gray-600 items-center">
               <div className="flex gap-2 justify-center items-center">
