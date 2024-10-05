@@ -3,6 +3,7 @@ import ButtonZiva from "./Button";
 import { Magnifer, UserCircle } from "solar-icon-set";
 import { Input } from "@nextui-org/react";
 import HamburgerMenuHeader from "./HamburgerMenuHeader";
+import InputZiva from "./InputZiva";
 
 const Header = () => {
   const menuItems = [
@@ -28,6 +29,25 @@ const Header = () => {
         </div>
       </div>
       <div className="flex 768-max:hidden flex-row gap-4">
+        {/* <InputZiva
+          type="text"
+          name="search"
+          // value={Weakness}
+          // onChange={(e) => {
+          //     setWeakness(e.target.value)
+          // }}
+          variant="bordered"
+          label="جستجو"
+          labelPlacement="inside"
+          endContent={
+            <button
+              type="button"
+              className="flex !w-30 2xl-max:!w-20 md-max:!w-24 justify-center items-center"
+            >
+              <Magnifer color="#A1A1AA" size={20} iconStyle="Outline" />
+            </button>
+          }
+        /> */}
         <Input
           type="text"
           id="search"

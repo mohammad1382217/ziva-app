@@ -29,15 +29,16 @@ import BoxMuliCarousel from "../../components/BoxMulitiCarousel/BoxMuliCarousel"
 import Banner from "../../components/Banner";
 import BuyTicket from "../../components/buyTicket";
 import Discount from "../../components/Discount";
-import Rate from "/rate";
+import Rate from "antd/es/rate";
 import RegisterComment from "../../components/RegisterComment";
 import Comment from "../../components/Comment";
+
 export const metadata: Metadata = {
   title: "مجموعه",
   description: "اسختر فلان در قم",
 };
 
-function getBackgroundImage(srcSet = "") {
+const getBackgroundImage = (srcSet = "") => {
   const imageSet = srcSet
     .split(", ")
     .map((str) => {

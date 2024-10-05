@@ -26,6 +26,8 @@ interface InputType {
   radius?: "sm" | "md" | "lg" | "none" | "full";
   labelPlacement?: "outside" | "inside" | "outside-left";
   isRequired?: boolean;
+  startContent?: React.ReactNode;
+  endContent?: React.ReactNode;
 }
 
 const InputZiva = forwardRef<HTMLInputElement, InputType>(({
@@ -39,10 +41,12 @@ const InputZiva = forwardRef<HTMLInputElement, InputType>(({
   type,
   maxLength,
   classNames,
-  size = "lg",
+  size = "sm",
   radius = "md",
   labelPlacement = "inside",
-  isRequired
+  isRequired,
+  startContent,
+  endContent,
 }, ref) => {
   return (
     <Input
@@ -63,6 +67,8 @@ const InputZiva = forwardRef<HTMLInputElement, InputType>(({
       type={type}
       aria-label={label}
       label={label}
+      startContent={startContent}
+      endContent={endContent}
       classNames={{
         label: `mr-0 !origin-top-right ${classNames?.label}`,
         input: `text-right mr-1 ${classNames?.input}`,
