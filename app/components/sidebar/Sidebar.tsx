@@ -25,7 +25,7 @@ import { Scrollbars } from 'react-custom-scrollbars-2';
 import { MenuDots } from 'solar-icon-set';
 import { IRoute } from '../../types/navigation';
 
-interface SidebarResponsiveProps {
+export interface SidebarResponsiveProps {
   routes: IRoute[];
 }
 
@@ -57,6 +57,7 @@ const Sidebar = (props: SidebarProps) => {
         minH="100%"
         overflowX="hidden"
         boxShadow={shadow}
+        className='bg-slate-50'
       >
         <Scrollbars
           autoHide

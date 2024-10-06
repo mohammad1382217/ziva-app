@@ -20,7 +20,7 @@ const AboutPage = () => {
       headerClass: "!items-center",
       label: "چطور میتوانم به زیوا اعتماد کنم؟",
       children: (
-        <div className="flex flex-row gap-[10px] px-2 py-3 text-gray-500 font-normal text-sm pr-16 md-max:pr-6">
+        <div className="flex flex-row gap-[10px] px-2 py-3 text-slate-500 font-normal text-sm pr-16 md-max:pr-6">
           <div className="w-[1px] bg-orange-500"></div>
           {text}
         </div>
@@ -32,7 +32,7 @@ const AboutPage = () => {
       headerClass: "!items-center",
       label: "چطور میتوانم امتیاز بگیرم؟",
       children: (
-        <div className="flex flex-row gap-[10px] px-2 py-3 text-gray-500 font-normal text-sm pr-16 md-max:pr-6">
+        <div className="flex flex-row gap-[10px] px-2 py-3 text-slate-500 font-normal text-sm pr-16 md-max:pr-6">
           <div className="w-[1px] bg-orange-500"></div>
           {text}
         </div>
@@ -44,7 +44,7 @@ const AboutPage = () => {
       headerClass: "!items-center",
       label: "چگونه میتوانم با پشتیبانی ارتباط داشته باشم؟",
       children: (
-        <div className="flex flex-row gap-[10px] px-2 py-3 text-gray-500 font-normal text-sm pr-16 md-max:pr-6">
+        <div className="flex flex-row gap-[10px] px-2 py-3 text-slate-500 font-normal text-sm pr-16 md-max:pr-6">
           <div className="w-[1px] bg-orange-500"></div>
           {text}
         </div>
@@ -56,7 +56,7 @@ const AboutPage = () => {
       headerClass: "!items-center",
       label: "بازگشت پول به حسابم به چه صورت است؟",
       children: (
-        <div className="flex flex-row gap-[10px] px-2 py-3 text-gray-500 font-normal text-sm pr-16 md-max:pr-6">
+        <div className="flex flex-row gap-[10px] px-2 py-3 text-slate-500 font-normal text-sm pr-16 md-max:pr-6">
           <div className="w-[1px] bg-orange-500"></div>
           {text}
         </div>

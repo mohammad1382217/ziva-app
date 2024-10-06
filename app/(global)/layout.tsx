@@ -48,7 +48,7 @@ const RootLayout = ({
   return (
     <html lang="fa" dir="rtl">
       <body className={pelak.className}>
-        <NextUIProvider locale="fa-AF" className="bg-gray-50">
+        <NextUIProvider locale="fa-AF" className="bg-slate-50">
           <Header />
           <main className="mt-20 !select-none">
             <AppWrappers>{children}</AppWrappers>
@@ -58,6 +58,6 @@ const RootLayout = ({
       </body>
     </html>
   );
-}
+};
 
 export default RootLayout;

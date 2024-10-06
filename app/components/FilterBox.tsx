@@ -49,7 +49,7 @@ const FilterBox: React.FC<FilterBoxType> = ({
       <div className="lg-min:hidden">
         <ButtonZiva
           onClick={showDrawer}
-          className="h-10 w-auto rounded-full bg-white hover:!bg-white focus:bg-white border-none text-gray-900"
+          className="h-10 w-auto rounded-full bg-white hover:!bg-white focus:bg-white border-none text-slate-900"
           buttonText="امکانات"
           variant="ghost"
           type="submit"

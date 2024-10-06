@@ -96,7 +96,9 @@ const HeaderLinks = (props: {
       </Menu>
       <Flex align="center" justify="center" gap="16px">
         <Flex flexDirection="column">
-          <span className="mr-4 text-gray-900 text-lg font-bold">نام و نام خانوادگی</span>
+          <span className="mr-4 text-slate-900 text-lg font-bold">
+            نام و نام خانوادگی
+          </span>
         </Flex>
         <Flex
           className="bg-blue-200"

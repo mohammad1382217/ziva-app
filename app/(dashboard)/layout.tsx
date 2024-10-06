@@ -12,8 +12,9 @@ import {
   getActiveNavbar,
   getActiveNavbarText,
   getActiveRoute,
-  isWindowAvailable,
 } from "../utils/navigation";
+import { usePathname } from "next/navigation";
+import ButtonBar from "../components/sidebar/components/ButtonBar";
 
 interface RTLLayoutProps extends PropsWithChildren {}
 
@@ -22,11 +23,16 @@ const RTLLayout = (props: RTLLayoutProps) => {
   const { children, ...rest } = props;
   const [fixed] = useState(false);
   const [toggleSidebar, setToggleSidebar] = useState(false);
+  const pathname = usePathname(); // دریافت مسیر فعلی
+  const [brandText, setBrandText] = useState<string>("Default Brand Text");
+  const [secondaryNavbar, setSecondaryNavbar] = useState<boolean>(false);
+  const [message, setMessage] = useState<string | boolean>(false);
 
   useEffect(() => {
-    if (!isWindowAvailable()) return;
-    window.document.documentElement.dir = "rtl";
-  });
+    setBrandText(getActiveRoute(routes, pathname));
+    setSecondaryNavbar(getActiveNavbar(routes, pathname));
+    setMessage(getActiveNavbarText(routes, pathname));
+  }, [pathname, routes]);
 
   const { onOpen } = useDisclosure();
   return (
@@ -59,9 +65,9 @@ const RTLLayout = (props: RTLLayoutProps) => {
                 <Navbar
                   onOpen={onOpen}
                   logoText={"زیوا"}
-                  brandText={getActiveRoute(routes)}
-                  secondary={getActiveNavbar(routes)}
-                  message={getActiveNavbarText(routes)}
+                  brandText={brandText}
+                  secondary={secondaryNavbar}
+                  message={message}
                   fixed={fixed}
                   {...rest}
                 />
@@ -78,6 +84,7 @@ const RTLLayout = (props: RTLLayoutProps) => {
               {children}
             </Box>
           </Box>
+          <ButtonBar routes={routes} />
         </SidebarContext.Provider>
       </Box>
     </RtlProvider>

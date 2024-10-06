@@ -8,11 +8,11 @@ import { Letter } from "solar-icon-set";
 const Footer = () => {
   return (
     <footer className="!select-none">
-      <div className="flex justify-between gap-32 xl-max:gap-16 lg-max:8 sm-max:flex-col-reverse bg-gray-50 flex-row containerZiva py-16">
+      <div className="flex justify-between gap-32 xl-max:gap-16 lg-max:8 sm-max:flex-col-reverse bg-slate-50 flex-row containerZiva py-16">
         <div className="flex flex-col gap-12">
           <div className="flex flex-col justify-end items-start gap-6">
             <Logo />
-            <p className="text-[14px] text-gray-600 font-normal">
+            <p className="text-[14px] text-slate-600 font-normal">
               لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از
               طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که
               لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود
@@ -27,8 +27,8 @@ const Footer = () => {
         </div>
         <div className="flex flex-row  gap-20">
           <div className="flex flex-col gap-10">
-            <div className="text-gray-800 font-bold text-lg">زیوا</div>
-            <div className="flex flex-col gap-8 text-nowrap text-xs font-normal text-gray-600">
+            <div className="text-slate-800 font-bold text-lg">زیوا</div>
+            <div className="flex flex-col gap-8 text-nowrap text-xs font-normal text-slate-600">
               <Link href={"/"}>ارتباط با ما</Link>
               <Link href={"/"}>قوانین و مقررات</Link>
               <Link href={"/"}>درباره ما </Link>
@@ -36,8 +36,8 @@ const Footer = () => {
             </div>
           </div>
           <div className="flex flex-col gap-10">
-            <div className="text-gray-800 font-bold text-lg">لینک ها</div>
-            <div className="flex flex-col gap-8 text-nowrap text-xs font-normal text-gray-600">
+            <div className="text-slate-800 font-bold text-lg">لینک ها</div>
+            <div className="flex flex-col gap-8 text-nowrap text-xs font-normal text-slate-600">
               <Link href={"/"}>بیشترین تخفیف</Link>
               <Link href={"/"}>محبوب‌ترین ها</Link>
               <Link href={"/"}>همه استخر ها </Link>

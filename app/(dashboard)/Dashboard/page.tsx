@@ -57,10 +57,10 @@ export const UserReports = () => {
                 />
               </Flex>
               <Flex flexDirection="column">
-                <span className="mr-4 text-gray-900 text-lg font-bold">
+                <span className="mr-4 text-slate-900 text-lg font-bold">
                   نام و نام خانوادگی
                 </span>
-                <span className="mr-4 text-gray-500 text-sm font-normal">
+                <span className="mr-4 text-slate-500 text-sm font-normal">
                   6789 345 0912
                 </span>
               </Flex>

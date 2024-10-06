@@ -22,7 +22,7 @@ const Information: React.FC = () => {
   return (
     <Card p="20px" alignItems="start" flexDirection="column" w="100%">
       <Flex alignItems="center" justifyContent="space-between" w="100%" mb="30px">
-        <Text className="text-gray-900" fontSize="lg" fontWeight="700">
+        <Text className="text-slate-900" fontSize="lg" fontWeight="700">
           اطلاعات حساب
         </Text>
         <Flex gap="2px" alignItems="center" justifyContent="center">

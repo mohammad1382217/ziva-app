@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import ButtonZiva from "@/app/components/ButtonZiva";
 import InputDate from "@/app/components/inputDate";
@@ -28,7 +28,14 @@ const Account = (props: { [x: string]: any }) => {
     <Box pt={{ base: "130px", md: "60px", xl: "60px" }}>
       <SimpleGrid columns={{ base: 1, md: 1, xl: 1 }} gap="20px" mb="20px">
         <SimpleGrid columns={{ base: 1, md: 2, xl: 2 }} gap="20px">
-          <Card p="20px" alignItems="start" flexDirection="column" w="100%" h="min-content" {...rest}>
+          <Card
+            p="20px"
+            alignItems="start"
+            flexDirection="column"
+            w="100%"
+            h="min-content"
+            {...rest}
+          >
             <Flex alignItems="center" justifyContent="space-between" w="100%" mb="30px">
               <Text color={"ff5400"} fontSize="lg" fontWeight="700" className="w-[145px]">
                 اطلاعات فردی
@@ -112,12 +119,26 @@ const Account = (props: { [x: string]: any }) => {
                   buttonText="ذخیره"
                   type="button"
                   className={`w-32 sm-max:w-full h-11 font-semibold text-sm bg-orange-500 hover:bg-orange-600`}
-                  leftIcon={<Unread color={"white"} height={20} width={20} className="!w-5 !h-5" />}
+                  leftIcon={
+                    <Unread
+                      color={"white"}
+                      height={20}
+                      width={20}
+                      className="!w-5 !h-5"
+                    />
+                  }
                 />
               </SimpleGrid>
             </SimpleGrid>
           </Card>
-          <Card p="20px" alignItems="start" flexDirection="column" w="100%" h="min-content" {...rest}>
+          <Card
+            p="20px"
+            alignItems="start"
+            flexDirection="column"
+            w="100%"
+            h="min-content"
+            {...rest}
+          >
             <Flex alignItems="center" justifyContent="space-between" w="100%" mb="30px">
               <Text color={"ff5400"} fontSize="lg" fontWeight="700" className="w-[165px]">
                 تصویر پروفایل
@@ -142,14 +163,14 @@ const Account = (props: { [x: string]: any }) => {
                     />
                   </Flex>
                   <Flex flexDirection="column" justifyContent="space-between" h="100%">
-                    <span className="mr-4 text-gray-900 text-sm font-bold">
+                    <span className="mr-4 text-slate-900 text-sm font-bold">
                       ویرایش تصویر
                     </span>
                     <span className="mr-4 text-red-500 text-xs font-bold">حذف تصویر</span>
                   </Flex>
                 </Flex>
               </SimpleGrid>
-              <SimpleGrid columns={{ base: 1 }} gap="20px" w="100%" >
+              <SimpleGrid columns={{ base: 1 }} gap="20px" w="100%">
                 <Dragger
                   fileList={fileList}
                   multiple={false}
@@ -160,7 +181,12 @@ const Account = (props: { [x: string]: any }) => {
                 >
                   <div className="flex !w-full flex-col justify-center h-[114px]">
                     <p className="ant-upload-drag-icon flex items-center justify-center">
-                      <Inbox color="#1890FF" width="48px" height="48px" className="!w-12 !h-12"/>
+                      <Inbox
+                        color="#1890FF"
+                        width="48px"
+                        height="48px"
+                        className="!w-12 !h-12"
+                      />
                     </p>
                     <p className="ant-upload-text">برای آپلود کلیک کنید</p>
                     <p className="ant-upload-hint">
@@ -180,7 +206,14 @@ const Account = (props: { [x: string]: any }) => {
                   buttonText="ذخیره"
                   type="button"
                   className={`w-32 sm-max:w-full h-11 font-semibold text-sm bg-orange-500 hover:bg-orange-600`}
-                  leftIcon={<Unread color={"white"} height={20} width={20} className="!w-5 !h-5" />}
+                  leftIcon={
+                    <Unread
+                      color={"white"}
+                      height={20}
+                      width={20}
+                      className="!w-5 !h-5"
+                    />
+                  }
                 />
               </SimpleGrid>
             </SimpleGrid>

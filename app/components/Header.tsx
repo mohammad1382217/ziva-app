@@ -20,7 +20,7 @@ const Header = () => {
           <div className="w-8 h-8 rounded-full bg-slate-600"></div>
           <span className="text-2xl font-black text-black">زیوا</span>
         </div>
-        <div className="flex 768-max:hidden items-center gap-10 1200-max:gap-8 text-gray-700 text-sm font-medium">
+        <div className="flex 768-max:hidden items-center gap-10 1200-max:gap-8 text-slate-700 text-sm font-medium">
           {menuItems.map((menuItem, index) => (
             <Link key={index} href={menuItem[1]}>
               {menuItem[0]}

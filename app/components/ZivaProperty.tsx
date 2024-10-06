@@ -15,7 +15,7 @@ const ZivaProperty: React.FC<ZivaPropertyType> = ({ property, icon, description 
           <UserSpeakRounded color="#FCFCFD" size={35} />
         </div>
       </div>
-      <div className="text-xl lg-max:text-lg md-max:text-sm font-normal text-gray-500">
+      <div className="text-xl lg-max:text-lg md-max:text-sm font-normal text-slate-500">
         {description}
       </div>
     </div>

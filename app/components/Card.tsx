@@ -37,7 +37,7 @@ const Card: React.FC<CardType> = ({
       >
         {Verticalable ? null : (
           <div className="rounded-lg absolute left-1 gap-[3px] flex w-10 h-5 flex-row justify-center items-center bg-gradient-to-r from-white/90 to-white/80 bg-opacity-20 backdrop-blur-lg">
-            <span className="text-gray-900 font-bold text-10">{rate}</span>
+            <span className="text-slate-900 font-bold text-10">{rate}</span>
             <Image src={Star} alt="ستاره" color="#FFBD00" width={12} height={12} />
           </div>
         )}
@@ -70,17 +70,17 @@ const Card: React.FC<CardType> = ({
             {/* </Button> */}
           </div>
           <div className="gap-2 flex flex-col">
-            <h1 className="text-lg font-bold text-gray-700">{name}</h1>
+            <h1 className="text-lg font-bold text-slate-700">{name}</h1>
             <div className="flex flex-row gap-1">
               <MapPointWave color="#FF5400" size={13} />
-              <p className="text-gray-400 text-xs font-normal">{location}</p>
+              <p className="text-slate-400 text-xs font-normal">{location}</p>
             </div>
           </div>
         </div>
         <div className="flex flex-col gap-1 mt-10">
           <Divider className="w-full m-0 bg-orange-200" />
           <div className="flex justify-between py-1">
-            <p className="text-xs font-semibold text-gray-700">شروع قیمت از : {price}</p>
+            <p className="text-xs font-semibold text-slate-700">شروع قیمت از : {price}</p>
             <Link
               href={navigate}
               className="flex gap-1 flex-row justify-center items-center"
