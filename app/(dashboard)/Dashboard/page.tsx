@@ -17,7 +17,7 @@ export const UserReports = () => {
   ];
 
   return (
-    <Box pt={{ base: "130px", md: "120px", xl: "120px" }}>
+    <Box pt={{ base: "90px", md: "80px", xl: "80px" }}>
       <SimpleGrid w="100%" columns={{ base: 1, md: 1 }} gap="20px" mb="20px">
         <Box
           p="0px"

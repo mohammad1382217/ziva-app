@@ -4,6 +4,7 @@ export interface IRoute {
   name: string;
   layout: string; 
   icon: ReactComponentElement | string;
+  activeIcon?: ReactComponentElement | string;
   secondary?: boolean;
   path: string;
 }

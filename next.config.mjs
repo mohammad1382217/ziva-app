@@ -2,7 +2,6 @@
 const nextConfig = {
   reactStrictMode: false,
   output: "standalone",
-  swcMinify: true,
   optimizeFonts: true,
   experimental: {
     optimizePackageImports: [

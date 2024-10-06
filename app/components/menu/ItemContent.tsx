@@ -1,4 +1,5 @@
 // chakra imports
+import React from "react";
 import { Icon, Flex, Text, useColorModeValue } from "@chakra-ui/react";
 import { Upload } from "solar-icon-set"; 
 

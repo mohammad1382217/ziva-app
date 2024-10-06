@@ -6,8 +6,6 @@ import Links from '../../../components/sidebar/components/Links';
 import SidebarCard from '../../../components/sidebar/components/SidebarCard';
 import { IRoute } from '../../../types/navigation';
 
-// FUNCTIONS
-
 interface SidebarContentProps {
 	routes: IRoute[];
 }

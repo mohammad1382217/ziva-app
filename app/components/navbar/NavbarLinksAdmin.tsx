@@ -13,7 +13,7 @@ import {
 import ItemContent from "../../components/menu/ItemContent";
 import { SidebarResponsive } from "../../components/sidebar/Sidebar";
 import { Bell, SmileSquare } from "solar-icon-set";
-import routes from "../../(dashboard)/Dashboard/routes";
+import routes from "../../(dashboard)/routes";
 
 const HeaderLinks = (props: {
   secondary: boolean;
@@ -37,8 +37,9 @@ const HeaderLinks = (props: {
       flexDirection="row"
       bg={menuBg}
       flexWrap={secondary ? { base: "wrap", md: "nowrap" } : "unset"}
-      p="10px"
       borderRadius="30px"
+      px="0"
+      p="10px"
       boxShadow={shadow}
     >
       <SidebarResponsive routes={routes} />
@@ -110,6 +111,6 @@ const HeaderLinks = (props: {
       </Flex>
     </Flex>
   );
-}
+};
 
 export default HeaderLinks;
