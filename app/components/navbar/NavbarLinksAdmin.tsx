@@ -32,8 +32,9 @@ const HeaderLinks = (props: {
 
   return (
     <Flex
-      w={{ sm: "100%", md: "auto" }}
+      w={{ sm: "auto" }}
       alignItems="center"
+      justifyContent="center"
       flexDirection="row"
       bg={menuBg}
       flexWrap={secondary ? { base: "wrap", md: "nowrap" } : "unset"}
@@ -42,7 +43,6 @@ const HeaderLinks = (props: {
       p="10px"
       boxShadow={shadow}
     >
-      <SidebarResponsive routes={routes} />
       <Menu>
         <MenuButton p="0px" mt="8px">
           <Bell iconStyle="Bold" width={"18px"} height="18px" />

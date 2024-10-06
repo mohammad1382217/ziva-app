@@ -28,7 +28,7 @@ const Account = (props: { [x: string]: any }) => {
     <Box pt={{ base: "130px", md: "60px", xl: "60px" }}>
       <SimpleGrid columns={{ base: 1, md: 1, xl: 1 }} gap="20px" mb="20px">
         <SimpleGrid columns={{ base: 1, md: 2, xl: 2 }} gap="20px">
-          <Card p="20px" alignItems="start" flexDirection="column" w="100%" {...rest}>
+          <Card p="20px" alignItems="start" flexDirection="column" w="100%" h="min-content" {...rest}>
             <Flex alignItems="center" justifyContent="space-between" w="100%" mb="30px">
               <Text color={"ff5400"} fontSize="lg" fontWeight="700" className="w-[145px]">
                 اطلاعات فردی
@@ -36,7 +36,7 @@ const Account = (props: { [x: string]: any }) => {
               <HSeparator />
             </Flex>
             <SimpleGrid columns={{ base: 1, md: 1, xl: 1 }} gap="20px" mb="20px" w="100%">
-              <SimpleGrid columns={{ base: 1, md: 2, xl: 2 }} gap="20px">
+              <SimpleGrid columns={{ base: 1, xl: 2 }} gap="20px">
                 <InputZiva
                   name="first_name"
                   size="sm"
@@ -58,7 +58,7 @@ const Account = (props: { [x: string]: any }) => {
                   }}
                 />
               </SimpleGrid>
-              <SimpleGrid columns={{ base: 1, md: 2, xl: 2 }} gap="20px" w="100%">
+              <SimpleGrid columns={{ base: 1, xl: 2 }} gap="20px" w="100%">
                 <InputZiva
                   name="phone_number"
                   size="sm"
@@ -77,7 +77,7 @@ const Account = (props: { [x: string]: any }) => {
                 />
               </SimpleGrid>
               <SimpleGrid
-                columns={{ base: 1, md: 2, xl: 2 }}
+                columns={{ base: 1, xl: 2 }}
                 gap="20px"
                 w="100%"
                 alignItems="center"
@@ -117,7 +117,7 @@ const Account = (props: { [x: string]: any }) => {
               </SimpleGrid>
             </SimpleGrid>
           </Card>
-          <Card p="20px" alignItems="start" flexDirection="column" w="100%" {...rest}>
+          <Card p="20px" alignItems="start" flexDirection="column" w="100%" h="min-content" {...rest}>
             <Flex alignItems="center" justifyContent="space-between" w="100%" mb="30px">
               <Text color={"ff5400"} fontSize="lg" fontWeight="700" className="w-[165px]">
                 تصویر پروفایل
@@ -125,7 +125,7 @@ const Account = (props: { [x: string]: any }) => {
               <HSeparator />
             </Flex>
             <SimpleGrid columns={{ base: 1, md: 1, xl: 1 }} gap="20px" mb="20px" w="100%">
-              <SimpleGrid columns={{ base: 1, md: 2, xl: 2 }} gap="20px" h="fit-content">
+              <SimpleGrid columns={{ base: 1, xl: 2 }} gap="20px" w="100%">
                 <Flex align="start" justify="start" gap="16px">
                   <Flex
                     className="bg-blue-200"
@@ -149,7 +149,7 @@ const Account = (props: { [x: string]: any }) => {
                   </Flex>
                 </Flex>
               </SimpleGrid>
-              <SimpleGrid columns={{ base: 1 }} gap="20px" w="100%" h="min-content">
+              <SimpleGrid columns={{ base: 1 }} gap="20px" w="100%" >
                 <Dragger
                   fileList={fileList}
                   multiple={false}
