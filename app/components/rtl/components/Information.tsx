@@ -1,11 +1,8 @@
-import { Box, Flex, Text, useColorModeValue } from "@chakra-ui/react";
+import { Box, Flex, Text } from "@chakra-ui/react";
 import Card from "../../card/Card";
 import { Pen2 } from "solar-icon-set";
 
-const Information: React.FC = (props: { [x: string]: any }) => {
-  const { ...rest } = props;
-
-  const textColor = useColorModeValue("secondaryGray.900", "white");
+const Information: React.FC = () => {
   const userData = {
     fullName: "علی محمدی",
     phoneNumber: "09123456789",
@@ -23,9 +20,9 @@ const Information: React.FC = (props: { [x: string]: any }) => {
   ];
 
   return (
-    <Card p="20px" alignItems="start" flexDirection="column" w="100%" {...rest}>
+    <Card p="20px" alignItems="start" flexDirection="column" w="100%">
       <Flex alignItems="center" justifyContent="space-between" w="100%" mb="30px">
-        <Text color={textColor} fontSize="lg" fontWeight="700">
+        <Text className="text-slate-900" fontSize="lg" fontWeight="700">
           اطلاعات حساب
         </Text>
         <Flex gap="2px" alignItems="center" justifyContent="center">

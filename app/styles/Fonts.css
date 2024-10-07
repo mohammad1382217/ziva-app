@@ -1,34 +1,39 @@
 @font-face {
-  font-family: 'PelakFA';
-  src: url('../public/fonts/PelakFA-Regular.woff2') format('woff2');
+  font-family: "PelakFA";
+  src: url("../public/fonts/PelakFA-Regular.woff2") format("woff2");
   font-weight: 400;
+  font-display: "optional";
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'PelakFA';
-  src: url('../public/fonts/PelakFA-Medium.woff2') format('woff2');
+  font-family: "PelakFA";
+  src: url("../public/fonts/PelakFA-Medium.woff2") format("woff2");
   font-weight: 500;
+  font-display: "optional";
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'PelakFA';
-  src: url('../public/fonts/PelakFA-SemiBold.woff2') format('woff2');
+  font-family: "PelakFA";
+  src: url("../public/fonts/PelakFA-SemiBold.woff2") format("woff2");
   font-weight: 600;
+  font-display: "optional";
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'PelakFA';
-  src: url('../public/fonts/PelakFA-Bold.woff2') format('woff2');
+  font-family: "PelakFA";
+  src: url("../public/fonts/PelakFA-Bold.woff2") format("woff2");
   font-weight: 700;
+  font-display: "optional";
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'PelakFA';
-  src: url('../public/fonts/PelakFA-Black.woff2') format('woff2');
+  font-family: "PelakFA";
+  src: url("../public/fonts/PelakFA-Black.woff2") format("woff2");
   font-weight: 900;
+  font-display: "optional";
   font-style: normal;
 }

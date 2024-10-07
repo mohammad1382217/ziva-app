@@ -9,7 +9,7 @@ let options = {
   rtl: { key: 'css-ar', stylisPlugins: [rtl] },
   ltr: { key: 'css-en' }
 }
-export function RtlProvider (props: { children: ReactNode }) {
+const RtlProvider = (props: { children: ReactNode }) => {
   const { children } = props
   const dir =
     isWindowAvailable() && window.document.documentElement.dir == 'ar'
@@ -18,3 +18,5 @@ export function RtlProvider (props: { children: ReactNode }) {
   const cache = createCache(options[dir])
   return <CacheProvider value={cache} children={children} />
 }
+
+export default RtlProvider;

@@ -24,7 +24,7 @@ const DividerCards: React.FC<DividerCardsType> = ({
           href={navigate}
           className="hidden sm-min:flex  flex-row justify-center items-center gap-2"
         >
-          <span className="text-gray-700 font-semibold text-lg">
+          <span className="text-slate-700 font-semibold text-lg">
             {costomNavigte ? costomNavigte : "مشاهده بیشتر"}
           </span>
           <Reply2 color="#FF5400" size={20} />

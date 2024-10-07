@@ -1,5 +1,5 @@
-import { User , Widget5, CartCheck, Heart } from "solar-icon-set";
-import { IRoute } from "../../types/navigation";
+import { User, Widget5, CartCheck, Heart } from "solar-icon-set";
+import { IRoute } from "../types/navigation";
 
 const routes: IRoute[] = [
   {
@@ -7,6 +7,7 @@ const routes: IRoute[] = [
     layout: "/",
     path: "Dashboard",
     icon: <Widget5 iconStyle="Outline" width="20px" height="20px" color="#ff5400" />,
+    activeIcon: <Widget5 iconStyle="Bold" width="20px" height="20px" color="white" />,
     secondary: true,
   },
   {
@@ -14,21 +15,21 @@ const routes: IRoute[] = [
     layout: "/",
     path: "Account",
     icon: <User iconStyle="Outline" width="20px" height="20px" color="#ff5400" />,
-    secondary: true,
+    activeIcon: <User iconStyle="Bold" width="20px" height="20px" color="white" />,
   },
   {
     name: "بلیط های من",
     layout: "/",
     path: "MyTickets",
     icon: <CartCheck iconStyle="Outline" width="20px" height="20px" color="#ff5400" />,
-    secondary: true,
+    activeIcon: <CartCheck iconStyle="Bold" width="20px" height="20px" color="white" />,
   },
   {
     name: "علاقه مندی ها",
     layout: "/",
     path: "MyFavorite",
     icon: <Heart iconStyle="Outline" width="20px" height="20px" color="#ff5400" />,
-    secondary: true,
+    activeIcon: <Heart iconStyle="Bold" width="20px" height="20px" color="white" />,
   },
 ];
 

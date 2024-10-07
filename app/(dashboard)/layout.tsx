@@ -1,27 +1,38 @@
-'use client';
+"use client";
 // Chakra imports
-import { Portal, Box, useDisclosure } from '@chakra-ui/react';
-import Footer from '../components/footer/FooterAdmin';
+import { Portal, Box, useDisclosure } from "@chakra-ui/react";
 // Layout components
-import Navbar from '../components/navbar/NavbarRTL';
-import Sidebar from '../components/sidebar/Sidebar';
-import { RtlProvider } from '../components/rtlProvider/RtlProvider';
-import { SidebarContext } from '../contexts/SidebarContext';
-import { PropsWithChildren, useState } from 'react';
-import routes from './Dashboard/routes';
+import Navbar from "../components/navbar/NavbarRTL";
+import Sidebar from "../components/sidebar/Sidebar";
+import RtlProvider from "../components/rtlProvider/RtlProvider";
+import { SidebarContext } from "../contexts/SidebarContext";
+import { PropsWithChildren, useEffect, useState } from "react";
+import routes from "./routes";
 import {
   getActiveNavbar,
   getActiveNavbarText,
   getActiveRoute,
-} from '../utils/navigation';
+} from "../utils/navigation";
+import { usePathname } from "next/navigation";
+import ButtonBar from "../components/sidebar/components/ButtonBar";
 
 interface RTLLayoutProps extends PropsWithChildren {}
 
 // Custom Chakra theme
-export default function RTLLayout(props: RTLLayoutProps) {
+const RTLLayout = (props: RTLLayoutProps) => {
   const { children, ...rest } = props;
   const [fixed] = useState(false);
   const [toggleSidebar, setToggleSidebar] = useState(false);
+  const pathname = usePathname(); // دریافت مسیر فعلی
+  const [brandText, setBrandText] = useState<string>("Default Brand Text");
+  const [secondaryNavbar, setSecondaryNavbar] = useState<boolean>(false);
+  const [message, setMessage] = useState<string | boolean>(false);
+
+  useEffect(() => {
+    setBrandText(getActiveRoute(routes, pathname));
+    setSecondaryNavbar(getActiveNavbar(routes, pathname));
+    setMessage(getActiveNavbarText(routes, pathname));
+  }, [pathname, routes]);
 
   const { onOpen } = useDisclosure();
   return (
@@ -41,22 +52,22 @@ export default function RTLLayout(props: RTLLayoutProps) {
             overflow="auto"
             position="relative"
             maxHeight="100%"
-            w={{ base: '100%', xl: 'calc( 100% - 290px )' }}
-            maxWidth={{ base: '100%', xl: 'calc( 100% - 290px )' }}
+            w={{ base: "100%", xl: "calc( 100% - 214px )" }}
+            maxWidth={{ base: "100%", xl: "calc( 100% - 214px )" }}
             transition="all 0.33s cubic-bezier(0.685, 0.0473, 0.346, 1)"
             transitionDuration=".2s, .2s, .35s"
             transitionProperty="top, bottom, width"
             transitionTimingFunction="linear, linear, ease"
-            bg={"#F4F7FE"}
+            bg={"#F8FAFC"}
           >
             <Portal>
               <Box>
                 <Navbar
                   onOpen={onOpen}
-                  logoText={'Horizon UI Dashboard'}
-                  brandText={getActiveRoute(routes)}
-                  secondary={getActiveNavbar(routes)}
-                  message={getActiveNavbarText(routes)}
+                  logoText={"زیوا"}
+                  brandText={brandText}
+                  secondary={secondaryNavbar}
+                  message={message}
                   fixed={fixed}
                   {...rest}
                 />
@@ -65,19 +76,19 @@ export default function RTLLayout(props: RTLLayoutProps) {
 
             <Box
               mx="auto"
-              p={{ base: '20px', md: '30px' }}
+              p={{ base: "20px", md: "80px" }}
               pe="20px"
               minH="100vh"
               pt="50px"
             >
               {children}
             </Box>
-            <Box>
-              <Footer />
-            </Box>
           </Box>
+          <ButtonBar routes={routes} />
         </SidebarContext.Provider>
       </Box>
     </RtlProvider>
   );
-}
+};
+
+export default RTLLayout;

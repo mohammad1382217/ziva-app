@@ -24,10 +24,10 @@ const LoginForm: React.FC = () => {
       className="z-10 fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[440px] max-w-[90%] h-auto grid items-center justify-center gap-8 bg-gradient-to-br from-white/90 to-white/80 bg-opacity-20 backdrop-blur-xl rounded-3xl shadow-lg p-6"
     >
       <section className="grid gap-4">
-        <h1 className="sm-min:text-2xl text-lg text-center font-bold text-gray-900">
+        <h1 className="sm-min:text-2xl text-lg text-center font-bold text-slate-900">
           ورود | ثبت نام
         </h1>
-        <h2 className="sm-min:text-lg text-sm text-center font-normal text-gray-500">
+        <h2 className="sm-min:text-lg text-sm text-center font-normal text-slate-500">
           برای ادامه، شماره موبایل خود را وارد کنید{" "}
         </h2>
       </section>
@@ -51,7 +51,7 @@ const LoginForm: React.FC = () => {
           <p
             lang="fa"
             role="text"
-            className="sm-min:text-sm text-xs text-center text-gray-500 font-normal"
+            className="sm-min:text-sm text-xs text-center text-slate-500 font-normal"
           >
             ورود شما به معنای پذیرش <span className="text-blue-500">شرایط زیوا</span> و{" "}
             <span className="text-blue-500"> قوانین حریم خصوصی</span> است

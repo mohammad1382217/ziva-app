@@ -4,7 +4,7 @@ import { Navbar, NavbarBrand, NavbarContent, NavbarItem, NavbarMenuToggle, Navba
 import { HamburgerMenu } from "solar-icon-set";
 import Link from "next/link";
 
-export default function HamburgerMenuHeader({ menuItems }: { menuItems: string[][] }) {
+const HamburgerMenuHeader = ({ menuItems }: { menuItems: string[][] }) => {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
   return (
@@ -33,3 +33,5 @@ export default function HamburgerMenuHeader({ menuItems }: { menuItems: string[]
     </Navbar>
   );
 }
+
+export default HamburgerMenuHeader;

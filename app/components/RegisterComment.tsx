@@ -2,12 +2,7 @@
 
 import Rate from "antd/es/rate";
 import BoxDescription from "./BoxDescription";
-import {
-  AddCircle,
-  ChatLine,
-  CloseCircle,
-  TrashBinMinimalistic,
-} from "solar-icon-set";
+import { AddCircle, ChatLine, CloseCircle, TrashBinMinimalistic } from "solar-icon-set";
 import { Input, Textarea } from "@nextui-org/react";
 import { useState } from "react";
 import ButtonZiva from "./Button";
@@ -42,7 +37,7 @@ const RegisterComment: React.FC<RegisterCommentType> = ({}) => {
   };
   return (
     <BoxDescription clsasName="lg-max:w-full" name="ثبت نظر" Icon={ChatLine}>
-      <p className="text-gray-500 text-base font-normal">
+      <p className="text-slate-500 text-base font-normal">
         تجربه خودت رو در استفاده از مجموعه برامون بنویس.
       </p>
 
@@ -54,9 +49,9 @@ const RegisterComment: React.FC<RegisterCommentType> = ({}) => {
       >
         <div className="flex flex-row justify-between items-center">
           <div className="flex gap-2 justify-center items-center">
-            <span className="text-gray-800 text-2xl sm-max:text-xl font-bold">0.0</span>
+            <span className="text-slate-800 text-2xl sm-max:text-xl font-bold">0.0</span>
             <span className="font-semibold text-sm sm-max:text-xs">از</span>
-            <span className="text-gray-600 font-bold text-xl sm-max:text-lg">5</span>
+            <span className="text-slate-600 font-bold text-xl sm-max:text-lg">5</span>
           </div>
           <div>
             <Rate defaultValue={0} />
@@ -69,8 +64,8 @@ const RegisterComment: React.FC<RegisterCommentType> = ({}) => {
             variant="bordered"
             classNames={{
               // base:'bg-transparent border-1 border-[#E4E4E7]',
-              description: "text-gray-500 text-sm",
-              label: "text-gray-600 text-xs",
+              description: "text-slate-500 text-sm",
+              label: "text-slate-600 text-xs",
             }}
             placeholder="نظرت رو برامون بنویس ..."
             className="w-full "
@@ -99,7 +94,7 @@ const RegisterComment: React.FC<RegisterCommentType> = ({}) => {
             endContent={
               <button
                 type="button"
-                className="text-2xl text-gray-500"
+                className="text-2xl text-slate-500"
                 onClick={addStrenth}
               >
                 +
@@ -109,7 +104,7 @@ const RegisterComment: React.FC<RegisterCommentType> = ({}) => {
           <div className="px-4 flex flex-col gap-2">
             {strengths.map((item, index) => (
               <div key={index} className="flex justify-between">
-                <span className="text-sm font-normal text-gray-600">{item}</span>
+                <span className="text-sm font-normal text-slate-600">{item}</span>
                 <TrashBinMinimalistic
                   onClick={() => {
                     handleRemoveStrength(index);
@@ -145,7 +140,7 @@ const RegisterComment: React.FC<RegisterCommentType> = ({}) => {
             endContent={
               <button
                 type="button"
-                className="text-2xl text-gray-500"
+                className="text-2xl text-slate-500"
                 onClick={addWeakness}
               >
                 +
@@ -155,7 +150,7 @@ const RegisterComment: React.FC<RegisterCommentType> = ({}) => {
           <div className="px-4 flex flex-col gap-2">
             {Weaknesses.map((item, index) => (
               <div key={index} className="flex justify-between">
-                <span className="text-sm font-normal text-gray-600">{item}</span>
+                <span className="text-sm font-normal text-slate-600">{item}</span>
                 <TrashBinMinimalistic
                   onClick={() => {
                     handleRemoveWeakness(index);

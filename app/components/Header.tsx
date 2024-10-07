@@ -14,13 +14,13 @@ const Header = () => {
   ];
 
   return (
-    <div className="h-20 flex items-center justify-between fixed top-0 z-40 px-[156px] 1200-max:px-20 768-max:px-5 w-full bg-gradient-to-r from-white/80 to-white/90 backdrop-blur-sm">
+    <header className="h-20 flex items-center justify-between fixed top-0 z-40 px-[156px] 1200-max:px-20 768-max:px-5 w-full bg-gradient-to-r from-white/80 to-white/90 backdrop-blur-sm !select-none">
       <div className="flex gap-14 1200-max:gap-12">
         <div className="flex justify-center items-center gap-4">
           <div className="w-8 h-8 rounded-full bg-slate-600"></div>
           <span className="text-2xl font-black text-black">زیوا</span>
         </div>
-        <div className="flex 768-max:hidden items-center gap-10 1200-max:gap-8 text-gray-700 text-sm font-medium">
+        <div className="flex 768-max:hidden items-center gap-10 1200-max:gap-8 text-slate-700 text-sm font-medium">
           {menuItems.map((menuItem, index) => (
             <Link key={index} href={menuItem[1]}>
               {menuItem[0]}
@@ -80,7 +80,7 @@ const Header = () => {
       <div className="768-min:hidden ">
         <HamburgerMenuHeader menuItems={menuItems} />
       </div>
-    </div>
+    </header>
   );
 };
 

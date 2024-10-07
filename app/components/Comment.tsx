@@ -33,26 +33,26 @@ const Comment: React.FC<CommentType> = ({
     <div className="flex flex-col gap-5">
       <div className="flex justify-between items-center">
         <div className="flex gap-3">
-          <div className="flex justify-center items-center w-10 h-10 rounded-[10px] bg-gray-200">
+          <div className="flex justify-center items-center w-10 h-10 rounded-[10px] bg-slate-200">
             <FaceScanSquare color="#FFFFFF" size={20} />
           </div>
           <div className="flex flex-col gap-[2px]">
-            <span className="text-gray-800 text-base font-semibold">{name}</span>
-            <span className="text-gray-400 text-xs font-medium">{date}</span>
+            <span className="text-slate-800 text-base font-semibold">{name}</span>
+            <span className="text-slate-400 text-xs font-medium">{date}</span>
           </div>
         </div>
         <div className="flex gap-[6px]">
           <div className="flex gap-1">
             <ButtonZiva
               buttonTextClassName="text-xs font-bold"
-              className={`min-w-10 h-6 gap-1 rounded-full px-2 ${isAgree ? "bg-red-500 hover:bg-red-600" : "bg-transparent text-gray-400 hover:bg-gray-200"}  `}
+              className={`min-w-10 h-6 gap-1 rounded-full px-2 ${isAgree ? "bg-red-500 hover:bg-red-600" : "bg-transparent text-slate-400 hover:bg-slate-200"}  `}
               type="button"
               buttonText={String(agree)}
               rightIcon={<Like iconStyle="Bold" />}
             />
             <ButtonZiva
               buttonTextClassName="text-xs font-bold"
-              className={`min-w-10 h-6 gap-1 rounded-full px-2 ${isdisAgree ? "bg-red-500 hover:bg-red-600" : "bg-transparent text-gray-400 hover:bg-gray-200"}  `}
+              className={`min-w-10 h-6 gap-1 rounded-full px-2 ${isdisAgree ? "bg-red-500 hover:bg-red-600" : "bg-transparent text-slate-400 hover:bg-slate-200"}  `}
               type="button"
               buttonText={String(disAgree)}
               rightIcon={<Dislike iconStyle="Bold" />}
@@ -68,7 +68,7 @@ const Comment: React.FC<CommentType> = ({
             {strengths.map((strength, index) => (
               <div
                 key={index}
-                className="flex flex-row items-center gap-1 text-gray-800 font-semibold"
+                className="flex flex-row items-center gap-1 text-slate-800 font-semibold"
               >
                 <AddCircle color="#12B76A" size={20} iconStyle="Bold" />
                 {strength}
@@ -77,7 +77,7 @@ const Comment: React.FC<CommentType> = ({
             {Weaknesses.map((Weakness, index) => (
               <div
                 key={index}
-                className="flex flex-row items-center gap-1 text-gray-800 font-semibold"
+                className="flex flex-row items-center gap-1 text-slate-800 font-semibold"
               >
                 <CloseCircle color="#F04438" size={20} iconStyle="Bold" />
                 {Weakness}

@@ -10,16 +10,16 @@ import {
   useColorModeValue,
 } from "@chakra-ui/react";
 // Custom Components
-import { ItemContent } from "../../components/menu/ItemContent";
+import ItemContent from "../../components/menu/ItemContent";
 import { SidebarResponsive } from "../../components/sidebar/Sidebar";
 import { Bell, SmileSquare } from "solar-icon-set";
-import routes from "../../(dashboard)/Dashboard/routes";
+import routes from "../../(dashboard)/routes";
 
-export default function HeaderLinks(props: {
+const HeaderLinks = (props: {
   secondary: boolean;
   onOpen: boolean | any;
   fixed: boolean | any;
-}) {
+}) => {
   const { secondary } = props;
   // Chakra Color Mode
   let menuBg = useColorModeValue("white", "navy.800");
@@ -32,16 +32,17 @@ export default function HeaderLinks(props: {
 
   return (
     <Flex
-      w={{ sm: "100%", md: "auto" }}
+      w={{ sm: "auto" }}
       alignItems="center"
+      justifyContent="center"
       flexDirection="row"
       bg={menuBg}
       flexWrap={secondary ? { base: "wrap", md: "nowrap" } : "unset"}
-      p="10px"
       borderRadius="30px"
+      px="0"
+      p="10px"
       boxShadow={shadow}
     >
-      <SidebarResponsive routes={routes} />
       <Menu>
         <MenuButton p="0px" mt="8px">
           <Bell iconStyle="Bold" width={"18px"} height="18px" />
@@ -95,7 +96,9 @@ export default function HeaderLinks(props: {
       </Menu>
       <Flex align="center" justify="center" gap="16px">
         <Flex flexDirection="column">
-          <span className="mr-4 text-gray-900 text-lg font-bold">نام و نام خانوادگی</span>
+          <span className="mr-4 text-slate-900 text-lg font-bold">
+            نام و نام خانوادگی
+          </span>
         </Flex>
         <Flex
           className="bg-blue-200"
@@ -110,4 +113,6 @@ export default function HeaderLinks(props: {
       </Flex>
     </Flex>
   );
-}
+};
+
+export default HeaderLinks;
