@@ -39,30 +39,29 @@ const FilterBox: React.FC<FilterBoxType> = ({
             <Divider className="w-full bg-orange-200" />
           </div>
           <div className="flex gap-2 flex-row-reverse justify-center items-center">
-            <h2 className="text-2xl font-bold text-nowrap">{name}</h2>
-            {/* <Icon color="#F04438" size={24} iconStyle="Outline" /> */}
-            <div className="text-orange-500">{Icon}</div>
+            <h2 className="text-lg font-bold text-nowrap">{name}</h2>
+            <div className="text-orange-500 flex justify-center items-center">{Icon}</div>
           </div>
         </div>
         <div className={`flex flex-col gap-6 ${childrenclassName}`}>{children}</div>
       </div>
-      <div className="lg-min:hidden">
+      <div className="lg-min:hidden ">
         <ButtonZiva
           onClick={showDrawer}
-          className="h-10 w-auto rounded-full bg-white hover:!bg-white focus:bg-white border-none text-gray-900"
-          buttonText="امکانات"
+          className="h-10 w-auto text-xs font-semibold rounded-full bg-white hover:!bg-white focus:bg-white border-none text-gray-700"
+          buttonText={name}
           variant="ghost"
           type="submit"
-          rightIcon={Icon}
+          rightIcon={<div className="text-orange-500 flex justify-center items-center">{Icon}</div>}
         />
         <Drawer
-          className="rounded-t-2xl"
           placement="bottom"
-          title="Basic Drawer"
           onClose={onClose}
+          className="rounded-t-2xl"
           open={open}
         >
-          <div className={`flex flex-col gap-6 ${childrenclassName}`}>{children}</div>
+          <div className={`bg-white !z-[99999999999999999999999]  h-full flex flex-col p-6 gap-4 ${childrenclassName}`}>{children}</div>
+
         </Drawer>
       </div>
     </div>

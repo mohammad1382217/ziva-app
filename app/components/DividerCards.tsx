@@ -6,15 +6,19 @@ interface DividerCardsType {
   name: string;
   navigate?: string;
   costomNavigte?: string;
+  className?:string;
+  textClassName?:string;
 }
 
 const DividerCards: React.FC<DividerCardsType> = ({
   name,
   navigate,
   costomNavigte,
+  textClassName,
+  className
 }) => {
   return (
-    <div className="flex w-full flex-row-reverse  gap-8 justify-center items-center">
+    <div className={`flex w-full flex-row-reverse  gap-8 justify-center items-center ${className}`}>
       {navigate && (
         <Link
           href={navigate}
@@ -31,7 +35,7 @@ const DividerCards: React.FC<DividerCardsType> = ({
         <Divider className="w-full bg-orange-200" />
       </div>
       <div className="flex gap-2 flex-row justify-center items-center">
-        <span className="text-3xl font-bold text-nowrap">{name}</span>
+        <span className={`text-3xl text-gray-800 font-bold text-nowrap ${textClassName}`}>{name}</span>
       </div>
     </div>
   );

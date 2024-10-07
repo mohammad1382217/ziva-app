@@ -62,7 +62,7 @@ const Header = () => {
           endContent={
             <button
               type="button"
-              className="flex !w-30 2xl-max:!w-20 md-max:!w-24 justify-center items-center"
+              className="flex justify-center items-center"
             >
               <Magnifer color="#A1A1AA" size={20} iconStyle="Outline" />
             </button>
