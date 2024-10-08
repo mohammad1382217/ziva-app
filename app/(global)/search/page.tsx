@@ -113,19 +113,11 @@ const SearchPage = () => {
           </div>
           <Dropdown>
             <DropdownTrigger>
-              <Button
-                variant="bordered"
-              >
-                Open Menu
-              </Button>
+              <ButtonZiva className="p-0 gap-[2px] rounded min-w-auto h-[20px]" them="default" buttonTextClassName="text-10 font-semibold text-gray-600" variant="flat" type="button" buttonText="ترتیب نمایش بر اساس مرتبط ترین" />
             </DropdownTrigger>
             <DropdownMenu aria-label="Static Actions">
               <DropdownItem key="new">New file</DropdownItem>
-              <DropdownItem key="copy">Copy link</DropdownItem>
-              <DropdownItem key="edit">Edit file</DropdownItem>
-              <DropdownItem key="delete" className="text-danger" color="danger">
-                Delete file
-              </DropdownItem>
+
             </DropdownMenu>
           </Dropdown>
           {/* <div className="text-nowrap md-max:self-end">ترتیب نمایش بر اساس مرتبط ترین</div> */}
