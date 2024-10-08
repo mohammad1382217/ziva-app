@@ -7,6 +7,7 @@ import { Button, Checkbox, Dropdown, DropdownItem, DropdownMenu, DropdownTrigger
 import Link from "next/link";
 import ButtonZiva from "@/app/components/Button";
 import { Tag as AntdTag, Slider } from "antd";
+import RadioGroupZiva from "@/app/components/RadioGroup";
 const SearchPage = () => {
   const SearchCards = [
     {
@@ -164,31 +165,32 @@ const SearchPage = () => {
             <Checkbox defaultSelected>استخر کودکان</Checkbox>
             <Checkbox defaultSelected>استخر کودکان</Checkbox>
             <Checkbox defaultSelected>استخر کودکان</Checkbox>
-            <Checkbox defaultSelected>استخر کودکان</Checkbox>
-            <Checkbox defaultSelected>استخر کودکان</Checkbox>
-            <Checkbox defaultSelected>استخر کودکان</Checkbox>
-            <Checkbox defaultSelected>استخر کودکان</Checkbox>
-            <Checkbox defaultSelected>استخر کودکان</Checkbox>
-            <Checkbox defaultSelected>استخر کودکان</Checkbox>
-            <Checkbox defaultSelected>استخر کودکان</Checkbox>
           </div>
         </FilterBox>
         <FilterBox name="محدوده قیمت" Icon={<Tag />}>
-            <Input variant="bordered" className="bg-white " color="default" type="text" label="از" placeholder="شروع قیمت" />
-            <Input variant="bordered" className="bg-white " color="default" type="text" label="تا" placeholder="پایان قیمت" />
-            <Slider  range defaultValue={[20, 50]} />
-            <ButtonZiva them="orange" className="h-6 rounded-md text-xs font-semibold" type="button" buttonText="اعمال" />
+          <Input variant="bordered" className="bg-white " color="default" type="text" label="از" placeholder="شروع قیمت" />
+          <Input variant="bordered" className="bg-white " color="default" type="text" label="تا" placeholder="پایان قیمت" />
+          <Slider range defaultValue={[20, 50]} />
+          <ButtonZiva them="orange" className="h-6 rounded-md text-xs font-semibold" type="button" buttonText="اعمال" />
 
         </FilterBox>
         <FilterBox name="جنسیت" Icon={<UserHands />}>
-          <div>
-            <Checkbox defaultSelected>استخر کودکان</Checkbox>
-          </div>
+
+          <RadioGroupZiva
+            className="w-full flex"
+            name="gender"
+            options={[
+              { label: "اقایان", value: "male" },
+              { label: "بانوان", value: "female" },
+            ]}
+          />
         </FilterBox>
         <FilterBox name="محدوده زمان سانس" Icon={<ClockCircle />}>
-          <div>
-            <Checkbox defaultSelected>استخر کودکان</Checkbox>
-          </div>
+          <Input variant="bordered" className="bg-white " color="default" type="text" label="از" placeholder="شروع زمان" />
+          <Input variant="bordered" className="bg-white " color="default" type="text" label="تا" placeholder="پایان زمان" />
+          <Slider range defaultValue={[20, 50]} />
+          <ButtonZiva them="orange" className="h-6 rounded-md text-xs font-semibold" type="button" buttonText="اعمال" />
+
         </FilterBox>
       </div>
     </div>
