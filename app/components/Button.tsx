@@ -14,13 +14,15 @@ interface CustomButtonProps {
   iconOnly?: boolean;
   variant?:
   "solid" | "bordered" | "light" | "flat" | "faded" | "shadow" | "ghost" | undefined;
-  them?:'orange'
+  them?:'orange' |"default"
 }
 
 const ButtonZiva: React.FC<CustomButtonProps> = ({onClick, className, buttonTextClassName, buttonText, type, leftIcon, rightIcon, textOnly = false, variant, style, iconOnly ,them}) => {
   let ButtonThem :string ;
   if(them === 'orange'){
     ButtonThem = "bg-orange-500 hover:bg-orange-600 text-white"
+  }else if(them === 'default'){
+    ButtonThem = "!bg-transparent hover:!bg-transparent !text-black"
   }
   return (
     <Button

@@ -45,3 +45,6 @@ body {
 .ant-drawer-header{
   display: none !important;
 }
+*{
+  font-family: '__pelak_424033';
+}
