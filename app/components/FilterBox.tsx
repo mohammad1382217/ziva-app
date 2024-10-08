@@ -58,9 +58,21 @@ const FilterBox: React.FC<FilterBoxType> = ({
           placement="bottom"
           onClose={onClose}
           className="rounded-t-2xl"
+          height={'auto'}
           open={open}
         >
-          <div className={`bg-white !z-[99999999999999999999999]  h-full flex flex-col p-6 gap-4 ${childrenclassName}`}>{children}</div>
+          <div className={`bg-white !z-[99999999999999999999999]  h-full flex flex-col p-6 gap-4 ${childrenclassName}`}>
+            <div className="flex flex-row-reverse  gap-6 justify-center items-center">
+              <div className="flex-grow">
+                <Divider className="w-full bg-orange-200" />
+              </div>
+              <div className="flex gap-2 flex-row-reverse justify-center items-center">
+                <h2 className="text-lg font-bold text-nowrap">{name}</h2>
+                <div className="text-orange-500 flex justify-center items-center">{Icon}</div>
+              </div>
+            </div>
+            {children}
+          </div>
 
         </Drawer>
       </div>

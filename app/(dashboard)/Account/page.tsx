@@ -1,6 +1,6 @@
 "use client";
 
-import ButtonZiva from "@/app/components/ButtonZiva";
+import ButtonZiva from "@/app/components/Button";
 import InputDate from "@/app/components/inputDate";
 import InputZiva from "@/app/components/InputZiva";
 import RadioGroupZiva from "@/app/components/RadioGroup";

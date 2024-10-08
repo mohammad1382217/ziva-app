@@ -24,7 +24,7 @@ import { getImageProps } from "next/image";
 import SegmentedZiva from "../../components/SegmentedZiva";
 import BoxDescription from "../../components/BoxDescription";
 import { Metadata } from "next";
-import ButtonZiva from "../../components/ButtonZiva";
+import ButtonZiva from "../../components/Button";
 import BoxMuliCarousel from "../../components/BoxMulitiCarousel/BoxMuliCarousel";
 import Banner from "../../components/Banner";
 import BuyTicket from "../../components/buyTicket";

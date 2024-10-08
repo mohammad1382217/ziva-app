@@ -5,7 +5,7 @@ import DividerCards from "../../components/DividerCards";
 import FilterBox from "../../components/FilterBox";
 import { Button, Checkbox, Dropdown, DropdownItem, DropdownMenu, DropdownTrigger, Input } from "@nextui-org/react";
 import Link from "next/link";
-import ButtonZiva from "@/app/components/ButtonZiva";
+import ButtonZiva from "@/app/components/Button";
 
 const SearchPage = () => {
   const SearchCards = [
@@ -155,12 +155,20 @@ const SearchPage = () => {
           </div>
         </FilterBox>
         <FilterBox name="جستجو" Icon={<Magnifer />}>
-          <Input variant="bordered" className="bg-white" color="default" type="text" label="نام استخر" placeholder="“نام استخر”" />
-          <ButtonZiva color="warning" className="h-10" type="button" buttonText="ثبت نظر" />
-
+          <Input variant="bordered" className="bg-white " color="default" type="text" label="نام استخر" placeholder="“نام استخر”" />
+          <ButtonZiva them="orange" className="h-6 rounded-md text-xs font-semibold" type="button" buttonText="اعمال" />
         </FilterBox>
         <FilterBox name="امکانات" Icon={<Widget />}>
           <div>
+            <Checkbox defaultSelected>استخر کودکان</Checkbox>
+            <Checkbox defaultSelected>استخر کودکان</Checkbox>
+            <Checkbox defaultSelected>استخر کودکان</Checkbox>
+            <Checkbox defaultSelected>استخر کودکان</Checkbox>
+            <Checkbox defaultSelected>استخر کودکان</Checkbox>
+            <Checkbox defaultSelected>استخر کودکان</Checkbox>
+            <Checkbox defaultSelected>استخر کودکان</Checkbox>
+            <Checkbox defaultSelected>استخر کودکان</Checkbox>
+            <Checkbox defaultSelected>استخر کودکان</Checkbox>
             <Checkbox defaultSelected>استخر کودکان</Checkbox>
           </div>
         </FilterBox>
