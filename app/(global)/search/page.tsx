@@ -1,12 +1,12 @@
 'use client'
-import { ClockCircle, Magnifer, Tuning2, UserHands, Widget } from "solar-icon-set";
+import { ClockCircle, Magnifer, Tag, Tuning2, UserHands, Widget } from "solar-icon-set";
 import Card from "../../components/Card";
 import DividerCards from "../../components/DividerCards";
 import FilterBox from "../../components/FilterBox";
 import { Button, Checkbox, Dropdown, DropdownItem, DropdownMenu, DropdownTrigger, Input } from "@nextui-org/react";
 import Link from "next/link";
 import ButtonZiva from "@/app/components/Button";
-import { Tag } from "antd";
+import { Tag as AntdTag, Slider } from "antd";
 const SearchPage = () => {
   const SearchCards = [
     {
@@ -151,8 +151,8 @@ const SearchPage = () => {
       <div className="flex flex-col lg-max:flex-row lg-max:overflow-scroll gap-6">
         <FilterBox isFilter={true} name="فیلتر های فعال" Icon={<Tuning2 />}>
           <div className="gap-2 flex flex-row flex-nowrap">
-            <Tag className="rounded-full flex flex-row-reverse w-fit text-xs font-normal text-[#000000D9] border-1 bg-[#FFF8F4] border-orange-300 px-2 py-[1px] gap-[3px]" closable color="default"> <p className="w-full">از 000,000 تا 000,000 تومان</p></Tag>
-            <Tag className="rounded-full flex flex-row-reverse w-fit text-xs font-normal text-[#000000D9] border-1 bg-[#FFF8F4] border-orange-300 px-2 py-[1px] gap-[3px]" closable color="default"> <p className="w-full">جکوزی</p></Tag>
+            <AntdTag className="rounded-full flex flex-row-reverse w-fit text-xs font-normal text-[#000000D9] border-1 bg-[#FFF8F4] border-orange-300 px-2 py-[1px] gap-[3px]" closable color="default"> <p className="w-full">از 000,000 تا 000,000 تومان</p></AntdTag>
+            <AntdTag className="rounded-full flex flex-row-reverse w-fit text-xs font-normal text-[#000000D9] border-1 bg-[#FFF8F4] border-orange-300 px-2 py-[1px] gap-[3px]" closable color="default"> <p className="w-full">جکوزی</p></AntdTag>
           </div>
         </FilterBox>
         <FilterBox name="جستجو" Icon={<Magnifer />}>
@@ -174,9 +174,11 @@ const SearchPage = () => {
           </div>
         </FilterBox>
         <FilterBox name="محدوده قیمت" Icon={<Tag />}>
-          <div>
-            <Checkbox defaultSelected>استخر کودکان</Checkbox>
-          </div>
+            <Input variant="bordered" className="bg-white " color="default" type="text" label="از" placeholder="شروع قیمت" />
+            <Input variant="bordered" className="bg-white " color="default" type="text" label="تا" placeholder="پایان قیمت" />
+            <Slider  range defaultValue={[20, 50]} />
+            <ButtonZiva them="orange" className="h-6 rounded-md text-xs font-semibold" type="button" buttonText="اعمال" />
+
         </FilterBox>
         <FilterBox name="جنسیت" Icon={<UserHands />}>
           <div>
