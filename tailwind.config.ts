@@ -66,7 +66,7 @@ const config: Config = {
       },
       backgroundImage: {
         "RectangleOrange": "url('./assests/RectangleLoginPage.webp')",
-        "pattern": "url('./assests/pattern.png')"
+        "pattern": "url('./assests/pattern.png')",
       },
       padding:{
         '156':'156px'

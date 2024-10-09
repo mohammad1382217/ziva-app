@@ -42,3 +42,19 @@ body {
   margin: 0;
   padding: 0;
 }
+
+:root {
+  --gradient-f-90-f-8045: linear-gradient(-45deg, rgba(255, 255, 255, 0.90) 4.17%, rgba(255, 255, 255, 0.80) 95.83%);
+  --gradient-f-80-f-9085: linear-gradient(-85deg, #FFFFFF 80%, #FFFFFF 90%);
+  --gradient-f-70-f-8080: linear-gradient(-80deg, #FFFFFF 70%, #FFFFFF 80%);
+  --gradient-f-60-f-7085: linear-gradient(-85deg, #FFFFFF 60%, #FFFFFF 70%);
+  --gradient-f-50-f-6060: linear-gradient(-60deg, #FFFFFF 50%, #FFFFFF 60%);
+  --gradient-f-40-f-5050: linear-gradient(-50deg, #FFFFFF 40%, #FFFFFF 50%);
+  --gradient-f-30-f-4080: linear-gradient(-80deg, #FFFFFF 30%, #FFFFFF 40%);
+  --gradient-f-20-f-3080: linear-gradient(-80deg, #FFFFFF 20%, #FFFFFF 30%);
+  --gradient-f-10-f-2080: linear-gradient(-80deg, #FFFFFF 10%, #FFFFFF 20%);
+}
+
+.bg-gradient-f-90-f-8045 {
+  background: linear-gradient(-45deg, rgba(255, 255, 255, 0.90) 4.17%, rgba(255, 255, 255, 0.80) 95.83%);
+}

@@ -28,62 +28,65 @@ const SignUpForm: React.FC = () => {
   return (
     <form
       action={handleSubmitSignUp}
-      className="z-10 fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[440px] max-w-[90%] h-auto grid items-center justify-center gap-8 bg-gradient-to-br from-white/90 to-white/80 bg-opacity-20 backdrop-blur-xl rounded-3xl shadow-lg p-6"
+      className="z-10 w-[440px] max-w-[90%] h-auto grid items-center bg-gradient-f-90-f-8045 bg-opacity-20 backdrop-blur-xl border-2 border-solid border-white rounded-2xl shadow-lg"
     >
-      <section className="grid gap-4">
-        <h1 className="sm-min:text-2xl text-lg text-center font-bold text-slate-900">
-          ثبت نام
-        </h1>
-        <h2 className="sm-min:text-lg text-sm text-center font-normal text-slate-500">
-          برای ساخت حساب، اطلاعات خود را وارد کنید
-        </h2>
-      </section>
-      <section className="grid gap-4">
-        <InputZiva
-          name="first_name"
-          label="نام"
-          type="text"
-          classNames={{
-            inputWrapper: "w-full min-w-[116px]",
-            label: "text-medium sm-max:text-tiny",
-          }}
-        />
-        <InputZiva
-          name="last_name"
-          label="نام خانوادگی"
-          type="text"
-          classNames={{
-            inputWrapper: "w-full min-w-[116px]",
-            label: "text-medium sm-max:text-tiny",
-          }}
-        />
-        <InputZiva
-          name="email"
-          label="ایمیل"
-          type="text"
-          classNames={{
-            inputWrapper: "w-full min-w-[116px]",
-            label: "text-medium sm-max:text-tiny",
-          }}
-        />
-        <InputDate name="birth_date" placeholder="تاریخ تولد" />
-        <RadioGroupZiva
-          label="جنسیت"
-          name="gender"
-          options={[
-            { label: "آقا", value: "male" },
-            { label: "خانم", value: "female" },
-          ]}
-        />
-
-        <div className="grid gap-4">
-          <ButtonZiva
-            className="text-lg sm-min:text-xl font-semibold bg-orange-500 hover:bg-orange-600"
-            buttonText={"تایید و ثبت اطلاعات"}
-            type={"submit"}
-          />
-        </div>
-      </section>
+      <div className="w-full grid gap-8 items-center p-6 sm-max:p-4">
+        <section className="grid gap-4">
+          <h1 className="sm-min:text-2xl text-lg text-center font-bold text-slate-900">
+            ثبت نام
+          </h1>
+          <h2 className="sm-min:text-lg text-sm text-center font-normal text-slate-500">
+            برای ساخت حساب، اطلاعات خود را وارد کنید
+          </h2>
+        </section>
+        <section className="grid gap-6">
+          <section className="grid gap-4">
+            <InputZiva
+              name="first_name"
+              label="نام"
+              type="text"
+              classNames={{
+                inputWrapper: "w-full min-w-[116px]",
+                label: "text-medium sm-max:text-tiny",
+              }}
+            />
+            <InputZiva
+              name="last_name"
+              label="نام خانوادگی"
+              type="text"
+              classNames={{
+                inputWrapper: "w-full min-w-[116px]",
+                label: "text-medium sm-max:text-tiny",
+              }}
+            />
+            <InputZiva
+              name="email"
+              label="ایمیل"
+              type="text"
+              classNames={{
+                inputWrapper: "w-full min-w-[116px]",
+                label: "text-medium sm-max:text-tiny",
+              }}
+            />
+            <InputDate name="birth_date" placeholder="تاریخ تولد" />
+            <RadioGroupZiva
+              label="جنسیت"
+              name="gender"
+              options={[
+                { label: "آقا", value: "male" },
+                { label: "خانم", value: "female" },
+              ]}
+            />
+          </section>
+          <section className="grid">
+            <ButtonZiva
+              className="text-lg sm-min:text-xl font-semibold bg-orange-500 hover:bg-orange-600"
+              buttonText={"تایید و ثبت اطلاعات"}
+              type={"submit"}
+            />
+          </section>
+        </section>
+      </div>
     </form>
   );
 };

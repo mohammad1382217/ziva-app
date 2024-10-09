@@ -1,10 +1,10 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { SidebarResponsiveProps } from "../Sidebar";
-import { Box, Flex, Text } from "@chakra-ui/react";
+import { Box, Flex } from "@chakra-ui/react";
 
 const BottomNav = (props: SidebarResponsiveProps) => {
-  const pathname = usePathname(); // For checking the active route
+  const pathname = usePathname();
   const { routes } = props;
 
   return (
