@@ -1,5 +1,5 @@
 import { AddCircle, CloseCircle, Dislike, FaceScanSquare, Like } from "solar-icon-set";
-import ButtonZiva from "./Button";
+import ButtonZiva from "./ButtonZiva";
 import Rate from "./Rate";
 
 interface CommentType {

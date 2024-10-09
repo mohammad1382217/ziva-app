@@ -58,3 +58,11 @@ body {
 .bg-gradient-f-90-f-8045 {
   background: linear-gradient(-45deg, rgba(255, 255, 255, 0.90) 4.17%, rgba(255, 255, 255, 0.80) 95.83%);
 }
+
+.ant-drawer-header{
+  display: none !important;
+}
+
+* {
+  font-family: '__pelak_424033';
+}

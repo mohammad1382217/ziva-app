@@ -320,7 +320,8 @@ const Collection: React.FC = () => {
             {buttonTexts.map((text, index) => (
               <ButtonZiva
                 key={index}
-                className="h-10 w-auto rounded-full bg-transparent hover:bg-transparent border text-slate-900"
+                className="h-10 w-auto rounded-full border text-slate-900"
+                theme="default"
                 buttonText={text}
                 variant="bordered"
                 type="submit"

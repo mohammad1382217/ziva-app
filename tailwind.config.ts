@@ -54,6 +54,9 @@ const config: Config = {
         Duke: {
           500: '#390099'
         },
+        Error:{
+          500 :"#F04438"
+        }
 
       },
       boxShadow: {

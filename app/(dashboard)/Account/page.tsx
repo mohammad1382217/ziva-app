@@ -205,7 +205,8 @@ const Account = (props: { [x: string]: any }) => {
                 <ButtonZiva
                   buttonText="ذخیره"
                   type="button"
-                  className={`w-32 sm-max:w-full h-11 font-semibold text-sm bg-orange-500 hover:bg-orange-600`}
+                  className={`w-32 sm-max:w-full h-11 font-semibold text-sm`}
+                  theme="orange"
                   leftIcon={
                     <Unread
                       color={"white"}

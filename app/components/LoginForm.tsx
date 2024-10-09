@@ -47,7 +47,7 @@ const LoginForm: React.FC = () => {
               className="text-lg sm-min:text-xl font-semibold bg-orange-500 hover:bg-orange-600"
               buttonText={"تایید و دریافت کد"}
               type={"submit"}
-              color="primary"
+              theme="default"
             />
             <p
               lang="fa"

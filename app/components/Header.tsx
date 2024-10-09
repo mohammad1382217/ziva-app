@@ -1,5 +1,5 @@
 import Link from "next/link";
-import ButtonZiva from "./Button";
+import ButtonZiva from "./ButtonZiva";
 import { Magnifer, UserCircle } from "solar-icon-set";
 import { Input } from "@nextui-org/react";
 import HamburgerMenuHeader from "./HamburgerMenuHeader";
@@ -14,7 +14,7 @@ const Header = () => {
   ];
 
   return (
-    <header className="h-20 flex items-center justify-between fixed top-0 z-40 px-[156px] 1200-max:px-20 768-max:px-5 w-full bg-gradient-to-r from-white/80 to-white/90 backdrop-blur-sm !select-none">
+    <div className="h-20 flex items-center justify-between fixed top-0 z-40 px-[156px] 1200-max:px-20 768-max:px-5 w-full bg-gradient-to-r from-white/80 to-white/90 backdrop-blur-sm !select-none">
       <div className="flex gap-14 1200-max:gap-12">
         <div className="flex justify-center items-center gap-4">
           <div className="w-8 h-8 rounded-full bg-slate-600"></div>
@@ -62,7 +62,7 @@ const Header = () => {
           endContent={
             <button
               type="button"
-              className="flex !w-30 2xl-max:!w-20 md-max:!w-24 justify-center items-center"
+              className="flex justify-center items-center"
             >
               <Magnifer color="#A1A1AA" size={20} iconStyle="Outline" />
             </button>
@@ -74,13 +74,14 @@ const Header = () => {
             type="button"
             buttonText="پنل کاربری"
             leftIcon={<UserCircle size={20} />}
+            theme="orange"
           />
         </Link>
       </div>
       <div className="768-min:hidden ">
         <HamburgerMenuHeader menuItems={menuItems} />
       </div>
-    </header>
+    </div>
   );
 };
 

@@ -5,7 +5,7 @@ import BoxDescription from "./BoxDescription";
 import { AddCircle, ChatLine, CloseCircle, TrashBinMinimalistic } from "solar-icon-set";
 import { Input, Textarea } from "@nextui-org/react";
 import { useState } from "react";
-import ButtonZiva from "./Button";
+import ButtonZiva from "./ButtonZiva";
 
 export interface RegisterCommentType {}
 

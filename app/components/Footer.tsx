@@ -2,7 +2,7 @@ import Image from "next/image";
 import Logo from "./Logo";
 import ZarinPay from "@/app/assests/Vector.png";
 import Link from "next/link";
-import ButtonZiva from "./Button";
+import ButtonZiva from "./ButtonZiva";
 import { Letter } from "solar-icon-set";
 
 const Footer = () => {
