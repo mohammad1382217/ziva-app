@@ -1,7 +1,7 @@
 // Chakra imports
-import { Box, Center, Flex, MenuButton, useColorModeValue } from "@chakra-ui/react";
+import { Box, Center, Flex, useColorModeValue } from "@chakra-ui/react";
 import Image from "next/image";
-import logo from "../../../assests/magicpattern-mesh-gradient-1717062120559.webp";
+import logo from "../../../../public/logo.webp";
 
 export const SidebarBrand = () => {
   //   Chakra color mode
@@ -17,9 +17,17 @@ export const SidebarBrand = () => {
           w="40px"
           h="40px"
           borderRadius={"50%"}
-					overflow={"hidden"}
+          overflow={"hidden"}
         />
-        <Center top={0} left={0} position={"absolute"} w={"100%"} h={"100%"} overflow={"hidden"} borderRadius={"50%"}>
+        <Center
+          top={0}
+          left={0}
+          position={"absolute"}
+          w={"100%"}
+          h={"100%"}
+          overflow={"hidden"}
+          borderRadius={"50%"}
+        >
           <Image src={logo} alt={"logo"} />
         </Center>
       </Box>

@@ -49,6 +49,7 @@ const SignUpForm: React.FC = () => {
                 inputWrapper: "w-full min-w-[116px]",
                 label: "text-medium sm-max:text-tiny",
               }}
+              isRequired
             />
             <InputZiva
               name="last_name"
@@ -80,8 +81,9 @@ const SignUpForm: React.FC = () => {
           </section>
           <section className="grid">
             <ButtonZiva
-              className="text-lg sm-min:text-xl font-semibold bg-orange-500 hover:bg-orange-600"
+              className="text-lg sm-min:text-xl font-semibold"
               buttonText={"تایید و ثبت اطلاعات"}
+              theme="orange"
               type={"submit"}
             />
           </section>

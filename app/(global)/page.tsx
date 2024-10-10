@@ -1,14 +1,14 @@
 import Image from "next/image";
 import Banner from "../components/Banner";
 import { EmblaOptionsType } from "embla-carousel";
-import ImageSampel from "../assests/RectangleLoginPage.webp";
+import ImageSampel from "../../public/RectangleLoginPage.webp";
 import EmblaCarouselHome from "../components/CarouselHome/EmblaCarouselHome";
 import BoxMuliCarousel from "../components/BoxMulitiCarousel/BoxMuliCarousel";
-import '../styles/CarouselEmblaHome.css';
+import "../styles/CarouselEmblaHome.css";
 
 const Home: React.FC = () => {
   const OPTIONS: EmblaOptionsType = { align: "center", direction: "rtl", loop: true };
-  
+
   const SLIDES = [
     { src: ImageSampel, alt: "استخر" },
     { src: ImageSampel, alt: "استخر" },

@@ -21,20 +21,24 @@ const RegisterComment: React.FC<RegisterCommentType> = ({}) => {
       setStrength("");
     }
   };
+
   const handleRemoveStrength = (index: number) => {
     const newStrengths = strengths.filter((_, i) => i !== index);
     setStrengths(newStrengths);
   };
+
   const addWeakness = () => {
     if (Weakness) {
       setWeakneses([...Weaknesses, Weakness]);
       setWeakness("");
     }
   };
+  
   const handleRemoveWeakness = (index: number) => {
     const newtWeaknesses = Weaknesses.filter((_, i) => i !== index);
     setWeakneses(newtWeaknesses);
   };
+
   return (
     <BoxDescription clsasName="lg-max:w-full" name="ثبت نظر" Icon={ChatLine}>
       <p className="text-slate-500 text-base font-normal">
@@ -77,9 +81,7 @@ const RegisterComment: React.FC<RegisterCommentType> = ({}) => {
             id="strength"
             name="strength"
             value={strength}
-            onChange={(e) => {
-              setStrength(e.target.value);
-            }}
+            onChange={(e) => setStrength(e.target.value)}
             variant="bordered"
             placeholder="نقطه قوت"
             labelPlacement="outside"
@@ -106,9 +108,7 @@ const RegisterComment: React.FC<RegisterCommentType> = ({}) => {
               <div key={index} className="flex justify-between">
                 <span className="text-sm font-normal text-slate-600">{item}</span>
                 <TrashBinMinimalistic
-                  onClick={() => {
-                    handleRemoveStrength(index);
-                  }}
+                  onClick={() => handleRemoveStrength(index)}
                   color="#98A2B3"
                   size={13}
                   iconStyle="Bold"
@@ -123,9 +123,7 @@ const RegisterComment: React.FC<RegisterCommentType> = ({}) => {
             id="weakness"
             name="weakness"
             value={Weakness}
-            onChange={(e) => {
-              setWeakness(e.target.value);
-            }}
+            onChange={(e) => setWeakness(e.target.value)}
             variant="bordered"
             placeholder="نقطه ضعف"
             labelPlacement="outside"
@@ -152,9 +150,7 @@ const RegisterComment: React.FC<RegisterCommentType> = ({}) => {
               <div key={index} className="flex justify-between">
                 <span className="text-sm font-normal text-slate-600">{item}</span>
                 <TrashBinMinimalistic
-                  onClick={() => {
-                    handleRemoveWeakness(index);
-                  }}
+                  onClick={() => handleRemoveWeakness(index)}
                   color="#98A2B3"
                   size={13}
                   iconStyle="Bold"

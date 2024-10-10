@@ -44,10 +44,10 @@ const LoginForm: React.FC = () => {
           />
           <div className="grid gap-4">
             <ButtonZiva
-              className="text-lg sm-min:text-xl font-semibold bg-orange-500 hover:bg-orange-600"
+              className="text-lg sm-min:text-xl font-semibold"
               buttonText={"تایید و دریافت کد"}
               type={"submit"}
-              theme="default"
+              theme="orange"
             />
             <p
               lang="fa"

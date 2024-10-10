@@ -31,7 +31,7 @@ export const renderView = () => {
   return (
     <Box
       height="100%"
-      me={{ base: "0px !important", lg: "-16px !important" }}
+      me={{ base: "0px !important" }}
       style={viewStyle}
     />
   );

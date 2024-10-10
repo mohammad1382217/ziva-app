@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Logo from "./Logo";
-import ZarinPay from "@/app/assests/Vector.png";
+import ZarinPay from "../../public/Vector.webp";
 import Link from "next/link";
 import ButtonZiva from "./ButtonZiva";
 import { Letter } from "solar-icon-set";
@@ -49,16 +49,18 @@ const Footer = () => {
       <div className="bg-orange-500 flex flex-row md-max:flex-col md-max:gap-6 md-max:justify-center justify-between items-center containerZiva !py-6">
         <div className="flex flex-row-reverse lg-max:flex-col items-center gap-4">
           <ButtonZiva
-            className="h-10 w-auto rounded-full bg-transparent hover:bg-transparent text-[14px] font-semibold border border-whitetext-white "
+            className="h-10 w-auto rounded-full text-sm font-semibold border border-white text-white"
             buttonText="پست الکترونیکی:  info@zivaticket.ir"
             variant="bordered"
             type="submit"
             rightIcon={<Letter size={17} color="white" />}
+            theme="orange"
           />
           <ButtonZiva
-            className="h-10 w-auto rounded-full bg-transparent hover:bg-transparent text-[14px] font-semibold border border-whitetext-white "
+            className="h-10 w-auto rounded-full text-sm font-semibold border border-white text-white"
             buttonText="شماره تماس پشتیبانی:  0912 345 6789"
             variant="bordered"
+            theme="orange"
             type="submit"
             rightIcon={<Letter size={17} color="white" />}
           />
@@ -68,6 +70,7 @@ const Footer = () => {
             className="h-10 min-w-5 w-10 rounded-full bg-transparent hover:bg-transparent text-[14px] font-semibold border border-whitetext-white "
             iconOnly={true}
             variant="bordered"
+            theme="orange"
             type="submit"
             rightIcon={<Letter size={17} color="white" />}
           />
@@ -75,6 +78,7 @@ const Footer = () => {
             className="h-10 min-w-5 w-10 rounded-full bg-transparent hover:bg-transparent text-[14px] font-semibold border border-whitetext-white "
             iconOnly={true}
             variant="bordered"
+            theme="orange"
             type="submit"
             rightIcon={<Letter size={17} color="white" />}
           />
@@ -82,6 +86,7 @@ const Footer = () => {
             className="h-10 min-w-5 w-10 rounded-full bg-transparent hover:bg-transparent text-[14px] font-semibold border border-whitetext-white "
             iconOnly={true}
             variant="bordered"
+            theme="orange"
             type="submit"
             rightIcon={<Letter size={17} color="white" />}
           />
@@ -89,6 +94,7 @@ const Footer = () => {
             className="h-10 min-w-5 w-10 rounded-full bg-transparent hover:bg-transparent text-[14px] font-semibold border border-whitetext-white "
             iconOnly={true}
             variant="bordered"
+            theme="orange"
             type="submit"
             rightIcon={<Letter size={17} color="white" />}
           />

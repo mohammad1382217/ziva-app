@@ -78,7 +78,7 @@ const Header = () => {
           />
         </Link>
       </div>
-      <div className="768-min:hidden ">
+      <div className="768-min:hidden">
         <HamburgerMenuHeader menuItems={menuItems} />
       </div>
     </div>

@@ -49,9 +49,10 @@ const OtpValid: React.FC = () => {
 
           <section className="grid">
             <ButtonZiva
-              className="text-lg sm-min:text-xl font-semibold bg-orange-500 hover:bg-orange-600"
+              className="text-lg sm-min:text-xl font-semibold"
               buttonText={"تایید و ادامه"}
               type={"submit"}
+              theme="orange"
             />
           </section>
         </section>

@@ -3,8 +3,8 @@
 import Divider from "antd/es/divider";
 import Link from "next/link";
 import { Heart, MapPointWave, Reply2, Sale } from "solar-icon-set";
-import Star from "@/app/assests/start.svg";
-import StarWhite from "@/app/assests/startWhite.svg";
+import Star from "../../public/start.svg";
+import StarWhite from "../../public/startWhite.svg";
 import Image from "next/image";
 
 export interface CardType {

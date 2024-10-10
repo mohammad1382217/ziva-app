@@ -1,4 +1,4 @@
-import bg_login from "../assests/RectangleLoginPage.webp";
+import bg_login from "../public/RectangleLoginPage.webp";
 import Image from "next/image";
 import OtpValid from "../components/OtpValid";
 

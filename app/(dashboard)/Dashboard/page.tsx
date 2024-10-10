@@ -2,11 +2,11 @@
 
 import Image from "next/image";
 import { Box, Flex, SimpleGrid } from "@chakra-ui/react";
-import bg_login from "../../assests/RectangleLoginPage.webp";
+import bg_login from "../../../public/RectangleLoginPage.webp";
 import ImageCard from "../../components/rtl/components/ImageCard";
 import ComplexTable from "../../components/rtl/components/ComplexTable";
 import Tasks from "../../components/rtl/components/Information";
-import { SmileSquare } from "solar-icon-set";
+import { Logout, SmileSquare } from "solar-icon-set";
 
 export const UserReports = () => {
   const tableDataComplex = [{ name: "استخر الف" }, { name: "استخر ب" }];
@@ -27,11 +27,12 @@ export const UserReports = () => {
           justifyContent="center"
         >
           <Box
-            className="flex flex-col gap-[2px] bg-gradient-to-b from-white/70 to-white/80 bg-opacity-20 backdrop-blur-lg"
+            className="flex sm-max:flex-col bg-gradient-to-b from-white/70 to-white/80 bg-opacity-20 backdrop-blur-lg justify-between sm-max:justify-center sm-max:gap-5"
             _hover={{ cursor: "pointer" }}
+            alignItems="center"
             color="white"
             w="90%"
-            h="86px"
+            h={{ base: "86px", sm: "auto" }}
             padding="16px"
             overflow={"hidden"}
             style={{ position: "relative" }}
@@ -40,7 +41,11 @@ export const UserReports = () => {
             borderRadius="20px"
             mb="150px"
           >
-            <Flex>
+            <Flex
+              flexDirection={{ sm: "column", lg: "row" }}
+              alignItems="center"
+              className="gap-6 sm-max:gap-4"
+            >
               <Flex
                 className="bg-blue-200"
                 borderRadius="12px"
@@ -48,7 +53,6 @@ export const UserReports = () => {
                 h="56px"
                 align="center"
                 justify="center"
-                mb={4}
               >
                 <SmileSquare
                   iconStyle="Outline"
@@ -56,13 +60,27 @@ export const UserReports = () => {
                   className="z-50 !w-6 !h-6"
                 />
               </Flex>
-              <Flex flexDirection="column">
-                <span className="mr-4 text-slate-900 text-lg font-bold">
+              <Flex flexDirection="column" gap="2px" className="items-start sm-max:items-center">
+                <span className="text-slate-900 text-lg font-bold">
                   نام و نام خانوادگی
                 </span>
-                <span className="mr-4 text-slate-500 text-sm font-normal">
+                <span className="text-slate-500 text-sm font-normal">
                   6789 345 0912
                 </span>
+              </Flex>
+            </Flex>
+            <Flex alignItems="center" gap={1}>
+              <Flex flexDirection="column" alignItems="center">
+                <span className="mr-4 text-[#F04438] text-sm font-semibold">
+                  خروج از حساب
+                </span>
+              </Flex>
+              <Flex borderRadius="12px" alignItems="center" justifyContent="center">
+                <Logout
+                  iconStyle="Outline"
+                  color="#F04438"
+                  className="z-50 !w-3.5 !h-3.5"
+                />
               </Flex>
             </Flex>
           </Box>

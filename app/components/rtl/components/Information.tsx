@@ -26,7 +26,6 @@ const Information: React.FC = () => {
           اطلاعات حساب
         </Text>
         <Flex gap="2px" alignItems="center" justifyContent="center">
-          <Pen2 iconStyle="Outline" width="24px" height="24px" color="#ff5400" />
           <Text
             fontWeight="bold"
             color="#111827"
@@ -36,6 +35,7 @@ const Information: React.FC = () => {
           >
             ویرایش اطلاعات
           </Text>
+          <Pen2 iconStyle="Outline" width="24px" height="24px" color="#ff5400" />
         </Flex>
       </Flex>
       <Box>

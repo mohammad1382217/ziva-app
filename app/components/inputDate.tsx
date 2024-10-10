@@ -60,7 +60,6 @@ const inputDateZiva: React.FC<InputType> = ({
             inputWrapper: `w-full min-w-[116px] ${className}`,
             label: "text-medium sm-max:text-tiny",
           }}
-          onFocus={openCalendar}
         />
       )}
     />

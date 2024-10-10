@@ -20,7 +20,7 @@ import Card from "../../../components/card/Card";
 import React from "react";
 import Image from "next/image";
 import { Reply2 } from "solar-icon-set";
-import Poll from "../../../assests/Rectangle 2491.png";
+import Poll from "../../../../public/Rectangle 2491.webp";
 import { HSeparator } from "../../separator/Separator";
 
 type RowObj = {
@@ -92,7 +92,7 @@ const ComplexTable = ({
               px="14px"
               cursor="pointer"
             >
-              <Text color={"#ff5400"} fontSize="xs" fontWeight="700">
+              <Text color={"#ff5400"} fontSize="8px" fontWeight="700">
                 مشاهده
               </Text>
               <Reply2 size={14} iconStyle="Outline" color="#ff5400" />
@@ -128,23 +128,46 @@ const ComplexTable = ({
       flexDirection="column"
       w="100%"
       px="0px"
-      overflowX={{ sm: "scroll", lg: "hidden" }}
+      overflowX={{ sm: "auto", lg: "hidden" }}
+      height="min-content"
+      gap={5}
     >
       <Flex
         px="25px"
-        mb="8px"
         flexDirection="column"
         justifyContent="space-between"
         align="start"
-        gap="10px"
-      >
-        <Text color={textColor} fontSize="18px" fontWeight="700" lineHeight="100%">
-          {HeaderText}
-        </Text>
+        gap="6px"
+        flexShrink="1"
+        >
+        {" "}
+        <Flex
+          justifyContent="space-between"
+          align="start"
+          gap="6px"
+          width="100%"
+          flexShrink="1"
+        >
+          <Text color={textColor} fontSize="18px" fontWeight="700" lineHeight="100%">
+            {HeaderText}
+          </Text>
+          <Flex gap="2px" alignItems="center" justifyContent="center">
+            <Text
+              fontWeight="bold"
+              color="#111827"
+              fontSize="10px"
+              textAlign="start"
+              cursor="pointer"
+            >
+              همه علاقه‌مندی ها
+            </Text>
+            <Reply2 size={14} iconStyle="Outline" color="#ff5400" />
+          </Flex>
+        </Flex>
         <HSeparator />
       </Flex>
       <Box>
-        <Table variant="simple" color="gray.500" mb="24px" mt="12px">
+        <Table variant="simple" color="gray.500">
           <Tbody>
             {table
               .getRowModel()
@@ -169,6 +192,6 @@ const ComplexTable = ({
       </Box>
     </Card>
   );
-}
+};
 
 export default ComplexTable;

@@ -32,12 +32,13 @@ const Account = (props: { [x: string]: any }) => {
             p="20px"
             alignItems="start"
             flexDirection="column"
+            borderRadius={16}
             w="100%"
             h="min-content"
             {...rest}
           >
             <Flex alignItems="center" justifyContent="space-between" w="100%" mb="30px">
-              <Text color={"ff5400"} fontSize="lg" fontWeight="700" className="w-[145px]">
+              <Text color={"ff5400"} fontSize="lg" fontWeight="700" className="w-fit">
                 اطلاعات فردی
               </Text>
               <HSeparator />
@@ -53,6 +54,7 @@ const Account = (props: { [x: string]: any }) => {
                     inputWrapper: "w-full min-w-[116px]",
                     label: "text-medium sm-max:text-tiny",
                   }}
+                  isRequired
                 />
                 <InputZiva
                   name="last_name"
@@ -75,6 +77,7 @@ const Account = (props: { [x: string]: any }) => {
                     inputWrapper: "w-full min-w-[116px]",
                     label: "text-medium sm-max:text-tiny",
                   }}
+                  isRequired
                 />
                 <InputDate
                   name="birth_date"
@@ -118,7 +121,8 @@ const Account = (props: { [x: string]: any }) => {
                 <ButtonZiva
                   buttonText="ذخیره"
                   type="button"
-                  className={`w-32 sm-max:w-full h-11 font-semibold text-sm bg-orange-500 hover:bg-orange-600`}
+                  className={`w-32 sm-max:w-full h-11 font-semibold text-sm`}
+                  theme="orange"
                   leftIcon={
                     <Unread
                       color={"white"}

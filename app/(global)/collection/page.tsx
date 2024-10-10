@@ -1,5 +1,5 @@
 import CarouselCollection from "../../components/CarouselCollection/CarouselCollection";
-import ImageSampel from "../../assests/RectangleLoginPage.webp";
+import ImageSampel from "../../public/RectangleLoginPage.webp";
 import { EmblaOptionsType } from "embla-carousel";
 import {
   ArrowDown,
@@ -17,9 +17,9 @@ import {
   InfoCircle,
   Clipboard,
 } from "solar-icon-set";
-import StarWhite from "@/app/assests/startWhite.svg";
+import StarWhite from "../../public/startWhite.svg";
 import Image from "next/image";
-import Map from "../../assests/Button.webp";
+import Map from "../../public/Button.webp";
 import { getImageProps } from "next/image";
 import SegmentedZiva from "../../components/SegmentedZiva";
 import BoxDescription from "../../components/BoxDescription";

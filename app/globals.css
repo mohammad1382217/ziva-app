@@ -51,12 +51,16 @@ body {
   --gradient-f-50-f-6060: linear-gradient(-60deg, #FFFFFF 50%, #FFFFFF 60%);
   --gradient-f-40-f-5050: linear-gradient(-50deg, #FFFFFF 40%, #FFFFFF 50%);
   --gradient-f-30-f-4080: linear-gradient(-80deg, #FFFFFF 30%, #FFFFFF 40%);
-  --gradient-f-20-f-3080: linear-gradient(-80deg, #FFFFFF 20%, #FFFFFF 30%);
+  --gradient-f-20-f-3080: linear-gradient(92deg, rgba(255, 255, 255, 0.20) 0.15%, rgba(255, 255, 255, 0.30) 99.85%);
   --gradient-f-10-f-2080: linear-gradient(-80deg, #FFFFFF 10%, #FFFFFF 20%);
 }
 
 .bg-gradient-f-90-f-8045 {
-  background: linear-gradient(-45deg, rgba(255, 255, 255, 0.90) 4.17%, rgba(255, 255, 255, 0.80) 95.83%);
+  background: var(--gradient-f-90-f-8045);
+}
+
+.bg-gradient-f-20-f-3080 {
+  background: var(--gradient-f-20-f-3080);
 }
 
 .ant-drawer-header{

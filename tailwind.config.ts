@@ -10,25 +10,25 @@ const config: Config = {
   ],
   theme: {
     screens: {
-      '4xl-max': { max: '1920px' },
-      '3xl-max': { max: '1440px' },
-      '2xl-max': { max: '1320px' },
-      'xl-max': { max: '1140px' },
-      'lg-max': { max: '960px' },
-      'md-max': { max: '720px' },
-      'sm-max': { max: '540px' },
-      'xs-max': { max: '420px' },
-      '1200-max': { max: '1200px' },
-      '768-max': { max: '768px' },
-      '768-min': { min: '768px' },
+      "4xl-max": { max: "1920px" },
+      "3xl-max": { max: "1440px" },
+      "2xl-max": { max: "1320px" },
+      "xl-max": { max: "1140px" },
+      "lg-max": { max: "960px" },
+      "md-max": { max: "720px" },
+      "sm-max": { max: "540px" },
+      "xs-max": { max: "420px" },
+      "1200-max": { max: "1200px" },
+      "768-max": { max: "768px" },
+      "768-min": { min: "768px" },
 
-      '4xl-min': { min: '1921px' },
-      '3xl-min': { min: '1441px' },
-      '2xl-min': { min: '1321px' },
-      'xl-min': { min: '1141px' },
-      'lg-min': { min: '961px' },
-      'md-min': { min: '721px' },
-      'sm-min': { min: '541px' },
+      "4xl-min": { min: "1921px" },
+      "3xl-min": { min: "1441px" },
+      "2xl-min": { min: "1321px" },
+      "xl-min": { min: "1141px" },
+      "lg-min": { min: "961px" },
+      "md-min": { min: "721px" },
+      "sm-min": { min: "541px" },
     },
     extend: {
       colors: {
@@ -46,34 +46,33 @@ const config: Config = {
           900: "#331100",
         },
         Folly: {
-          500: '#FF0054'
+          500: "#FF0054",
         },
         Murrey: {
-          500: '#9E0059'
+          500: "#9E0059",
         },
         Duke: {
-          500: '#390099'
+          500: "#390099",
         },
-        Error:{
-          500 :"#F04438"
-        }
-
+        Error: {
+          500: "#F04438",
+        },
       },
       boxShadow: {
-        'Box': '0px 16px 40px -16px var(gray-100)',
+        Box: "0px 16px 40px -16px var(gray-100)",
       },
       fontSize: {
-        '10': '10px',
+        "10": "10px",
         "40": "40px",
-        '32': '32px'
+        "32": "32px",
       },
       backgroundImage: {
-        "RectangleOrange": "url('./assests/RectangleLoginPage.webp')",
-        "pattern": "url('./assests/pattern.png')",
+        RectangleOrange: "url('../public/RectangleLoginPage.webp')",
+        pattern: "url('../public/pattern.webp')",
       },
-      padding:{
-        '156':'156px'
-      }
+      padding: {
+        "156": "156px",
+      },
     },
   },
   // darkMode: "class",

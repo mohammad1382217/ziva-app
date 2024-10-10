@@ -1,5 +1,5 @@
 import Image from "next/image";
-import StarWhite from "@/app/assests/startWhite.svg";
+import StarWhite from "../../public/startWhite.svg";
 
 interface rateType {
   rate: number;
