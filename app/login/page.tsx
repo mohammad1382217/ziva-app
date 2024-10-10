@@ -1,5 +1,5 @@
 import LoginForm from "../components/LoginForm";
-import bg_login from "../public/RectangleLoginPage.webp";
+import bg_login from "../../public/RectangleLoginPage.webp";
 import Image from "next/image";
 
 const Login = () => {

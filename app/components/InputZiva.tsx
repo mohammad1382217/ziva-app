@@ -75,7 +75,7 @@ const InputZiva = forwardRef<HTMLInputElement, InputType>(
           classNames={{
             label: `ml-2 mr-0 !origin-top-right ${classNames?.label}`,
             input: `text-right mr-1 ${classNames?.input}`,
-            inputWrapper: `h-11 bg-white hover:!bg-white w-64 ${classNames?.inputWrapper}`,
+            inputWrapper: `h-12 bg-white hover:!bg-white w-64 ${classNames?.inputWrapper}`,
             innerWrapper: `${classNames?.innerWrapper}`,
           }}
         />
