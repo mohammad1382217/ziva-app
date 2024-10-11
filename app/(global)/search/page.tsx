@@ -124,7 +124,7 @@ const SearchPage = () => {
               مشاهده همه استخر ها
             </Link>
           </div>
-          <Dropdown>
+          {/* <Dropdown>
             <DropdownTrigger>
               <ButtonZiva
                 className="p-0 gap-[2px] rounded min-w-auto h-[20px]"
@@ -138,7 +138,7 @@ const SearchPage = () => {
             <DropdownMenu aria-label="Static Actions">
               <DropdownItem key="new">New file</DropdownItem>
             </DropdownMenu>
-          </Dropdown>
+          </Dropdown> */}
           {/* <div className="text-nowrap md-max:self-end">ترتیب نمایش بر اساس مرتبط ترین</div> */}
         </div>
 
