@@ -1,6 +1,6 @@
 import Image from "next/image";
-import ImageIntroduction from "../public/Group 146.webp";
-import ImageIntroductio2 from "../public/Group 152.webp";
+import ImageIntroduction from "../../../public/Group 146.webp";
+import ImageIntroductio2 from "../../../public/Group 152.webp";
 import { CSSProperties } from "react";
 import { CollapseProps } from "antd";
 import { VerifiedCheck } from "solar-icon-set";

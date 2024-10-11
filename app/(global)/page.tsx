@@ -117,8 +117,8 @@ const Home: React.FC = () => {
         <div className="p-0 lg-min:px-40">
           <BoxMuliCarousel
             Verticalable={true}
-            SLIDES={slideTopic}
-            DivderName="مجموعه های برگزیده"
+            slides={slideTopic}
+            DividerName="مجموعه های برگزیده"
           />
         </div>
         <div className="flex h-[104px] md-max:h-[128px] sm-max:flex-col justify-between w-full my-32 gap-6 lg-max:gap-4 lg-min:px-40">
@@ -127,18 +127,18 @@ const Home: React.FC = () => {
         </div>
         <div className="p-0 lg-min:px-40">
           <BoxMuliCarousel
-            SLIDES={slideCard}
-            DivderName="تخفیف‌های شگفت‌انگیز"
+            slides={slideCard}
+            DividerName="تخفیف‌های شگفت‌انگیز"
             DividerNavigate="/collection"
           />
           <BoxMuliCarousel
-            SLIDES={slideCard}
-            DivderName="محبوب‌ترین ها"
+            slides={slideCard}
+            DividerName="محبوب‌ترین ها"
             DividerNavigate="/collection"
           />
           <BoxMuliCarousel
-            SLIDES={slideCard}
-            DivderName="به‌صرفه‌ترین انتخاب"
+            slides={slideCard}
+            DividerName="به‌صرفه‌ترین انتخاب"
             DividerNavigate="/collection"
           />
         </div>
@@ -150,8 +150,8 @@ const Home: React.FC = () => {
         </div>
         <div className="p-0 lg-min:px-40">
           <BoxMuliCarousel
-            SLIDES={slideCard}
-            DivderName="پرفروش های زیوا"
+            slides={slideCard}
+            DividerName="پرفروش های زیوا"
             DividerNavigate="/collection"
           />
         </div>

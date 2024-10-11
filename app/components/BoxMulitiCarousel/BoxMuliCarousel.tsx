@@ -9,19 +9,19 @@ import { Reply2 } from "solar-icon-set";
 import { CardType } from "../Card";
 
 interface BoxMuliCarouselType {
-  SLIDES: CardType[];
-  DivderName: string;
+  slides: CardType[];
+  DividerName: string;
   DividerNavigate?: string;
   Verticalable?: boolean;
-  costomNavigte?: string;
+  customNavigate?: string;
 }
 
 const BoxMuliCarousel: React.FC<BoxMuliCarouselType> = ({
-  SLIDES,
-  DivderName,
+  slides,
+  DividerName,
   DividerNavigate,
   Verticalable,
-  costomNavigte,
+  customNavigate,
 }) => {
   const OPTIONS: EmblaOptionsType = {
     align: "center",
@@ -43,15 +43,15 @@ const BoxMuliCarousel: React.FC<BoxMuliCarouselType> = ({
     <div className="">
       <div>
         <DividerCards
-          costomNavigte={costomNavigte!}
-          name={DivderName}
+          costomNavigte={customNavigate!}
+          name={DividerName}
           navigate={DividerNavigate!}
         />
       </div>
       <EmblaCarousel
         isChangeVerticalable={isVerticalable}
         Verticalable={Verticalable}
-        slides={SLIDES}
+        slides={slides}
         options={OPTIONS}
       />
       {DividerNavigate ? (
@@ -60,7 +60,7 @@ const BoxMuliCarousel: React.FC<BoxMuliCarouselType> = ({
           className="flex sm-min:hidden my-3 flex-row justify-center items-center gap-2"
         >
           <span className="text-slate-700 font-semibold text-lg">
-            {costomNavigte ? costomNavigte : "مشاهده بیشتر"}
+            {customNavigate ? customNavigate : "مشاهده بیشتر"}
           </span>
           <Reply2 color="#FF5400" size={20} />
         </Link>

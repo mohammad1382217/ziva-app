@@ -12,12 +12,14 @@ import {
   PrevButton,
   usePrevNextButtons,
 } from "../CarouselHome/EmblaCarouselArrowButtonsHome";
-interface ImageData {
+
+export interface ImageProps {
   src: StaticImageData;
   alt: string;
 }
+
 type PropType = {
-  slides: ImageData[];
+  slides: ImageProps[];
   options?: EmblaOptionsType;
 };
 

@@ -14,7 +14,7 @@ export interface CardType {
   name: string;
   location: string;
   price: string;
-  navigate: any;
+  navigate?: any;
   Verticalable?: boolean;
 }
 
