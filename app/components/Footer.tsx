@@ -7,7 +7,7 @@ import { Letter } from "solar-icon-set";
 
 const Footer = () => {
   return (
-    <footer className="!select-none">
+    <footer className="!select-none mt-20">
       <div className="flex justify-between gap-32 xl-max:gap-16 lg-max:8 sm-max:flex-col-reverse bg-slate-50 flex-row containerZiva py-16">
         <div className="flex flex-col gap-12">
           <div className="flex flex-col justify-end items-start gap-6">

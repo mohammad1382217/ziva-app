@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .containerZiva {
-  padding: 78px 158px;
+  padding: 0 158px;
   /* display: flex;
   flex-direction: column;
   gap: 120px; */
@@ -12,25 +12,25 @@
 
 @media only screen and (max-width: 600px) {
   .containerZiva {
-    padding: 2rem;
+    padding: 0 2rem;
   }
 }
 
 @media only screen and (max-width: 1400px) {
   .containerZiva {
-    padding: 4rem;
+    padding: 0 4rem;
   }
 }
 
 @media only screen and (max-width: 1250px) {
   .containerZiva {
-    padding: 5rem;
+    padding: 0 5rem;
   }
 }
 
 @media only screen and (max-width: 1024px) {
   .containerZiva {
-    padding: 24px;
+    padding: 0 24px;
   }
 }
 
