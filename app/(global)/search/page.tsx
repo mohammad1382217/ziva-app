@@ -20,102 +20,120 @@ import { Tag as AntdTag, Slider } from "antd";
 const SearchPage = () => {
   const SearchCards = [
     {
-      name: "استخر ۱",
+      name: "استخر فردوس",
       discount: "10",
       like: true,
       location: "قم بلوار فردوسی",
-      navigate: "collection/poll",
+      navigate: "collection",
       price: "10000",
       rate: 0.5,
     },
     {
-      name: "استخر ۲",
+      name: "استخر غدیر",
       discount: "15",
       like: false,
       location: "تهران خیابان انقلاب",
-      navigate: "collection/poll",
+      navigate: "collection",
       price: "15000",
       rate: 4.0,
     },
-    {
-      name: "استخر ۳",
-      discount: "20",
-      like: true,
-      location: "اصفهان میدان نقش جهان",
-      navigate: "collection/poll",
-      price: "12000",
-      rate: 3.5,
-    },
-    {
-      name: "استخر ۴",
-      discount: "5",
-      like: false,
-      location: "مشهد امام رضا",
-      navigate: "collection/poll",
-      price: "8000",
-      rate: 2.0,
-    },
-    {
-      name: "استخر ۵",
-      discount: "25",
-      like: true,
-      location: "شیراز حافظیه",
-      navigate: "collection/poll",
-      price: "20000",
-      rate: 4.5,
-    },
-    {
-      name: "استخر 6",
-      discount: "10",
-      like: true,
-      location: "قم بلوار فردوسی",
-      navigate: "collection/poll",
-      price: "10000",
-      rate: 0.5,
-    },
-    {
-      name: "استخر 7",
-      discount: "15",
-      like: false,
-      location: "تهران خیابان انقلاب",
-      navigate: "collection/poll",
-      price: "15000",
-      rate: 4.0,
-    },
-    {
-      name: "استخر 8",
-      discount: "20",
-      like: true,
-      location: "اصفهان میدان نقش جهان",
-      navigate: "collection/poll",
-      price: "12000",
-      rate: 3.5,
-    },
-    {
-      name: "استخر 9",
-      discount: "5",
-      like: false,
-      location: "مشهد امام رضا",
-      navigate: "collection/poll",
-      price: "8000",
-      rate: 2.0,
-    },
-    {
-      name: "استخر 10",
-      discount: "25",
-      like: true,
-      location: "شیراز حافظیه",
-      navigate: "collection/poll",
-      price: "20000",
-      rate: 4.5,
-    },
+    // {
+    //   name: "استخر ۱",
+    //   discount: "10",
+    //   like: true,
+    //   location: "قم بلوار فردوسی",
+    //   navigate: "collection/poll",
+    //   price: "10000",
+    //   rate: 0.5,
+    // },
+    // {
+    //   name: "استخر ۲",
+    //   discount: "15",
+    //   like: false,
+    //   location: "تهران خیابان انقلاب",
+    //   navigate: "collection/poll",
+    //   price: "15000",
+    //   rate: 4.0,
+    // },
+    // {
+    //   name: "استخر ۳",
+    //   discount: "20",
+    //   like: true,
+    //   location: "اصفهان میدان نقش جهان",
+    //   navigate: "collection/poll",
+    //   price: "12000",
+    //   rate: 3.5,
+    // },
+    // {
+    //   name: "استخر ۴",
+    //   discount: "5",
+    //   like: false,
+    //   location: "مشهد امام رضا",
+    //   navigate: "collection/poll",
+    //   price: "8000",
+    //   rate: 2.0,
+    // },
+    // {
+    //   name: "استخر ۵",
+    //   discount: "25",
+    //   like: true,
+    //   location: "شیراز حافظیه",
+    //   navigate: "collection/poll",
+    //   price: "20000",
+    //   rate: 4.5,
+    // },
+    // {
+    //   name: "استخر 6",
+    //   discount: "10",
+    //   like: true,
+    //   location: "قم بلوار فردوسی",
+    //   navigate: "collection/poll",
+    //   price: "10000",
+    //   rate: 0.5,
+    // },
+    // {
+    //   name: "استخر 7",
+    //   discount: "15",
+    //   like: false,
+    //   location: "تهران خیابان انقلاب",
+    //   navigate: "collection/poll",
+    //   price: "15000",
+    //   rate: 4.0,
+    // },
+    // {
+    //   name: "استخر 8",
+    //   discount: "20",
+    //   like: true,
+    //   location: "اصفهان میدان نقش جهان",
+    //   navigate: "collection/poll",
+    //   price: "12000",
+    //   rate: 3.5,
+    // },
+    // {
+    //   name: "استخر 9",
+    //   discount: "5",
+    //   like: false,
+    //   location: "مشهد امام رضا",
+    //   navigate: "collection/poll",
+    //   price: "8000",
+    //   rate: 2.0,
+    // },
+    // {
+    //   name: "استخر 10",
+    //   discount: "25",
+    //   like: true,
+    //   location: "شیراز حافظیه",
+    //   navigate: "collection/poll",
+    //   price: "20000",
+    //   rate: 4.5,
+    // },
   ];
   return (
     <div className="containerZiva !py-12 sm-max:!py-8 mt-20 bg-slate-50 gap-6 flex lg-max:flex-col-reverse justify-between flex-row-reverse">
-      <div className="flex flex-col gap-6">
+      <div className="flex w-full flex-col gap-6">
         <div className="flex gap-6 md-max:flex-col md-max:items-start justify-between items-center w-full">
           <DividerCards
-            className="flex md-max:hidden"
+            className="flex w-full md-max:hidden"
             textClassName="text-lg"
             name="نتایج جستجو برای “کلمه مورد نظر”"
           />
@@ -142,7 +160,7 @@ const SearchPage = () => {
           {/* <div className="text-nowrap md-max:self-end">ترتیب نمایش بر اساس مرتبط ترین</div> */}
         </div>
 
-        <div className="flex flex-wrap justify-between gap-4">
+        <div className="flex flex-wrap sm-max:justify-center gap-4">
           {SearchCards.map(
             ({ rate, like, discount, name, location, navigate, price }, index) => (
               <div className={`w-[246px] flex justify-center`} key={index}>
@@ -192,6 +210,7 @@ const SearchPage = () => {
           />
           <ButtonZiva
             theme="orange"
+            disabled
             className="h-6 rounded-md text-xs font-semibold"
             type="button"
             buttonText="اعمال"
@@ -199,10 +218,17 @@ const SearchPage = () => {
         </FilterBox>
         <FilterBox name="امکانات" Icon={<Widget />}>
           <div>
-            <Checkbox defaultSelected>استخر کودکان</Checkbox>
-            <Checkbox defaultSelected>استخر کودکان</Checkbox>
+            {/* <Checkbox defaultSelected>استخر کودکان</Checkbox> */}
+            {/* <Checkbox defaultSelected>استخر کودکان</Checkbox> */}
             <Checkbox defaultSelected>استخر کودکان</Checkbox>
           </div>
+          <ButtonZiva
+            theme="orange"
+            disabled
+            className="h-6 rounded-md text-xs font-semibold"
+            type="button"
+            buttonText="اعمال"
+          />
         </FilterBox>
         <FilterBox name="محدوده قیمت" Icon={<Tag />}>
           <Input
@@ -238,6 +264,13 @@ const SearchPage = () => {
               { label: "بانوان", value: "female" },
             ]}
           />
+            <ButtonZiva
+            theme="orange"
+            disabled
+            className="h-6 rounded-md text-xs font-semibold"
+            type="button"
+            buttonText="اعمال"
+          />
         </FilterBox>
         <FilterBox name="محدوده زمان سانس" Icon={<ClockCircle />}>
           <Input
@@ -258,6 +291,7 @@ const SearchPage = () => {
           />
           <Slider range defaultValue={[20, 50]} />
           <ButtonZiva
+          disabled
             theme="orange"
             className="h-6 rounded-md text-xs font-semibold"
             type="button"

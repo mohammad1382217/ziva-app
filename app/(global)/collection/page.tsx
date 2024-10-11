@@ -76,7 +76,7 @@ const Collection: React.FC = () => {
       schedule: "روز های یک‌شنبه، سه‌شنبه و پنج شنبه از ساعت 00 : 00 الی 00 : 00 و روز جمعه از ساعت 00 : 00 الی 00 : 00"
     }
   ];
-  
+
   const womenSchedule = [
     {
       label: "بانوان",
@@ -91,58 +91,22 @@ const Collection: React.FC = () => {
 
   const slideCard = [
     {
-      name: "استخر ۱",
+      name: "استخر فردوس",
       discount: "10",
       like: true,
       location: "قم بلوار فردوسی",
-      navigate: "collection/poll",
+      navigate: "collection",
       price: "10000",
       rate: 0.5,
     },
     {
-      name: "استخر ۲",
+      name: "استخر غدیر",
       discount: "15",
       like: false,
       location: "تهران خیابان انقلاب",
-      navigate: "collection/poll",
+      navigate: "collection",
       price: "15000",
       rate: 4.0,
-    },
-    {
-      name: "استخر ۳",
-      discount: "20",
-      like: true,
-      location: "اصفهان میدان نقش جهان",
-      navigate: "collection/poll",
-      price: "12000",
-      rate: 3.5,
-    },
-    {
-      name: "استخر ۴",
-      discount: "5",
-      like: false,
-      location: "مشهد امام رضا",
-      navigate: "collection/poll",
-      price: "8000",
-      rate: 2.0,
-    },
-    {
-      name: "استخر ۵",
-      discount: "25",
-      like: true,
-      location: "شیراز حافظیه",
-      navigate: "collection/poll",
-      price: "20000",
-      rate: 4.5,
-    },
-    {
-      name: "استخر 6",
-      discount: "10",
-      like: true,
-      location: "قم بلوار فردوسی",
-      navigate: "collection/poll",
-      price: "10000",
-      rate: 0.5,
     },
   ];
 
@@ -152,14 +116,15 @@ const Collection: React.FC = () => {
     <div className="overflow-hidden flex justify-center mt-10 !py-12 sm-max:!py-8 w-full h-full gap-32 bg-slate-50">
       <div className="containerZiva flex flex-col gap-28">
         <PoolCard
-          name="استخر ۱"
-          rating={4.5}
+          name="استخر فردوس"
+          rating={0}
           address="آدرس کامل استخر لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت
                     چاپ و با استفاده از طراحان گرافیک است"
-          link="آدرس لینک"
+          link="/buyTicket"
+          linkBuyTicket="/buyTicket"
           gatePrice="100,000 تومان"
           zivaPrice="80,000 تومان"
-          discount={20} 
+          discount={20}
           showCarousel={true}
           slides={slides}
           options={OPTIONS}
@@ -210,6 +175,17 @@ const Collection: React.FC = () => {
           </h1>
           <div className="flex flex-col gap-6">
             <BuyTicket
+              priceDiscount="000,000"
+              background="#FF5400"
+              // childrenDiscount={12}
+              // childrenPrice="1222"
+              discount={0.0}
+              name="بلیط آزاد"
+              navigate="/buyTicket"
+              price="000,000"
+              className="w-full"
+            />
+            {/* <BuyTicket
               priceDiscount="12"
               background="#9E0059"
               childrenDiscount={12}
@@ -228,7 +204,7 @@ const Collection: React.FC = () => {
               navigate="//"
               price="1222"
               className="w-full"
-            />
+            /> */}
           </div>
         </section>
 
@@ -266,7 +242,7 @@ const Collection: React.FC = () => {
         <section className="flex flex-col gap-6 scroll-mt-[184px]" id="comments">
           <div className="bg-white w-full flex flex-row md-max:flex-col md-max:items-start justify-between items-center px-6 py-4 gap-8  rounded-2xl shadow-Box">
             <div className="flex gap-4 text-slate-600 items-center">
-              <div className="flex gap-2 justify-center items-center">
+              {/* <div className="flex gap-2 justify-center items-center">
                 <span className="text-slate-800 text-3xl sm-max:text-2xl font-bold">
                   0.0
                 </span>
@@ -277,13 +253,16 @@ const Collection: React.FC = () => {
               </div>
               <span className="text-lg sm-max:text-base font-medium">
                 از مجموع 00 نظر ثبت شده
+              </span> */}
+              <span className="text-lg sm-max:text-base font-medium">
+                در حال حاضر، هیچ نظری برای این مجموعه ثبت نشده
               </span>
             </div>
             <div>
-              <Rate allowHalf disabled defaultValue={2.5} />
+              <Rate allowHalf disabled defaultValue={0} />
             </div>
           </div>
-          <div className="flex gap-6 items-start justify-between lg-max:flex-col">
+          {/* <div className="flex gap-6 items-start justify-between lg-max:flex-col">
             <RegisterComment />
             <div className="w-full">
               <BoxDescription clsasName="w-full" name="نظرات مشتریان" Icon={ChatLine}>
@@ -312,7 +291,7 @@ const Collection: React.FC = () => {
                 </div>
               </BoxDescription>
             </div>
-          </div>
+          </div> */}
         </section>
       </div>
     </div>

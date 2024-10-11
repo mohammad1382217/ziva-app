@@ -6,11 +6,13 @@ import { ArrowDown } from "solar-icon-set";
 import { MapPointWave } from "solar-icon-set";
 import Discount from "../components/Discount";
 import Map from "../../public/Button.webp";
+import Link from "next/link";
 
 interface PoolCardProps {
   name: string;
   rating: number; // امتیاز از 5
   address: string;
+  linkBuyTicket:string;
   link: string; // لینک برای دکمه
   gatePrice: string; // قیمت گیشه
   zivaPrice: string; // قیمت زیوا
@@ -36,6 +38,7 @@ const PoolCard: React.FC<PoolCardProps> = ({
   rating,
   address,
   link,
+  linkBuyTicket,
   gatePrice,
   zivaPrice,
   discount,
@@ -61,8 +64,8 @@ const PoolCard: React.FC<PoolCardProps> = ({
           <div className="flex justify-between items-start">
             <h1 className="text-40 font-black text-black">{name}</h1>
             <div className="flex flex-row justify-between items-center">
-              <div className="flex justify-center items-center gap-1">
-                <Heart iconStyle={"Broken"} size={14} color="#FF0054" />
+              <div className="flex justify-center items-center gap-1 ">
+                <Heart iconStyle={"Outline"} size={14} color="#d1d5db" />
                 <div className="rounded-lg gap-[3px] flex w-10 h-5 flex-row justify-center items-center bg-amber-400">
                   <span className="text-white mt-[3px] font-bold text-10">{rating.toFixed(1)}</span>
                   <Image src="/startWhite.svg" alt="ستاره" color="#FFBD00" width={12} height={12} />
@@ -101,10 +104,12 @@ const PoolCard: React.FC<PoolCardProps> = ({
             </div>
             <div className="flex flex-row justify-between">
               <span className="font-bold text-white text-xl">{zivaPrice}</span>
+              <Link href={linkBuyTicket} >
               <button className="flex flex-row-reverse justify-center items-center gap-2 font-semibold text-sm text-white">
                 <ArrowDown color="#FFFFFF" width={20} height={20} size={20} />
                 خرید بلیط
               </button>
+              </Link>
             </div>
           </div>
         </div>

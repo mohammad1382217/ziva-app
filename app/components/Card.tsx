@@ -38,7 +38,7 @@ const Card: React.FC<CardType> = ({
         {Verticalable ? null : (
           <div className="rounded-lg absolute left-1 gap-[3px] flex w-10 h-5 flex-row justify-center items-center bg-gradient-to-r from-white/90 to-white/80 bg-opacity-20 backdrop-blur-lg">
             <span className="text-slate-900 font-bold text-10">{rate}</span>
-            <Image src={Star} alt="ستاره" color="#FFBD00" width={12} height={12} />
+            <Image src={Star}  alt="ستاره" color="#FFBD00" width={12} height={12} />
           </div>
         )}
       </div>
@@ -46,14 +46,14 @@ const Card: React.FC<CardType> = ({
         <div className="flex flex-col gap-2">
           <div className="flex flex-row justify-between items-center">
             <div className="flex rounded-full justify-center items-center gap-[2px]  h-[20px]  p-2  bg-Folly-500">
-              <Sale color="#FFFFFF" width={14} height={14} size={14} />
+              <Sale color="#FFFFFF" iconStyle="Outline" width={14} height={14} size={14} />
               <p className="text-10 mt-[3px] font-bold text-white">
                 تا {discount} درصد تخفیف
               </p>
             </div>
             {/* <Button isIconOnly color="default" className="bg-white border-1 border-Folly-500" > */}
             <div className="flex justify-center items-center gap-1">
-              <Heart iconStyle={like ? "Bold" : "Broken"} size={14} color="#FF0054" />
+              <Heart iconStyle={like ? "Bold" : "Outline"} size={14} color="#FF0054" />
               {Verticalable && (
                 <div className="rounded-lg gap-[3px] flex w-10 h-5 flex-row justify-center items-center bg-amber-400">
                   <span className="text-white mt-[3px] font-bold text-10">{rate}</span>
@@ -72,7 +72,7 @@ const Card: React.FC<CardType> = ({
           <div className="gap-2 flex flex-col">
             <h1 className="text-lg font-bold text-slate-700">{name}</h1>
             <div className="flex flex-row gap-1">
-              <MapPointWave color="#FF5400" size={13} />
+              <MapPointWave iconStyle="Outline" color="#FF5400" size={13} />
               <p className="text-slate-400 text-xs font-normal">{location}</p>
             </div>
           </div>
@@ -88,7 +88,7 @@ const Card: React.FC<CardType> = ({
               <span className="text-orange-500 font-semibold text-[10px]">
                 {Verticalable ? "مشاهده  و خرید بلیط" : "مشاهده"}
               </span>
-              <Reply2 color="#FF5400" height={6.71} width={9.63} />
+              <Reply2 iconStyle="Outline" color="#FF5400" height={6.71} width={9.63} />
             </Link>
           </div>
         </div>

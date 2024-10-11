@@ -70,7 +70,7 @@ const FilterBox: React.FC<FilterBoxType> = ({
 export default FilterBox;
 function HeaderFilterBox({ name, Icon, isFilter }: { name: string, Icon: any, isFilter?: boolean }) {
   return (<div className="flex flex-row-reverse  gap-6 justify-center items-center ">
-    <div className="flex-grow flex flex-row">
+    <div className="flex-grow flex flex-row-reverse justify-center items-center">
     {isFilter && <ButtonZiva className="p-0 gap-[2px] min-w-[66px] w-[57px] h-[20px]" theme="default" buttonTextClassName="text-10 font-semibold text-Error-500" variant="flat" type="button" buttonText="حذف همه" leftIcon={<CloseSquare size={10} color="#F04438" />} />}
       <hr className="w-full bg-orange-200" />
     </div>
