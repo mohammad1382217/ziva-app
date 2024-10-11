@@ -34,7 +34,7 @@
   }
 }
 
-.hamberger{
+.hamberger {
   backdrop-filter: none !important;
 }
 
@@ -62,14 +62,22 @@ body {
 .bg-gradient-f-20-f-3080 {
   background: var(--gradient-f-20-f-3080);
 }
+
 .bg-gradient-f-10-f-2080 {
   background: var(--gradient-f-10-f-2080);
 }
 
-.ant-drawer-header{
+.cartShdow {
+  box-shadow: 0px 16px 40px -16px #F1F5F9;
+}
+
+.ant-drawer-header {
   display: none !important;
 }
 
 * {
   font-family: '__pelak_424033';
+}
+.filterColor{
+  filter: invert(44%) sepia(15%) saturate(607%) hue-rotate(176deg) brightness(97%) contrast(91%);
 }

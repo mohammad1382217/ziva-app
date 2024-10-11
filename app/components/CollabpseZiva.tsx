@@ -29,7 +29,7 @@ const CollapseZiva: React.FC<CollapseZivaType> = ({ items }) => {
           />
         )
       }
-      style={{ background: "#FCFCFD" }}
+      style={{ background: "#F8FAFC" }}
       items={items}
     />
   );
