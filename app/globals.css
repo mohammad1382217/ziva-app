@@ -62,6 +62,9 @@ body {
 .bg-gradient-f-20-f-3080 {
   background: var(--gradient-f-20-f-3080);
 }
+.bg-gradient-f-10-f-2080 {
+  background: var(--gradient-f-10-f-2080);
+}
 
 .ant-drawer-header{
   display: none !important;
