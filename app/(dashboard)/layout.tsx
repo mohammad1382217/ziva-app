@@ -32,7 +32,7 @@ const RTLLayout = (props: RTLLayoutProps) => {
     setBrandText(getActiveRoute(routes, pathname));
     setSecondaryNavbar(getActiveNavbar(routes, pathname));
     setMessage(getActiveNavbarText(routes, pathname));
-  }, [pathname, routes]);
+  }, [pathname]);
 
   const { onOpen } = useDisclosure();
   return (
