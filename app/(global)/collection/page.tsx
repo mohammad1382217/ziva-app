@@ -10,8 +10,6 @@ import {
   InfoCircle,
   Clipboard,
 } from "solar-icon-set";
-import StarWhite from "../../public/startWhite.svg";
-import Image from "next/image";
 import SegmentedZiva from "../../components/SegmentedZiva";
 import BoxDescription from "../../components/BoxDescription";
 import { Metadata } from "next";
@@ -151,7 +149,7 @@ const Collection: React.FC = () => {
   const buttonTexts = ["استخر کودکان", "استخر بزرگسالان", "استخر عمومی"];
 
   return (
-    <div className="overflow-hidden flex justify-center mt-10 w-full h-full gap-32 bg-slate-50">
+    <div className="overflow-hidden flex justify-center mt-10 !py-12 sm-max:!py-8 w-full h-full gap-32 bg-slate-50">
       <div className="containerZiva flex flex-col gap-28">
         <PoolCard
           name="استخر ۱"

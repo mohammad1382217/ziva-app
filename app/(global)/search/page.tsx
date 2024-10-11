@@ -111,7 +111,7 @@ const SearchPage = () => {
     },
   ];
   return (
-    <div className="containerZiva py-12 mt-20 bg-slate-50 gap-6 flex lg-max:flex-col-reverse justify-between flex-row-reverse">
+    <div className="containerZiva !py-12 sm-max:!py-8 mt-20 bg-slate-50 gap-6 flex lg-max:flex-col-reverse justify-between flex-row-reverse">
       <div className="flex flex-col gap-6">
         <div className="flex gap-6 md-max:flex-col md-max:items-start justify-between items-center w-full">
           <DividerCards
@@ -124,7 +124,7 @@ const SearchPage = () => {
               مشاهده همه استخر ها
             </Link>
           </div>
-          <Dropdown>
+          {/* <Dropdown>
             <DropdownTrigger>
               <ButtonZiva
                 className="p-0 gap-[2px] rounded min-w-auto h-[20px]"
@@ -138,7 +138,7 @@ const SearchPage = () => {
             <DropdownMenu aria-label="Static Actions">
               <DropdownItem key="new">New file</DropdownItem>
             </DropdownMenu>
-          </Dropdown>
+          </Dropdown> */}
           {/* <div className="text-nowrap md-max:self-end">ترتیب نمایش بر اساس مرتبط ترین</div> */}
         </div>
 
