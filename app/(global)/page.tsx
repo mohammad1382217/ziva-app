@@ -97,7 +97,7 @@ const Home: React.FC = () => {
   ];
 
   return (
-    <section className="gap-[120px] md-max:gap-[56px] flex flex-col w-full h-full py-12 bg-[#F9FAFB] overflow-hidden">
+    <section className="gap-[120px] md-max:gap-[56px] flex flex-col w-full h-full py-12 sm-max:py-8 bg-[#F9FAFB] overflow-hidden">
       <div className="flex containerZiva flex-col md-min:flex-row md-max:gap-0 gap-6 justify-between h-96 sm-max:h-72 xs-max:h-44 md-max:h-80 xl-max:h-96 3xl-max:h-[30rem] 3xl-min:h-[60vh]">
         {/* <div className="w-full md-min:w-7/12 h-full  mb-4 md-min:mb-0"> */}
         <div className="w-full h-full  mb-4 md-min:mb-0">
