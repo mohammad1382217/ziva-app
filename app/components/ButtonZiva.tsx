@@ -5,6 +5,7 @@ interface CustomButtonProps {
   style?: CSSProperties;
   buttonTextClassName?: string;
   className?: string;
+  disabled?:boolean;
   onClick?: MouseEventHandler<HTMLButtonElement> | undefined;
   buttonText?: string;
   type: "button" | "submit" | "reset" | undefined;
@@ -37,6 +38,7 @@ const ButtonZiva: React.FC<CustomButtonProps> = ({
   style,
   iconOnly,
   theme = "default", // Default theme is "default"
+  disabled
 }) => {
   // Defining theme styles based on props
   let ButtonTheme: string = "";
@@ -50,6 +52,7 @@ const ButtonZiva: React.FC<CustomButtonProps> = ({
     <Button
       type={type}
       style={style}
+      disabled={disabled}
       onClick={onClick}
       size="lg"
       variant={variant}

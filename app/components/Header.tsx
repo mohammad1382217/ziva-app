@@ -29,33 +29,11 @@ const Header = () => {
         </div>
       </div>
       <div className="flex 768-max:hidden flex-row gap-4">
-        {/* <InputZiva
-          type="text"
-          name="search"
-          // value={Weakness}
-          // onChange={(e) => {
-          //     setWeakness(e.target.value)
-          // }}
-          variant="bordered"
-          label="جستجو"
-          labelPlacement="inside"
-          endContent={
-            <button
-              type="button"
-              className="flex !w-30 2xl-max:!w-20 md-max:!w-24 justify-center items-center"
-            >
-              <Magnifer color="#A1A1AA" size={20} iconStyle="Outline" />
-            </button>
-          }
-        /> */}
         <Input
           type="text"
           id="search"
           name="search"
-          // value={Weakness}
-          // onChange={(e) => {
-          //     setWeakness(e.target.value)
-          // }}
+          disabled
           variant="bordered"
           placeholder="جستجو"
           labelPlacement="inside"
@@ -68,15 +46,16 @@ const Header = () => {
             </button>
           }
         />
-        <Link href="/Dashboard">
-          <ButtonZiva
-            className="h-10 w-40 min-w-max text-lg font-semibold text-white"
-            type="button"
-            buttonText="پنل کاربری"
-            leftIcon={<UserCircle size={20} />}
-            theme="orange"
-          />
-        </Link>
+        {/* <Link href="/Dashboard"> */}
+        <ButtonZiva
+          disabled
+          className="h-10 w-40 min-w-max text-lg font-semibold text-white"
+          type="button"
+          buttonText="پنل کاربری"
+          leftIcon={<UserCircle size={20} />}
+          theme="orange"
+        />
+        {/* </Link> */}
       </div>
       <div className="768-min:hidden">
         <HamburgerMenuHeader menuItems={menuItems} />
