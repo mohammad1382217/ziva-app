@@ -18,9 +18,9 @@ const BoxDescription: React.FC<BoxDescriptionType> = ({
 }) => {
   return (
     <div
-      className={`bg-white flex flex-col p-6 gap-8  rounded-2xl   shadow-Box ${clsasName}`}
+      className={`bg-white flex flex-col p-6 gap-8 rounded-2xl shadow-Box ${clsasName}`}
     >
-      <div className="flex flex-row-reverse  gap-6 justify-center items-center">
+      <div className="flex flex-row-reverse gap-6 justify-center items-center">
         <div className="flex-grow">
           <Divider className="w-full bg-orange-200" />
         </div>

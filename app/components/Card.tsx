@@ -32,8 +32,8 @@ const Card: React.FC<CardType> = ({
     <div
       className={`bg-white  flex p-1 gap-2  rounded-2xl shadow-Box ${Verticalable ? "flex-row w-[556px]" : "flex-col w-[246px]"}`}
     >
-      <div
-        className={`gap-1 relative ${Verticalable ? " w-[216px] h-[162px]" : " w-[238px] h-[180px]"} w-[238px] h-[180px] rounded-xl p-1 bg-slate-600`}
+      <section
+        className={`gap-1 relative ${Verticalable ? "w-[216px] h-[162px]" : " w-[238px] h-[180px]"} w-[238px] h-[180px] rounded-xl p-1 bg-slate-600`}
       >
         {Verticalable ? null : (
           <div className="rounded-lg absolute left-1 gap-[3px] flex w-10 h-5 flex-row justify-center items-center bg-gradient-to-r from-white/90 to-white/80 bg-opacity-20 backdrop-blur-lg">
@@ -41,8 +41,8 @@ const Card: React.FC<CardType> = ({
             <Image src={Star} alt="ستاره" color="#FFBD00" width={12} height={12} />
           </div>
         )}
-      </div>
-      <div className={`flex flex-col px-2 gap-3 ${Verticalable ? "w-full h-full" : ""}`}>
+      </section>
+      <section className={`flex flex-col px-2 gap-3 ${Verticalable ? "w-full h-full" : ""}`}>
         <div className="flex flex-col gap-2">
           <div className="flex flex-row justify-between items-center">
             <div className="flex rounded-full justify-center items-center gap-[2px]  h-[20px]  p-2  bg-Folly-500">
@@ -92,7 +92,7 @@ const Card: React.FC<CardType> = ({
             </Link>
           </div>
         </div>
-      </div>
+      </section>
     </div>
   );
 };
