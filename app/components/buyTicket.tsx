@@ -2,6 +2,7 @@ import { Ticket } from "solar-icon-set";
 import ButtonZiva from "./ButtonZiva";
 import Discount from "./Discount";
 import { Divider } from "@nextui-org/react";
+import Link from "next/link";
 
 export interface BuyTicketType {
   className?: string;
@@ -64,6 +65,7 @@ const BuyTicket: React.FC<BuyTicketType> = ({
             </div>
           </div>
           <div className="my-auto">
+            <Link href={navigate} >
             <ButtonZiva
               style={{ color: background }}
               buttonText="خرید بلیط"
@@ -71,6 +73,7 @@ const BuyTicket: React.FC<BuyTicketType> = ({
               className={`w-32 sm-max:w-full h-11 text-[${background}] font-semibold text-sm hover:bg-transparent bg-gradient-to-r from-white/90 to-white/80 bg-opacity-20 backdrop-blur-lg`}
               leftIcon={<Ticket color={background} height={13} width={16} />}
             />
+            </Link>
           </div>
         </div>
       </div>

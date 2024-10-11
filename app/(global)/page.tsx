@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Banner from "../components/Banner";
 import { EmblaOptionsType } from "embla-carousel";
-import ImageSampel from "../../public/RectangleLoginPage.webp";
+import ImageSampel from "../../public/blue-swimming-pool-rippled-water-detail.webp";
 import EmblaCarouselHome from "../components/CarouselHome/EmblaCarouselHome";
 import BoxMuliCarousel from "../components/BoxMulitiCarousel/BoxMuliCarousel";
 import "../styles/CarouselEmblaHome.css";
@@ -20,11 +20,11 @@ const Home: React.FC = () => {
 
   const slideCard = [
     {
-      name: "استخر فردوس",
+      name: "استخر مجلل فردوس",
       discount: "10",
       like: true,
       location: "قم بلوار فردوسی",
-      navigate: "collection/poll",
+      navigate: "collection",
       price: "10000",
       rate: 0.5,
     },
@@ -33,7 +33,7 @@ const Home: React.FC = () => {
       discount: "15",
       like: false,
       location: "تهران خیابان انقلاب",
-      navigate: "collection/poll",
+      navigate: "collection",
       price: "15000",
       rate: 4.0,
     },
@@ -68,11 +68,11 @@ const Home: React.FC = () => {
 
   const slideTopic = [
     {
-      name: "استخر فردوس",
+      name: "استخر مجلل فردوس",
       discount: "10",
       like: true,
       location: "قم بلوار فردوسی",
-      navigate: "collection/poll",
+      navigate: "collection/",
       price: "10000",
       rate: 0.5,
     },
@@ -81,7 +81,7 @@ const Home: React.FC = () => {
       discount: "15",
       like: false,
       location: "تهران خیابان انقلاب",
-      navigate: "collection/poll",
+      navigate: "collection/",
       price: "15000",
       rate: 4.0,
     },

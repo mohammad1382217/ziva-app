@@ -1,11 +1,16 @@
 import Image from "next/image";
-import ImageIntroduction from "../../../public/Group 146.webp";
-import ImageIntroductio2 from "../../../public/Group 152.webp";
+import ImageIntroduction from "../../../public/IntroductionAboutus.svg";
+import ImageIntroductio2 from "../../../public/Group 152.svg";
 import { CSSProperties } from "react";
 import { CollapseProps } from "antd";
-import { ChatSquareCheck, ClipboardList, Sale } from "solar-icon-set";
+import { ChatSquareCheck, ClipboardList, PhoneCallingRounded, Sale } from "solar-icon-set";
 import ZivaProperty from "@/app/components/ZivaProperty";
 import CollapseZiva from "@/app/components/CollabpseZiva";
+import ContactProperty from "@/app/components/ContactProperty";
+import SocialLogo from "@/app/components/Social";
+import { Textarea } from "@nextui-org/react";
+import InputZiva from "@/app/components/InputZiva";
+import ButtonZiva from "@/app/components/ButtonZiva";
 
 const AboutPage = () => {
   const text = `
@@ -68,6 +73,8 @@ const AboutPage = () => {
     marginBottom: 24,
     background: "#FFFFFF",
     borderRadius: 21,
+
+    boxShadow: " 0px 16px 40px - 16px #F1F5F9",
     border: "none",
     display: "flex",
     flexDirection: "column",
@@ -79,7 +86,7 @@ const AboutPage = () => {
   };
 
   return (
-    <div className="bg-[#FCFCFD] mt-20 flex flex-col gap-20 sm-max:gap-[60px] !py-12 sm-max:!py-8 containerZiva">
+    <div className="bg-[#F8FAFC] mt-20 flex flex-col gap-20 sm-max:gap-[60px] !py-12 sm-max:!py-8 containerZiva">
       <section className="flex flex-row gap-6 md-max:flex-col">
         <Image
           className="w-[46%] md-max:w-full relative"
@@ -172,13 +179,69 @@ const AboutPage = () => {
         </div >
       </section >
       <section className=" flex flex-col gap-6">
-        <div className="flex justify-center text-center text-32 font-bold text-[#151618]">
+        <div className="flex justify-center text-center text-4xl font-bold text-[#151618]">
+          ارتباط با ما
+        </div>
+        <div className="flex flex-row lg-max:flex-col justify-between gap-6">
+          <div className="w-1/2 lg-max:w-full flex flex-col gap-4">
+            <ContactProperty
+              rightSide="شماره تماس پشتیبانی"
+              leftSide="0912 345 6789"
+              icon={<PhoneCallingRounded iconStyle="Outline" color="#FFFFFF" size={26} />}
+            />
+            <ContactProperty
+              rightSide="پست الکترونیک"
+              leftSide="info@zivaticket.ir"
+              icon={<PhoneCallingRounded iconStyle="Outline" color="#FFFFFF" size={26} />}
+            />
+            <ContactProperty
+              rightSide={<div className="flex flex-col gap-4">
+                <p>
+                  زیوا در شبکه های اجتماعی
+                </p>
+                <div className="flex gap-4">
+                  <SocialLogo iconClassName='filterColor' />
+                </div>
+              </div>}
+              leftSide="@zivaticket"
+              icon={<PhoneCallingRounded iconStyle="Outline" color="#FFFFFF" size={26} />}
+            />
+          </div>
+          <div className="bg-white relative w-1/2 lg-max:w-full cartShdow rounded-3xl p-6">
+            <div className="flex  flex-col gap-5">
+              <div>
+                <InputZiva classNames={{ inputWrapper: 'w-full' }} label="نام و نام خانوادگی" />
+              </div>
+              <div className="flex gap-5 justify-between">
+                <InputZiva classNames={{ inputWrapper: 'w-full' }} label="شماره موبایل" />
+                <InputZiva classNames={{ inputWrapper: 'w-full' }} label="ایمیل" />
+
+              </div>
+              <Textarea
+                isRequired
+                variant="bordered"
+                classNames={{
+                  description: "text-slate-500 text-sm",
+                  label: "text-slate-600 text-xs",
+                }}
+                placeholder="پیامتون رو برامون بنویسید"
+                className="w-full "
+              />
+              <div className="w-full flex lg-max:relative lg-max:bottom-0 absolute bottom-6 justify-center items-center">
+                <ButtonZiva disabled className="h-10 w-[240px]" type="button" theme="orange" buttonText="ارسال پیام" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className=" flex px-24 lg-max:px-5 md-max:px-0 flex-col gap-6">
+        <div className="flex justify-center  text-center text-4xl font-bold text-[#151618]">
           سوالات متداول
         </div>
         <CollapseZiva items={getItems(panelStyle)} />
       </section>
-      <section className=" flex flex-col gap-6">
-        <div className="flex justify-center text-center text-32 font-bold text-[#151618]">
+      <section className="px-24 lg-max:px-5 md-max:px-0 flex flex-col gap-6">
+        <div className="flex justify-center text-center text-4xl font-bold text-[#151618]">
           قوانین و مقررات
         </div>
         <CollapseZiva items={getItems(panelStyle)} />
