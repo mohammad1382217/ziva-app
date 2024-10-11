@@ -99,10 +99,11 @@ const Home: React.FC = () => {
   return (
     <section className="gap-32 md-max:gap-16 flex flex-col w-full h-full p-6 bg-[#F9FAFB] overflow-hidden">
       <div className="flex lg-min:px-40 flex-col md-min:flex-row md-max:gap-0 gap-6 justify-between h-96 xs-max:h-80 md-max:h-[30rem]  lg-max:h-80 xl-max:h-96 3xl-max:h-[30rem] 3xl-min:h-[60vh]">
-        <div className="w-full md-min:w-7/12 h-full  mb-4 md-min:mb-0">
+        {/* <div className="w-full md-min:w-7/12 h-full  mb-4 md-min:mb-0"> */}
+        <div className="w-full h-full  mb-4 md-min:mb-0">
           <EmblaCarouselHome slides={SLIDES} options={OPTIONS} />
         </div>
-        <div className="w-full md-min:w-5/12 h-full  md-max:h-1/2 overflow-hidden">
+        {/* <div className="w-full md-min:w-5/12 h-full  md-max:h-1/2 overflow-hidden">
           <div className="flex flex-col md-max:flex-row md-max:gap-2 w-full h-full gap-6">
             <div className="h-1/2 md-max:h-full  w-full relative">
               <Image src={ImageSampel} alt={"استخر"} fill className="rounded-2xl" />
@@ -111,7 +112,7 @@ const Home: React.FC = () => {
               <Image src={ImageSampel} alt={"استخر"} fill className="rounded-2xl" />
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
       <div>
         <div className="p-0 lg-min:px-40">
