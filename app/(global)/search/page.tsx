@@ -20,7 +20,7 @@ import { Tag as AntdTag, Slider } from "antd";
 const SearchPage = () => {
   const SearchCards = [
     {
-      name: "استخر فردوس",
+      name: "استخر مجلل فردوس",
       discount: "10",
       like: true,
       location: "قم بلوار فردوسی",

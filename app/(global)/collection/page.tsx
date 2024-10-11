@@ -18,26 +18,27 @@ import BoxMuliCarousel from "../../components/BoxMulitiCarousel/BoxMuliCarousel"
 import Banner from "../../components/Banner";
 import BuyTicket from "../../components/buyTicket";
 import Rate from "antd/es/rate";
-import RegisterComment from "../../components/RegisterComment";
-import Comment from "../../components/Comment";
 import PoolCard from "@/app/components/PollCard";
 import NotificationList from "@/app/components/NotificationList";
 import Schedule from "@/app/components/Schedule";
 import Rules from "@/app/components/Roles";
-
+import Ferdos1 from "@/public/Ferdos/ferdos_1_800_400.png"
+import Ferdos2 from "@/public/Ferdos/ferdos_2_800_400.png"
+import Ferdos3 from "@/public/Ferdos/ferdos_3_800_400.png"
+import Ferdos4 from "@/public/Ferdos/ferdos_4_800_400.png"
+import Ferdos5 from "@/public/Ferdos/ferdos_5_800_400.png"
 export const metadata: Metadata = {
-  title: "مجموعه",
-  description: "اسختر فلان در قم",
+  title: "استخر مجلل فردوس",
+  description: "قم ، بلوار جمهوری ، ابتدای بلوار شهیدان محمود نژاد ، کوچه ۱۲",
 };
 
 const Collection: React.FC = () => {
   const slides = [
-    { src: ImageSampel, alt: "استخر" },
-    { src: ImageSampel, alt: "استخر" },
-    { src: ImageSampel, alt: "استخر" },
-    { src: ImageSampel, alt: "استخر" },
-    { src: ImageSampel, alt: "استخر" },
-    { src: ImageSampel, alt: "استخر" },
+    { src: Ferdos1, alt: "استخر" },
+    { src: Ferdos2, alt: "استخر" },
+    { src: Ferdos3, alt: "استخر" },
+    { src: Ferdos4, alt: "استخر" },
+    { src: Ferdos5, alt: "استخر" },
   ];
 
   const SegmentZiva = [
@@ -73,58 +74,58 @@ const Collection: React.FC = () => {
   const menSchedule = [
     {
       label: "آقایان",
-      schedule: "روز های یک‌شنبه، سه‌شنبه و پنج شنبه از ساعت 00 : 00 الی 00 : 00 و روز جمعه از ساعت 00 : 00 الی 00 : 00"
+      schedule: "هر روز از ساعت ۱۷ تا ۲۲دوشنبه ها از ساعت ۱۸ تا ۲۲"
     }
   ];
 
   const womenSchedule = [
     {
       label: "بانوان",
-      schedule: "روز های یک‌شنبه، سه‌شنبه و پنج شنبه از ساعت 00 : 00 الی 00 : 00 و روز جمعه از ساعت 00 : 00 الی 00 : 00"
+      schedule: "شنبه تا پنج شنبه از ساعت ۹:۳۰ تا ۱۵"
     }
   ];
 
   const rulesList = [
-    "۲۰ دقیقه پایانی سانس به دوش‌گرفتن و تعویض لباس اختصاص دارد.",
-    "کودکان از 5 سال به بالا پذیرش می شوند."
+    "نیم ساعت پایانی سانس مخصوص دوش و رختکن می باشد.",
+    "پذیرش کودکان زیر ۴ سال ممنون می باشد.",
+    "ذیرش دختر بچه در سانس آقایان و پسربچه در سانس بانوان ممنوع می باشد."
   ];
 
   const slideCard = [
     {
-      name: "استخر فردوس",
-      discount: "10",
-      like: true,
-      location: "قم بلوار فردوسی",
+      name: "استخر مجلل فردوس",
+      discount: "0",
+      like: false,
+      location: "قم ، بلوار جمهوری ",
       navigate: "collection",
-      price: "10000",
-      rate: 0.5,
+      price: "0",
+      rate: 0.0,
     },
     {
       name: "استخر غدیر",
-      discount: "15",
+      discount: "0",
       like: false,
-      location: "تهران خیابان انقلاب",
+      location: "قم خیابان انقلاب",
       navigate: "collection",
-      price: "15000",
-      rate: 4.0,
+      price: "0",
+      rate: 0.0,
     },
   ];
 
-  const buttonTexts = ["استخر کودکان", "استخر بزرگسالان", "استخر عمومی"];
+  const buttonTexts = ["سونا خشک", "سونا بخار", "جکوزی آب گرم", "جکوزی آب سرد", "سالن ماساژ", "حمام", "آب سردکن", "فروشگاه لوازم شنا", "بوفه خوراکی", "فست فود", "کافی شاپ", "گیم نت", "لابی انتظار", "فیلمبرداری زیر آب", "غواصی"];
 
   return (
     <div className="overflow-hidden flex justify-center mt-10 !py-12 sm-max:!py-8 w-full h-full gap-32 bg-slate-50">
       <div className="containerZiva flex flex-col gap-28">
         <PoolCard
-          name="استخر فردوس"
+          name="استخر مجلل فردوس"
           rating={0}
-          address="آدرس کامل استخر لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت
-                    چاپ و با استفاده از طراحان گرافیک است"
-          link="/buyTicket"
+          address="قم ، بلوار جمهوری ، ابتدای بلوار شهیدان محمود نژاد ، کوچه ۱۲"
+          link="https://nshn.ir/68sbsd-CWxQOAU"
           linkBuyTicket="/buyTicket"
-          gatePrice="100,000 تومان"
-          zivaPrice="80,000 تومان"
-          discount={20}
+          gatePrice="120,000 تومان"
+          zivaPrice="75,000 تومان"
+          discount={45}
           showCarousel={true}
           slides={slides}
           options={OPTIONS}
@@ -139,7 +140,7 @@ const Collection: React.FC = () => {
           className="gap-10 flex flex-col lg-max:gap-6 scroll-mt-[184px]"
           id="introduction"
         >
-          <NotificationList notifications={notifications} />
+          {/* <NotificationList notifications={notifications} /> */}
           <Schedule men={menSchedule} women={womenSchedule} />
           <Rules rules={rulesList} />
         </section>
@@ -151,7 +152,7 @@ const Collection: React.FC = () => {
           >
             امکانات و ویژگی ها
           </h1>
-          <div className="flex justify-center items-center px-20 gap-4">
+          <div className="flex flex-wrap justify-center items-center px-20 gap-4">
             {buttonTexts.map((text, index) => (
               <ButtonZiva
                 key={index}
@@ -175,55 +176,58 @@ const Collection: React.FC = () => {
           </h1>
           <div className="flex flex-col gap-6">
             <BuyTicket
-              priceDiscount="000,000"
+              priceDiscount="75,000"
               background="#FF5400"
               // childrenDiscount={12}
               // childrenPrice="1222"
-              discount={0.0}
+              discount={45}
               name="بلیط آزاد"
               navigate="/buyTicket"
-              price="000,000"
-              className="w-full"
-            />
-            {/* <BuyTicket
-              priceDiscount="12"
-              background="#9E0059"
-              childrenDiscount={12}
-              childrenPrice="1222"
-              discount={22}
-              name="سانس بانوان"
-              navigate="//"
-              price="1222"
+              price="120,000"
               className="w-full"
             />
             <BuyTicket
-              priceDiscount="12"
+              priceDiscount="72,000"
               background="#390099"
-              discount={22}
-              name="سانس آقایان"
-              navigate="//"
-              price="1222"
+              discount={40}
+              name="بلیت سانس شبانه ( ویژه آقایان )"
+              navigate="/buyTicket"
+              price="120.000"
               className="w-full"
-            /> */}
+            />
           </div>
         </section>
 
         <section className="gap-8 flex flex-col">
           <BoxDescription clsasName="mt-10 " name="معرفی استخر" Icon={Clipboard}>
             <p className="text-base font-normal text-slate-500">
-              ۲۰ دقیقه پایانی سانس به دوش‌گرفتن و تعویض لباس اختصاص دارد.<br></br>
-              کودکان از 5 سال به بالا پذیرش می شوند.
+              استخر مجلل فردوس قم از معدود استخرهای خصوصی قم می باشد که همیشه آرامش و رفاه و سطح کیفیت خدمات در اولویت می باشد . این استخر از لحاظ وسعت میان رده بوده و به دلیل غدم عقد قرارداد با سازمان ها و ارگان ها ، به نسبت سایر استخرها از توازن مشتریان برخوردار بوده و کنترل و پایش مشتریان در هنگام ورود مانع از ازدحام و بی نظمی در استخر می گردد . استخر مجلل فردوس تمامی نیازهای شما را سنجیده و برای شما فراهم کرده است . این استخر تنها استخر تخصصی در برگزاری سانس های خصوصی می باشد . تنها در این استخر میتوانید غواصی و فیلمبرداری زیر آب را تجربه کنید.
             </p>
           </BoxDescription>
           <BoxDescription clsasName="mt-10 " name="مشخصات استخر" Icon={MenuDotsCircle}>
             <p className="text-base font-normal text-slate-500">
-              طول استخر: 25 متر
+              طول استخر ۱۳ متر
               <br />
-              عرض استخر 50 متر
+              عرض استخر ۷ متر
               <br />
-              کمترین ارتفاع: 1 متر
+              قسمت کم عمق ۹۰ سانتیمتر
               <br />
-              بیشترین ارتفاع: 3 متر
+              قسمت عمیق ۲ متر
+
+              <br />
+              سیستم تصفیه شنی
+
+              <br />
+              سیستم گندزدایی کلر
+
+              <br />
+              سرویس بهداشتی ایرانی و فرنگی
+
+              <br />
+              دوش های عمومی
+
+              <br />
+              سیستم تهویه هواکش
             </p>
           </BoxDescription>
         </section>
