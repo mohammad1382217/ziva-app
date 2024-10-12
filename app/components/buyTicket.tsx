@@ -42,10 +42,10 @@ const BuyTicket: React.FC<BuyTicketType> = ({
             </div>
             <div className="flex flex-row  md-max:justify-between gap-6">
               <div className="relative text-xl font-semibold  text-white ">
-                <span className="opacity-50">{priceDiscount} تومان</span>
+                <span className="opacity-50">{price} تومان</span>
                 <div className="absolute top-4 left-2 right-2 h-0.5 bg-slate-200 opacity-100 transform rotate-[-12deg]"></div>
               </div>
-              <div className="relative text-2xl font-black text-white">{price} تومان</div>
+              <div className="relative text-2xl font-black text-white">{priceDiscount} تومان</div>
             </div>
             <div>
               {childrenDiscount && childrenPrice && (

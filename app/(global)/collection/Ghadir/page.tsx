@@ -1,44 +1,42 @@
-import ImageSampel from "../../../public/RectangleLoginPage.webp";
 import { EmblaOptionsType } from "embla-carousel";
 import {
   HandStars,
   ClipboardList,
   Ticket,
   ChatLine,
-  FacemaskSquare,
   MenuDotsCircle,
-  InfoCircle,
   Clipboard,
 } from "solar-icon-set";
-import SegmentedZiva from "../../components/SegmentedZiva";
-import BoxDescription from "../../components/BoxDescription";
+import SegmentedZiva from "../../../components/SegmentedZiva";
+import BoxDescription from "../../../components/BoxDescription";
 import { Metadata } from "next";
-import ButtonZiva from "../../components/ButtonZiva";
-import BoxMuliCarousel from "../../components/BoxMulitiCarousel/BoxMuliCarousel";
-import Banner from "../../components/Banner";
-import BuyTicket from "../../components/buyTicket";
+import ButtonZiva from "../../../components/ButtonZiva";
+import BoxMuliCarousel from "../../../components/BoxMulitiCarousel/BoxMuliCarousel";
+import Banner from "../../../components/Banner";
+import BuyTicket from "../../../components/buyTicket";
 import Rate from "antd/es/rate";
 import PoolCard from "@/app/components/PollCard";
-import NotificationList from "@/app/components/NotificationList";
 import Schedule from "@/app/components/Schedule";
 import Rules from "@/app/components/Roles";
-import Ferdos1 from "@/public/Ferdos/ferdos_1_800_400.png"
-import Ferdos2 from "@/public/Ferdos/ferdos_2_800_400.png"
-import Ferdos3 from "@/public/Ferdos/ferdos_3_800_400.png"
-import Ferdos4 from "@/public/Ferdos/ferdos_4_800_400.png"
-import Ferdos5 from "@/public/Ferdos/ferdos_5_800_400.png"
+import ghadir1 from "@/public/ghadir/ghadir_1_800_400.jpg"
+import ghadir2 from "@/public/ghadir/ghadir_2_800_400.jpg"
+import ghadir3 from "@/public/ghadir/ghadir_3_800_400.jpg"
+import ghadir4 from "@/public/ghadir/ghadir_4_800_400.jpg"
+import ghadir5 from "@/public/Ghadir/ghadir_5_800_400.jpg"
+import ghadir6 from "@/public/Ghadir/ghadir_6_800_400.jpg"
 export const metadata: Metadata = {
-  title: "استخر مجلل فردوس",
-  description: "قم ، بلوار جمهوری ، ابتدای بلوار شهیدان محمود نژاد ، کوچه ۱۲",
+  title: "استخر غدیر",
+  description: "قم ، بلوار شهید نواب صفوی ، کوچه ۱۴",
 };
 
 const Collection: React.FC = () => {
   const slides = [
-    { src: Ferdos1, alt: "استخر" },
-    { src: Ferdos2, alt: "استخر" },
-    { src: Ferdos3, alt: "استخر" },
-    { src: Ferdos4, alt: "استخر" },
-    { src: Ferdos5, alt: "استخر" },
+    { src: ghadir1, alt: "استخر" },
+    { src: ghadir2, alt: "استخر" },
+    { src: ghadir3, alt: "استخر" },
+    { src: ghadir4, alt: "استخر" },
+    { src: ghadir5, alt: "استخر" },
+    { src: ghadir6, alt: "استخر" },
   ];
 
   const SegmentZiva = [
@@ -66,22 +64,18 @@ const Collection: React.FC = () => {
 
   const OPTIONS: EmblaOptionsType = { align: "center", direction: "rtl", loop: true };
 
-  const notifications = [
-    "استخر به دلیل تعمیرات، از تاریخ 00 / 00 / 0 0 تا تاریخ 00 / 00 / 0 0 تعطیل می‌باشد",
-    "استخر به دلیل تعمیرات، از تاریخ 00 / 00 / 0 0 تا تاریخ 00 / 00 / 0 0 تعطیل می‌باشد",
-  ];
 
   const menSchedule = [
     {
       label: "آقایان",
-      schedule: "هر روز از ساعت ۱۷ تا ۲۲دوشنبه ها از ساعت ۱۸ تا ۲۲"
+      schedule: "هر روز از ساعت ۱۷ تا ۲۳ , یک شنبه ها از ساعت ۱۸:۳۰ تا  ,چهارشنبه و پنج شنبه از ساعت ۲۳ تا ۲ بامداد۲۳"
     }
   ];
 
   const womenSchedule = [
     {
       label: "بانوان",
-      schedule: "شنبه تا پنج شنبه از ساعت ۹:۳۰ تا ۱۵"
+      schedule: "پنج شنبه و جمعه از ساعت ۹ تا ۱ , یک شنبه و سه شنبه از ساعت ۹ تا ۱۲"
     }
   ];
 
@@ -94,38 +88,29 @@ const Collection: React.FC = () => {
   const slideCard = [
     {
       name: "استخر مجلل فردوس",
-      discount: "0",
+      discount: "73",
       like: false,
-      location: "قم ، بلوار جمهوری ",
-      navigate: "collection",
-      price: "0",
-      rate: 0.0,
-    },
-    {
-      name: "استخر غدیر",
-      discount: "0",
-      like: false,
-      location: "قم خیابان انقلاب",
-      navigate: "collection",
-      price: "0",
+      location: "قم ، بلوار جمهوری ، ابتدای بلوار شهیدان محمود نژاد ، کوچه ۱۲",
+      navigate: "/collection/Ferdos",
+      price: "95,000",
       rate: 0.0,
     },
   ];
 
-  const buttonTexts = ["سونا خشک", "سونا بخار", "جکوزی آب گرم", "جکوزی آب سرد", "سالن ماساژ", "حمام", "آب سردکن", "فروشگاه لوازم شنا", "بوفه خوراکی", "فست فود", "کافی شاپ", "گیم نت", "لابی انتظار", "فیلمبرداری زیر آب", "غواصی"];
+  const buttonTexts = ["سونا خشک","سکوی شیرجه","سونا بخار","جکوزی آب گرم","سالن ماساژ","پارکینگ رایگان","آب سردکن","فروشگاه لوازم شنا","بوفه خوراکی","فست فود","کافی شاپ"];
 
   return (
     <div className="overflow-hidden flex justify-center mt-10 !py-12 sm-max:!py-8 w-full h-full gap-32 bg-slate-50">
       <div className="containerZiva flex flex-col gap-28">
         <PoolCard
-          name="استخر مجلل فردوس"
+          name="استخر غدیر"
           rating={0}
-          address="قم ، بلوار جمهوری ، ابتدای بلوار شهیدان محمود نژاد ، کوچه ۱۲"
-          link="https://nshn.ir/68sbsd-CWxQOAU"
+          address="قم ، بلوار شهید نواب صفوی ، کوچه ۱۴"
+          link="https://nshn.ir/4bvbsiy72xvOHM"
           linkBuyTicket="/buyTicket"
           gatePrice="120,000 تومان"
           zivaPrice="75,000 تومان"
-          discount={45}
+          discount={63}
           showCarousel={true}
           slides={slides}
           options={OPTIONS}
@@ -161,7 +146,7 @@ const Collection: React.FC = () => {
                 buttonText={text}
                 variant="bordered"
                 type="submit"
-                rightIcon={<FacemaskSquare size={17} color="#FF5400" />}
+              // rightIcon={<FacemaskSquare size={17} color="#FF5400" />}
               />
             ))}
           </div>
@@ -178,10 +163,8 @@ const Collection: React.FC = () => {
             <BuyTicket
               priceDiscount="75,000"
               background="#FF5400"
-              // childrenDiscount={12}
-              // childrenPrice="1222"
-              discount={45}
-              name="بلیط آزاد"
+              discount={63}
+              name="بلیط سانس عمومی"
               navigate="/buyTicket"
               price="120,000"
               className="w-full"
@@ -189,8 +172,8 @@ const Collection: React.FC = () => {
             <BuyTicket
               priceDiscount="72,000"
               background="#390099"
-              discount={40}
-              name="بلیت سانس شبانه ( ویژه آقایان )"
+              discount={60}
+              name="بلیط سانس شبانه ( ویژه آقایان )"
               navigate="/buyTicket"
               price="120.000"
               className="w-full"
@@ -201,19 +184,17 @@ const Collection: React.FC = () => {
         <section className="gap-8 flex flex-col">
           <BoxDescription clsasName="mt-10 " name="معرفی استخر" Icon={Clipboard}>
             <p className="text-base font-normal text-slate-500">
-              استخر مجلل فردوس قم از معدود استخرهای خصوصی قم می باشد که همیشه آرامش و رفاه و سطح کیفیت خدمات در اولویت می باشد . این استخر از لحاظ وسعت میان رده بوده و به دلیل غدم عقد قرارداد با سازمان ها و ارگان ها ، به نسبت سایر استخرها از توازن مشتریان برخوردار بوده و کنترل و پایش مشتریان در هنگام ورود مانع از ازدحام و بی نظمی در استخر می گردد . استخر مجلل فردوس تمامی نیازهای شما را سنجیده و برای شما فراهم کرده است . این استخر تنها استخر تخصصی در برگزاری سانس های خصوصی می باشد . تنها در این استخر میتوانید غواصی و فیلمبرداری زیر آب را تجربه کنید.
-            </p>
+              استخر غدیر قم یکی از بزرگترین استخرهای قم واقع در بلوار شهید نواب صفوی می باشد که وابسته به استانداری استان قم می باشد . این استخر یکی از بهترین کیفیت های آب را در بین استخر قم دارا می یاشد . این استخر در سانس های متنوع عمومی ، سانس های شبانه عمومی و سانس های خصوصی نیز برگزار می کند . استخر غدیر یکی از تخصصی ترین استخرها جهت آموزش عمومی و خصوصی شنا می باشد.            </p>
           </BoxDescription>
           <BoxDescription clsasName="mt-10 " name="مشخصات استخر" Icon={MenuDotsCircle}>
             <p className="text-base font-normal text-slate-500">
-              طول استخر ۱۳ متر
+              طول استخر ۲۵ متر
               <br />
-              عرض استخر ۷ متر
+              عرض استخر ۱۲.۵ متر
               <br />
               قسمت کم عمق ۹۰ سانتیمتر
               <br />
-              قسمت عمیق ۲ متر
-
+              قسمت عمیق ۳ متر
               <br />
               سیستم تصفیه شنی
 
@@ -224,11 +205,9 @@ const Collection: React.FC = () => {
               سرویس بهداشتی ایرانی و فرنگی
 
               <br />
-              دوش های عمومی
-
+              دوش های عمومی و انفرادی
               <br />
-              سیستم تهویه هواکش
-            </p>
+              سیستم تهویه هواکش و هواساز            </p>
           </BoxDescription>
         </section>
 
@@ -237,7 +216,7 @@ const Collection: React.FC = () => {
             customNavigate="مشاهده همه استخر ها"
             slides={slideCard}
             DividerName="مجموعه‌های پیشنهادی"
-            DividerNavigate="/collection"
+            DividerNavigate="/search"
           />
         </section>
         <div className="flex h-[104px] justify-between w-full gap-6">

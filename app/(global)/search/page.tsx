@@ -21,21 +21,21 @@ const SearchPage = () => {
   const SearchCards = [
     {
       name: "استخر مجلل فردوس",
-      discount: "10",
-      like: true,
-      location: "قم بلوار فردوسی",
-      navigate: "collection",
-      price: "10000",
-      rate: 0.5,
+      discount: "73",
+      like: false,
+      location: "قم ، بلوار جمهوری ، ابتدای بلوار شهیدان محمود نژاد ، کوچه ۱۲",
+      navigate: "/collection/Ferdos",
+      price: "95,000",
+      rate: 0.0,
     },
     {
       name: "استخر غدیر",
-      discount: "15",
+      discount: "63",
       like: false,
-      location: "تهران خیابان انقلاب",
-      navigate: "collection",
-      price: "15000",
-      rate: 4.0,
+      location: "قم ، بلوار شهید نواب صفوی ، کوچه ۱۴",
+      navigate: "/collection/Ghadir",
+      price: "75,000",
+      rate: 0.0,
     },
     // {
     //   name: "استخر ۱",
@@ -264,7 +264,7 @@ const SearchPage = () => {
               { label: "بانوان", value: "female" },
             ]}
           />
-            <ButtonZiva
+          <ButtonZiva
             theme="orange"
             disabled
             className="h-6 rounded-md text-xs font-semibold"
@@ -291,7 +291,7 @@ const SearchPage = () => {
           />
           <Slider range defaultValue={[20, 50]} />
           <ButtonZiva
-          disabled
+            disabled
             theme="orange"
             className="h-6 rounded-md text-xs font-semibold"
             type="button"

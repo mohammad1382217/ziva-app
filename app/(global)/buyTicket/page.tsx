@@ -47,7 +47,7 @@ const BuyTicket = () => {
   return (
     <div className="overflow-hidden flex justify-center w-full h-full gap-32 bg-slate-50">
       <div className="containerZiva flex flex-col gap-6 mt-10">
-        <div className="flex h-72 gap-6">
+        <div className="flex justify-between h-72 gap-6">
           <section
             className={`bg-white flex flex-col gap-8 rounded-2xl shadow-Box w-[744px] h-[274px] p-6`}
           >
