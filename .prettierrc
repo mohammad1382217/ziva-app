@@ -1,0 +1,11 @@
+{
+  "semi": true,
+  "tabWidth": 2,
+  "useTabs": false,
+  "trailingComma": "all",
+  "printWidth": 90,
+  "endOfLine": "crlf",
+  "proseWrap": "never",
+  "bracketSameLine": false,
+  "bracketSpacing": true
+}
